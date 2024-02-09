@@ -3,6 +3,7 @@ body {
     font-family: Baskerville;
     text-align: left;
     font-size: 75px;
+    background-color: #d2d7ee;
 }
 
 .promptContainer {
@@ -13,9 +14,11 @@ body {
 #seriousPrompt {
     background-color: #476CB0;
     color: white;
+    font-family: Georgia;
 }
 
 #funnyPrompt {
     background-color: #476CB0;
     color: white;
+    font-family: Georgia;
 }
