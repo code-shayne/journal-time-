@@ -1,0 +1,14 @@
+title {
+    color: #B8336A;
+    font-family: Helvetica;
+    text-align: left;
+    font-size: 75px;
+}
+
+.promptContainer {
+  background-color: #9792E3;
+}
+
+#seriousPrompt #funnyPrompt {
+    color: #476CB0;
+}
