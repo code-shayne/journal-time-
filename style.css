@@ -1,4 +1,4 @@
-title {
+body {
     color: #B8336A;
     font-family: Helvetica;
     text-align: left;
@@ -9,6 +9,12 @@ title {
   background-color: #9792E3;
 }
 
-#seriousPrompt #funnyPrompt {
-    color: #476CB0;
+#seriousPrompt {
+    background-color: #476CB0;
+    color: white;
+}
+
+#funnyPrompt {
+    background-color: #476CB0;
+    color: white;
 }
