@@ -1,9 +1,10 @@
 body {
     color: #B8336A;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "FuzzyBubbles-Regular";
     text-align: center;
     font-size: 75px;
     background-color: #d2d7ee;
+    line-height: 1.5;
 }
 
 .promptContainer {
@@ -20,4 +21,9 @@ body {
     background-color: #476CB0;
     color: white;
     font-family: Georgia;
+}
+
+.itemEntryForm {
+    font-family: Georgia;
+
 }
