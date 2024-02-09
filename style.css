@@ -1,13 +1,12 @@
 body {
     color: #B8336A;
-    font-family: Baskerville;
-    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
     font-size: 75px;
     background-color: #d2d7ee;
 }
 
 .promptContainer {
-  background-color: #9792E3;
   font-size: 20px;
 }
 
