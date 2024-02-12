@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/style.css">
     <title>Journal Time!</title>
 </head>
 <body>
@@ -16,20 +17,20 @@
         </section>
         <hr/>
         <section class="promptContainer">
-            <div class="promptTitle">
                 <hi>Prompts:</hi>
                 <button id="seriousPrompt" class="button" title = "promptOptionSerious"
                 tabindex="0">Serious Prompt</button>
                 <button id="funnyPrompt" class="button" title = "promptOptionFunny"
                 tabindex="0">Funny Prompt</button>
-            </div>
-            <div class = "journalEntry">
+                <button id="morePrompts" class="button" title = "promptOptionPlus"
+                tabindex="0">+</button>
+        </section>
+            <section class = "journalEntry">
                 <hi>What's something you want to get off your chest?</hi>
                 <form id="itemEntryForm">
                     <input id="newItem" type="text" size="95" wrap="hard"
                     autocomplete="off" placeholder="Start journaling here..." tabindex="0"/>
-            </div>
-        </section>
+                </section>
     </main>
 </body>
 </html>

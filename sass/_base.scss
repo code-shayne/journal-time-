@@ -1,0 +1,42 @@
+$default-font-color: #000;
+$backgroud-color: #B4B0EF;
+$prompt-container-bgcolor: #7898d5;
+$prompt-color: #B8336A;
+$header-bgcolor: #B8336A;
+$outline-color: #175490;
+
+@mixin mp($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: $default-font-color;
+    width: 100%;
+    min-height: 100%;
+    @include mp(768px) {
+        font-size: 22px;
+    }
+}
+
+body {
+    padding:5px;
+    background-color: $backgroud-color;
+}
+
+section {
+    background-color: $header-bgcolor;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin:auto;
+}
