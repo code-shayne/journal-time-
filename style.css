@@ -1,7 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     color: #B8336A;
     font-family: "FuzzyBubbles-Regular";
-    text-align: center;
+    text-align: left;
     font-size: 75px;
     background-color: #d2d7ee;
     line-height: 1.5;
