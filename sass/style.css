@@ -30,9 +30,8 @@ html, body {
   }
 }
 
-img {
-  height: 100px;
-  width: 100px;
+.logo {
+  background-image: url("image.png");
 }
 
 body {
