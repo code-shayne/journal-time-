@@ -30,8 +30,7 @@ html, body {
   }
 }
 
-#banner {
-  background-image: src="image.png";
+img {
   height: 50px;
   width: 50px;
 }
