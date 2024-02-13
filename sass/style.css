@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #000;
+  width: 100%;
+  min-height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  html, body {
+    font-size: 22px;
+  }
+}
+
+body {
+  background-color: #a3b9e3;
+}
+
+.logo {
+  background-color: #B8336A;
+  font-size: 20px;
+  padding: 5px;
+  position: sticky;
+}
+
+hr {
+  border: 1px solid #175490;
+}
+
+.promptContainer {
+  background-color: #a19ce1;
+  font-size: 17px;
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+  border: 2px solid #8882e4;
+  border-radius: 10px;
+  margin-top: 0.3cm;
+}
+
+.journalEntry {
+  font-size: 15px;
+  margin: 1%;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  filter: brightness(102%);
+  box-shadow: 4px 2px 5px #000;
+}
+
+#name {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#pastEntries {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  margin-right: 0.1cm;
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#tracking {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 17px;
+  margin-right: 0.1cm;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#store {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 17px;
+  margin-right: 0.1cm;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#seriousPrompt {
+  background-color: #476CB0;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#funnyPrompt {
+  background-color: #476CB0;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#morePrompts {
+  background-color: #476CB0;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}/*# sourceMappingURL=style.css.map */

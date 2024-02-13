@@ -1,0 +1,60 @@
+$default-font-color: #000;
+$backgroud-color: #a3b9e3;
+$prompt-container-bgcolor: #a19ce1;
+$header-bgcolor: #B8336A;
+$outline-color: #8882e4;
+$hr-color: #175490;
+
+@mixin mp($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: $default-font-color;
+    width: 100%;
+    min-height: 100%;
+    @include mp(768px) {
+        font-size: 22px;
+    }
+}
+
+body {
+    background-color: $backgroud-color;
+}
+
+.logo {
+    background-color: $header-bgcolor;
+    font-size: 20px;
+    padding: 5px;
+    position: sticky;
+}
+
+hr {
+    border: 1px solid $hr-color;
+}
+
+.promptContainer {
+    background-color: $prompt-container-bgcolor;
+    font-size: 17px;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    border: 2px solid $outline-color;
+    border-radius: 10px;
+    margin-top: 0.3cm;
+  }
+
+  .journalEntry {
+    font-size: 15px;
+    margin: 1%;
+  }
