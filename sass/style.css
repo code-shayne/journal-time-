@@ -4,17 +4,36 @@
   box-sizing: border-box;
 }
 
+.fuzzy-bubbles-regular {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fuzzy-bubbles-bold {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 html, body {
   font-size: 16px;
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: #000;
   width: 100%;
   min-height: 100%;
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
+
 @media only screen and (min-width: 768px) {
   html, body {
     font-size: 22px;
   }
+}
+
+#banner {
+  background-image: url("https://trello.com/1/cards/65c0fb0c873e6bc1c331f47f/attachments/65c264015afb83e110297d20/previews/65c264015afb83e110297db6/download/image.png");
+  height: 50px;
+  width: 50px;
 }
 
 body {
