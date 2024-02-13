@@ -45,6 +45,19 @@ body {
   position: sticky;
 }
 
+#login,
+#pastEntries,
+#shop, 
+#about {
+  background-color: #476CB0;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #175490;
+  text-align: right;
+}
+
 hr {
   border: 1px solid #175490;
 }
@@ -69,10 +82,9 @@ hr {
   cursor: pointer;
 }
 
-.button:hover,
-.button:focus {
+.button:hover{
   filter: brightness(102%);
-  box-shadow: 4px 2px 5px #000;
+  box-shadow: 4px 2px 5px #4a467d;
 }
 
 #name {
@@ -83,14 +95,14 @@ hr {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-#pastEntries {
+/*#pastEntries {
   background-color: #B8336A;
   border: none;
   padding: 5px;
   margin-right: 0.1cm;
   font-size: 17px;
   font-family: Georgia, "Times New Roman", Times, serif;
-}
+}*/
 
 #tracking {
   background-color: #B8336A;
