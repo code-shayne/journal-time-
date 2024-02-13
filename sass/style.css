@@ -31,7 +31,7 @@ html, body {
 }
 
 #banner {
-  background-image: url("https://trello.com/1/cards/65c0fb0c873e6bc1c331f47f/attachments/65c264015afb83e110297d20/previews/65c264015afb83e110297db6/download/image.png");
+  background-image: src="image.png";
   height: 50px;
   width: 50px;
 }
