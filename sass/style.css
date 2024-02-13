@@ -48,10 +48,6 @@ hr {
   margin: 1%;
 }
 
-#test {
-  padding: 100px;
-}
-
 .button:hover {
   cursor: pointer;
 }
@@ -74,9 +70,9 @@ hr {
   background-color: #B8336A;
   border: none;
   padding: 5px;
+  margin-right: 0.1cm;
   font-size: 17px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  margin-left: 48%;
 }
 
 #tracking {
@@ -84,6 +80,7 @@ hr {
   border: none;
   padding: 5px;
   font-size: 17px;
+  margin-right: 0.1cm;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -92,6 +89,7 @@ hr {
   border: none;
   padding: 5px;
   font-size: 17px;
+  margin-right: 0.1cm;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
