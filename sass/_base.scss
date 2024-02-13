@@ -1,9 +1,9 @@
 $default-font-color: #000;
-$backgroud-color: #B4B0EF;
-$prompt-container-bgcolor: #7898d5;
-$prompt-color: #B8336A;
+$backgroud-color: #a3b9e3;
+$prompt-container-bgcolor: #a19ce1;
 $header-bgcolor: #B8336A;
-$outline-color: #175490;
+$outline-color: #8882e4;
+$hr-color: #175490;
 
 @mixin mp($size) {
     @media only screen and (min-width: $size) {
@@ -29,14 +29,32 @@ html,body {
 }
 
 body {
-    padding:5px;
     background-color: $backgroud-color;
 }
 
-section {
+.logo {
     background-color: $header-bgcolor;
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    margin:auto;
+    font-size: 20px;
+    padding: 5px;
+    position: sticky;
 }
+
+hr {
+    border: 1px solid $hr-color;
+}
+
+.promptContainer {
+    background-color: $prompt-container-bgcolor;
+    font-size: 17px;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    border: 2px solid $outline-color;
+    border-radius: 10px;
+    margin-top: 0.3cm;
+  }
+
+  .journalEntry {
+    font-size: 15px;
+    margin: 1%;
+  }

@@ -18,14 +18,106 @@ html, body {
 }
 
 body {
-  padding: 5px;
-  background-color: #B4B0EF;
+  background-color: #a3b9e3;
 }
 
-section {
+.logo {
   background-color: #B8336A;
-  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+  position: sticky;
+}
+
+hr {
+  border: 1px solid #175490;
+}
+
+.promptContainer {
+  background-color: #a19ce1;
+  font-size: 17px;
   padding: 10px;
-  border-radius: 10px;
+  width: 90%;
   margin: auto;
+  border: 2px solid #8882e4;
+  border-radius: 10px;
+  margin-top: 0.3cm;
+}
+
+.journalEntry {
+  font-size: 15px;
+  margin: 1%;
+}
+
+#test {
+  padding: 100px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  filter: brightness(102%);
+  box-shadow: 4px 2px 5px #000;
+}
+
+#name {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#pastEntries {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 48%;
+}
+
+#tracking {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#store {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#seriousPrompt {
+  background-color: #476CB0;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#funnyPrompt {
+  background-color: #476CB0;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#morePrompts {
+  background-color: #476CB0;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }/*# sourceMappingURL=style.css.map */

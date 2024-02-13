@@ -1,0 +1,73 @@
+$button-textcolor: #fff;
+$button-hovercolor: #000;
+$prompt-color: #476CB0;
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    filter: brightness(102%);
+    box-shadow: 4px 2px 5px #000;
+}
+
+#name {
+    background-color: $header-bgcolor;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#pastEntries {
+    background-color: $header-bgcolor;
+    border: none;
+    padding: 5px;
+    font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-left: 48%;
+}
+
+#tracking {
+    background-color: $header-bgcolor;
+    border: none;
+    padding: 5px;
+    font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#store {
+    background-color: $header-bgcolor;
+    border: none;
+    padding: 5px;
+    font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#seriousPrompt {
+    background-color: $prompt-color;
+    color: $button-textcolor;
+    padding: 3px;
+    border-radius: 10px;
+    border: 2px solid $hr-color;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+#funnyPrompt {
+    background-color: $prompt-color;
+    color: $button-textcolor;
+    padding: 3px;
+    border-radius: 10px;
+    border: 2px solid $hr-color;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+#morePrompts {
+  background-color: $prompt-color;
+  color: $button-textcolor;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid $hr-color;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
+}

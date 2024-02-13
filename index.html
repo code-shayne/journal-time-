@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="sass/style.css"> -->
+    <link rel="stylesheet" href="sass/style.css">
     <title>Journal Time!</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
     <main>
         <section class = "logo">
             <form id="logoSpace">
-                <label for="logo">
-                    Journal Time!
-                </label>
+                <button id="name" class="button" title="Home"
+                tabindex="0">Journal Time!</button>
+                <button id="pastEntries" class="button" title="Past Entries"
+                tabindex="0">Entries</button>
+                <button id="tracking" class="button" title="Emotion Tracking"
+                tabindex="0">Tracking</button>
+                <button id="store" class="button" title="Store"
+                tabindex="0">Store</button>
             </form>
         </section>
         <hr/>
         <section class="promptContainer">
                 <hi>Prompts:</hi>
-                <button id="seriousPrompt" class="button" title = "promptOptionSerious"
+                <button id="seriousPrompt" class="button" title = "Generate Serious Prompt"
                 tabindex="0">Serious Prompt</button>
-                <button id="funnyPrompt" class="button" title = "promptOptionFunny"
+                <button id="funnyPrompt" class="button" title = "Generate Funny Prompt"
                 tabindex="0">Funny Prompt</button>
-                <button id="morePrompts" class="button" title = "promptOptionPlus"
+                <button id="morePrompts" class="button" title = "Add More Prompt Packages"
                 tabindex="0">+</button>
         </section>
             <section class = "journalEntry">
