@@ -1,9 +1,23 @@
+// $default-font-color: #000;
+// $backgroud-color: #a3b9e3;
+// $prompt-container-bgcolor: #a19ce1;
+// $header-bgcolor: #B8336A;
+// $outline-color: #8882e4;
+// $hr-color: #175490;
+// $button-textcolor: #fff;
+// $button-hovercolor: #000;
+// $prompt-color: #476CB0;
+
+//rose
 $default-font-color: #000;
-$backgroud-color: #a3b9e3;
-$prompt-container-bgcolor: #a19ce1;
-$header-bgcolor: #B8336A;
-$outline-color: #8882e4;
-$hr-color: #175490;
+$backgroud-color: #EECFD4;
+$prompt-container-bgcolor: #AAC0AA;
+$header-bgcolor: #AD9FBC;
+$outline-color: #859785;
+$hr-color: #837472;
+$button-textcolor: #fff;
+$button-hovercolor: #000;
+$prompt-color: #938482;
 
 @mixin mp($size) {
     @media only screen and (min-width: $size) {

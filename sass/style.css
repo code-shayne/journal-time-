@@ -18,27 +18,27 @@ html, body {
 }
 
 body {
-  background-color: #a3b9e3;
+  background-color: #EECFD4;
 }
 
 .logo {
-  background-color: #B8336A;
+  background-color: #AD9FBC;
   font-size: 20px;
   padding: 5px;
   position: sticky;
 }
 
 hr {
-  border: 1px solid #175490;
+  border: 1px solid #837472;
 }
 
 .promptContainer {
-  background-color: #a19ce1;
+  background-color: #AAC0AA;
   font-size: 17px;
   padding: 10px;
   width: 90%;
   margin: auto;
-  border: 2px solid #8882e4;
+  border: 2px solid #859785;
   border-radius: 10px;
   margin-top: 0.3cm;
 }
@@ -59,7 +59,7 @@ hr {
 }
 
 #name {
-  background-color: #B8336A;
+  background-color: #AD9FBC;
   border: none;
   padding: 5px;
   font-size: 20px;
@@ -67,7 +67,7 @@ hr {
 }
 
 #pastEntries {
-  background-color: #B8336A;
+  background-color: #AD9FBC;
   border: none;
   padding: 5px;
   margin-right: 0.1cm;
@@ -76,7 +76,7 @@ hr {
 }
 
 #tracking {
-  background-color: #B8336A;
+  background-color: #AD9FBC;
   border: none;
   padding: 5px;
   font-size: 17px;
@@ -85,7 +85,7 @@ hr {
 }
 
 #store {
-  background-color: #B8336A;
+  background-color: #AD9FBC;
   border: none;
   padding: 5px;
   font-size: 17px;
@@ -94,28 +94,28 @@ hr {
 }
 
 #seriousPrompt {
-  background-color: #476CB0;
+  background-color: #938482;
   color: #fff;
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #175490;
+  border: 2px solid #837472;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #funnyPrompt {
-  background-color: #476CB0;
+  background-color: #938482;
   color: #fff;
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #175490;
+  border: 2px solid #837472;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #morePrompts {
-  background-color: #476CB0;
+  background-color: #938482;
   color: #fff;
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #175490;
+  border: 2px solid #837472;
   font-family: Georgia, "Times New Roman", Times, serif;
 }/*# sourceMappingURL=style.css.map */
