@@ -76,6 +76,7 @@ hr {
 .journalEntry {
   font-size: 15px;
   margin: 1%;
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 .button:hover {
@@ -148,3 +149,7 @@ hr {
   border: 2px solid #175490;
   font-family: Georgia, "Times New Roman", Times, serif;
 }/*# sourceMappingURL=style.css.map */
+
+#itemEntryForm {
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
