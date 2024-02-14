@@ -17,6 +17,23 @@ html, body {
   }
 }
 
+.gridContainer{
+  display:grid;
+  width: 100%;
+  height: 80px;
+  grid-template-areas:"logo title pastEntries tracking store" "nav nav nav nav nav";
+  grid-template-rows: 50%;
+  grid-template-columns: 5.5% 95% 97% 99%;
+  }
+  
+  #logo {
+    height: 75px;
+    width: 75px;
+    display:inline;
+    grid-area: logo;
+    margin: 0 auto;
+  }
+
 body {
   background-color: #EECFD4;
 }
@@ -52,8 +69,7 @@ hr {
   cursor: pointer;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
   filter: brightness(102%);
   box-shadow: 4px 2px 5px #000;
 }
