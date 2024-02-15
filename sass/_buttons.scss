@@ -4,7 +4,8 @@
 }
 
 .button:hover,
-.button:focus {
+.button:focus { /*button:focus is what makes the shadows stay on the button when you click on it. if you dont
+                want the shadow to stay, you can just delete it*/
     filter: brightness(102%);
     box-shadow: 4px 2px 5px #000;
 }
