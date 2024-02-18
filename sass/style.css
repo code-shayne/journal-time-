@@ -1,37 +1,12 @@
-.fuzzy-bubbles-regular {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-bold {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:  "Fuzzy Bubbles", sans-serif;
-}
-
-.fuzzy-bubbles-regular {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-bold {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 700;
-  font-style: normal;
 }
 
 html, body {
   font-size: 16px;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: #000;
   width: 100%;
   min-height: 100%;
@@ -42,46 +17,28 @@ html, body {
   }
 }
 
-.gridContainer{
-  display:grid;
-  width: 100%;
-  height: 80px;
-  grid-template-areas:"logo title pastEntries tracking store" "nav nav nav nav nav";
-  grid-template-rows: 50%;
-  grid-template-columns: 5.5% 95% 97% 99%;
-  }
-  
-  #logo {
-    height: 75px;
-    width: 75px;
-    display:inline;
-    grid-area: logo;
-    margin: 0 auto;
-    font-family: "FuzzyBubbles-Regular"
-  }
-
 body {
-  background-color: #EECFD4;
+  background-color: #a3b9e3;
 }
 
 .logo {
-  background-color: #AD9FBC;
+  background-color: #B8336A;
   font-size: 20px;
   padding: 5px;
   position: sticky;
 }
 
 hr {
-  border: 1px solid #837472;
+  border: 2px solid #175490;
 }
 
 .promptContainer {
-  background-color: #AAC0AA;
+  background-color: #a19ce1;
   font-size: 17px;
   padding: 10px;
   width: 90%;
   margin: auto;
-  border: 2px solid #859785;
+  border: 2px solid #8882e4;
   border-radius: 10px;
   margin-top: 0.3cm;
 }
@@ -95,62 +52,87 @@ hr {
   cursor: pointer;
 }
 
-.button:hover {
-  filter: brightness(102%);
+.button:hover { /*button:focus is what makes the shadows stay on the button when you click on it. if you dont
+want the shadow to stay, you can just delete it*/
+  filter: brightness(110%);
   box-shadow: 4px 2px 5px #000;
 }
 
-#name {
-  background-color: #AD9FBC;
+#logo {
   border: none;
-  padding: 5px;
-  font-size: 20px;
+  padding: 0px;
 }
 
 #pastEntries {
-  background-color: #AD9FBC;
+  background-color: #B8336A;
   border: none;
   padding: 5px;
   margin-right: 0.1cm;
   font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #tracking {
-  background-color: #AD9FBC;
+  background-color: #B8336A;
   border: none;
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #store {
-  background-color: #AD9FBC;
+  background-color: #B8336A;
   border: none;
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#login {
+  background-color: #B8336A;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 17px;
+  margin-right: 0.1cm;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #seriousPrompt {
-  background-color: #938482;
+  background-color: #476CB0;
   color: #fff;
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #837472;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #funnyPrompt {
-  background-color: #938482;
+  background-color: #476CB0;
   color: #fff;
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #837472;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #morePrompts {
-  background-color: #938482;
+  background-color: #476CB0;
   color: #fff;
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #837472;
+  border: 2px solid #175490;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

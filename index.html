@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/style.css">
-    <link rel="icon" href="image.png">
+    <link rel="icon" href="JT Logo Black.png">
+    <link rel="icon" href="JT Logo White.png">
     <title>Journal Time!</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <script type="module" src="./login.py"></script>
+    <!-- <script type="module" src="./login.py"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
@@ -16,10 +17,14 @@
     <main>
         <section class = "logo">
             <div class = "gridContainer">
-            <a href = "./index.html"><img src = "image.png" id = 'logo' alt= 'Journal Time'></a>
+            <a href = "./index.html"><img src = "JT Logo White.png" id = 'logo' class="button" 
+                width="275px" height="75px" alt= 'Journal Time'></a>
             <form id="logoSpace">
-                <a href="./index.html" id="name" class="button" title="Home"
-                tabindex="0">Journal Time!</a>
+                <!-- <a href="./index.html" id="name" class="button" title="Home"
+                tabindex="0">Journal Time!</a> -->
+                <a href="./login.html" id="login" class="button" title="Login"
+                tabindex="0" style="float:right">
+                    Login</a>
                 <a href="./store.html" id="store" class="button" title="Store"
                 tabindex="0" style="float:right">Store
                    </a>
@@ -29,7 +34,7 @@
                 <a href="./entries.html" id="pastEntries" class="button" title="Store"
                 tabindex="0" style="float:right">
                     Entries</a>
-                    <button> <a href="./login.html">Login</a></button>
+                    <!-- <button> <a href="./login.html">Login</a></button> -->
                <!-- <button id="store" class="button" title="Store"
                     tabindex="0" style="float:right">Store</button>
                 <button id="tracking" class="button" title="Emotion Tracking"
