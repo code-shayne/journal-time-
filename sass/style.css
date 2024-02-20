@@ -48,12 +48,16 @@ hr {
   margin: 1%;
 }
 
+.button {
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
 .button:hover {
   cursor: pointer;
 }
 
-.button:hover { /*button:focus is what makes the shadows stay on the button when you click on it. if you dont
-want the shadow to stay, you can just delete it*/
+.button:hover {
   filter: brightness(110%);
   box-shadow: 4px 2px 5px #000;
 }
@@ -92,8 +96,8 @@ want the shadow to stay, you can just delete it*/
 
 #login {
   background-color: #B8336A;
+  filter: brightness(115%);
   border: 1px solid #fff;
-  border-radius: 10px;
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
@@ -135,4 +139,16 @@ a:link {
 a:visited {
   color: #000;
   text-decoration: none;
+}
+
+#pastEntries {
+  filter: brightness(110%);
+}
+
+#tracking {
+  filter: brightness(110%);
+}
+
+#store {
+  filter: brightness(110%);
 }/*# sourceMappingURL=style.css.map */

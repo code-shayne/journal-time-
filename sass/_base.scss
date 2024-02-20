@@ -74,7 +74,12 @@ hr {
   }
 
 //buttons
-  
+
+.button {
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
 .button:hover {
     cursor: pointer;
 }
@@ -119,8 +124,8 @@ hr {
 
 #login {
     background-color: $header-bgcolor;
+    filter: brightness(115%);
     border: 1px solid #fff;
-    border-radius: 10px;
     padding: 5px;
     font-size: 17px;
     margin-right: 0.1cm;
