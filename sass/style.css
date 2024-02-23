@@ -139,16 +139,4 @@ a:link {
 a:visited {
   color: #000;
   text-decoration: none;
-}
-
-#pastEntries {
-  filter: brightness(110%);
-}
-
-#tracking {
-  filter: brightness(110%);
-}
-
-#store {
-  filter: brightness(110%);
 }/*# sourceMappingURL=style.css.map */
