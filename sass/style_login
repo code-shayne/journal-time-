@@ -148,7 +148,7 @@
     text-align: center;
   }
 
-  .container {
+  .main {
     background-color: rgb(26,82,94);
     border-radius: 10px;
     height: 200px;
@@ -157,8 +157,6 @@
     border-color: rgb(26,82,94);
     color:white;
     font-size: 17px;
-    margin-top:50%;
-    margin:50%;
   }
   
   /*# sourceMappingURL=style.css.map */
