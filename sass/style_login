@@ -4,12 +4,26 @@
     box-sizing: border-box;
   }
   
+  .fuzzy-bubbles-regular {
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .fuzzy-bubbles-bold {
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
   html, body {
     font-size: 16px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Fuzzy Bubbles", sans-serif;
     color: #000;
     width: 100%;
     min-height: 100%;
+    align-items: center;
+    justify-content: center;
   }
   @media only screen and (min-width: 768px) {
     html, body {
@@ -17,6 +31,14 @@
     }
   }
   
+  .logo {
+    background-image: url("image.png");
+    background-color: #B8336A;
+    font-size: 20px;
+    padding: 5px;
+    position: sticky;
+  }
+
   body {
     background-color: #a3b9e3;
   }
@@ -27,6 +49,19 @@
     padding: 5px;
     position: sticky;
   }
+
+#login,
+#pastEntries,
+#shop, 
+#about {
+  background-color: #476CB0;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid #175490;
+  text-align: right;
+}
   
   hr {
     border: 2px solid #175490;
@@ -57,8 +92,8 @@
     padding: 5px;
     margin-right: 0.1cm;
     font-size: 17px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
   
   #tracking {
     background-color: #B8336A;
@@ -66,8 +101,8 @@
     padding: 5px;
     font-size: 17px;
     margin-right: 0.1cm;
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
   
   #store {
     background-color: #B8336A;
@@ -75,8 +110,8 @@
     padding: 5px;
     font-size: 17px;
     margin-right: 0.1cm;
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
   
   #login {
     background-color: #B8336A;
@@ -85,8 +120,8 @@
     padding: 5px;
     font-size: 17px;
     margin-right: 0.1cm;
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
   
   a:link {
     color: #000;
@@ -150,13 +185,56 @@
 
   .main {
     background-color: rgb(26,82,94);
-    border-radius: 10px;
-    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
     width: 500px;
-    align-content: center;
-    border-color: rgb(26,82,94);
-    color:white;
-    font-size: 17px;
+    text-align: center;
   }
+
+  h1 {
+    color: #fff;
+}
+ 
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+ 
+ 
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+ 
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #d3abab;
+    width: 100%;
+    font-size: 16px;
+}
+ 
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
   /*# sourceMappingURL=style.css.map */
