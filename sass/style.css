@@ -139,4 +139,18 @@ a:link {
 a:visited {
   color: #000;
   text-decoration: none;
+}
+
+.entriesFilter {
+  background-color: #a19ce1;
+  margin-right: 75%;
+  padding-bottom: 100%;
+}
+
+.entriesFilterTitle {
+  background-color: rgba(107, 104, 172, 0.5176470588);
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  position: sticky;
 }/*# sourceMappingURL=style.css.map */

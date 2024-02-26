@@ -1,4 +1,22 @@
-#pastEntries {
-    //filter: brightness(110%);
+// #pastEntries {
+//     filter: brightness(110%);
+// }
+@mixin mp($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
 }
 
+.entriesFilter {
+    background-color: $prompt-container-bgcolor;
+    margin-right: 75%;
+    padding-bottom: 100%;
+}
+
+.entriesFilterTitle {
+    background-color: $filter-title-bgcolor;
+    text-align:center;
+    padding:10px;
+    font-size: 20px;
+    position:sticky;
+}
