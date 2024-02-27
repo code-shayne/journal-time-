@@ -4,6 +4,21 @@ $prompt-container-bgcolor: #a19ce1;
 $header-bgcolor: #B8336A;
 $outline-color: #8882e4;
 $hr-color: #175490;
+$button-textcolor: #fff;
+$button-hovercolor: #000;
+$prompt-color: #476CB0;
+$filter-title-bgcolor: #6b68ac84;
+
+// rose
+// $default-font-color: #000;
+// $backgroud-color: #EECFD4;
+// $prompt-container-bgcolor: #AAC0AA;
+// $header-bgcolor: #AD9FBC;
+// $outline-color: #859785;
+// $hr-color: #837472;
+// $button-textcolor: #fff;
+// $button-hovercolor: #000;
+// $prompt-color: #938482;
 
 @mixin mp($size) {
     @media only screen and (min-width: $size) {
@@ -36,12 +51,14 @@ body {
     background-color: $header-bgcolor;
     font-size: 20px;
     padding: 5px;
-    position: sticky;
+    position: fixed;
+    width: 100%;
+    height: 60px;
 }
 
-hr {
-    border: 1px solid $hr-color;
-}
+// hr {
+//     border: 2px solid $hr-color;
+// }
 
 .promptContainer {
     background-color: $prompt-container-bgcolor;
@@ -51,10 +68,109 @@ hr {
     margin: auto;
     border: 2px solid $outline-color;
     border-radius: 10px;
-    margin-top: 0.3cm;
+    margin-top: 70px;
   }
 
   .journalEntry {
     font-size: 15px;
     margin: 1%;
   }
+
+//buttons
+
+.button {
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:hover { 
+    filter: brightness(110%);
+    box-shadow: 4px 2px 5px #000;
+}
+
+#logo {
+    border: none;
+    padding: 0px;
+    //filter: invert(100%)
+}
+
+#pastEntries {
+    background-color: $header-bgcolor;
+    border: none;
+    padding: 5px;
+    margin-right: 0.1cm;
+    font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#tracking {
+    background-color: $header-bgcolor;
+    border: none;
+    padding: 5px;
+    font-size: 17px;
+    margin-right: 0.1cm;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#store {
+    background-color: $header-bgcolor;
+    border: none;
+    padding: 5px;
+    font-size: 17px;
+    margin-right: 0.1cm;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#login {
+    background-color: $header-bgcolor;
+    filter: brightness(115%);
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 17px;
+    margin-right: 0.1cm;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#seriousPrompt {
+    background-color: $prompt-color;
+    color: $button-textcolor;
+    padding: 3px;
+    border-radius: 10px;
+    border: 2px solid $hr-color;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+#funnyPrompt {
+    background-color: $prompt-color;
+    color: $button-textcolor;
+    padding: 3px;
+    border-radius: 10px;
+    border: 2px solid $hr-color;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+#morePrompts {
+  background-color: $prompt-color;
+  color: $button-textcolor;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid $hr-color;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+
+//links
+
+a:link {
+    color: $default-font-color;
+    text-decoration: none;
+}
+
+a:visited {
+    color: $default-font-color;
+    text-decoration: none;
+}
