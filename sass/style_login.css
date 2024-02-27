@@ -125,12 +125,12 @@
 }
   
   a:link {
-    color: #000;
+    color: #fff;
     text-decoration: none;
   }
   
   a:visited {
-    color: #000;
+    color: #fff;
     text-decoration: none;
   }
   
@@ -146,26 +146,22 @@
     filter: brightness(110%);
   }
 
-  #signin{
+  .main{
     background-color: rgb(26,82,94);
     border-radius: 10px;
     height: 50px;
     width: 120px;
-    grid-area:signin;
     align-content: center;
     border-color: rgb(26,82,94);
-    color:white;
+    color:#000;
     font-size: 17px;
-    margin-top:auto;
-    margin:auto;
-    
+    margin: 75px 33.5%; 
   }
   
   #signin:hover {
     cursor:pointer;
     background-color:rgb(45, 125, 143);
     text-decoration: underline;
-  
   }
 
   #signin:active {
@@ -175,7 +171,7 @@
   }
   .heading{
     grid-area: title;
-    color: rgb(26,82,94);
+    color: rgb(97, 140, 150);
     font-size: 30pt;
   }
   
@@ -185,7 +181,7 @@
   }
 
   .main {
-    background-color: rgb(26,82,94);
+    background-color: rgb(97, 140, 150);
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
@@ -194,7 +190,7 @@
     text-align: center;
   }
 
-  h1 {
+h1 {
     color: #fff;
 }
  
@@ -204,7 +200,7 @@ label {
     margin-top: 10px;
     margin-bottom: 5px;
     text-align: left;
-    color: #555;
+    color: #fff;
     font-weight: bold;
 }
  
@@ -227,13 +223,23 @@ button {
     border: none;
     color: white;
     cursor: pointer;
-    background-color: #d3abab;
+    background-color: #175490;
     width: 100%;
     font-size: 16px;
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+.button:hover {
+  cursor: pointer;
 }
  
+.button:hover {
+  filter: brightness(102%);
+  box-shadow: 4px 2px 5px #0f355c;
+}
+
 .wrap {
-    display: flex;
+    display: center;
     justify-content: center;
     align-items: center;
 }

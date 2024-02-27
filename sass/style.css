@@ -53,7 +53,7 @@ body {
 #about {
   background-color: #476CB0;
   font-family: "Fuzzy Bubbles", sans-serif;
-  color: #fff;
+  color: #000000;
   padding: 3px;
   border-radius: 10px;
   border: 2px solid #175490;
@@ -114,7 +114,7 @@ hr {
   padding: 5px;
   margin-right: 0.1cm;
   font-size: 17px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 #tracking {
@@ -142,7 +142,7 @@ hr {
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 #seriousPrompt {
