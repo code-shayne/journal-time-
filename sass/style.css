@@ -4,21 +4,9 @@
   box-sizing: border-box;
 }
 
-.fuzzy-bubbles-regular {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-bold {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 html, body {
   font-size: 16px;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: #000;
   width: 100%;
   min-height: 100%;
@@ -37,11 +25,9 @@ body {
   background-color: #B8336A;
   font-size: 20px;
   padding: 5px;
-  position: sticky;
-}
-
-hr {
-  border: 2px solid #175490;
+  position: fixed;
+  width: 100%;
+  height: 60px;
 }
 
 .promptContainer {
@@ -52,7 +38,7 @@ hr {
   margin: auto;
   border: 2px solid #8882e4;
   border-radius: 10px;
-  margin-top: 0.3cm;
+  margin-top: 70px;
 }
 
 .journalEntry {
@@ -85,7 +71,7 @@ hr {
   padding: 5px;
   margin-right: 0.1cm;
   font-size: 17px;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #tracking {
@@ -94,7 +80,7 @@ hr {
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #store {
@@ -103,7 +89,7 @@ hr {
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #login {
@@ -113,7 +99,7 @@ hr {
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #seriousPrompt {
@@ -122,7 +108,7 @@ hr {
   padding: 3px;
   border-radius: 10px;
   border: 2px solid #175490;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #funnyPrompt {
@@ -131,7 +117,7 @@ hr {
   padding: 3px;
   border-radius: 10px;
   border: 2px solid #175490;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #morePrompts {
@@ -140,7 +126,7 @@ hr {
   padding: 3px;
   border-radius: 10px;
   border: 2px solid #175490;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 a:link {
@@ -155,8 +141,13 @@ a:visited {
 
 .entriesFilter {
   background-color: #a19ce1;
-  margin-right: 75%;
-  padding-bottom: 100%;
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  margin-top: 58px;
+  left: 0;
+  overflow-x: hidden;
 }
 
 .entriesFilterTitle {
@@ -165,4 +156,38 @@ a:visited {
   padding: 10px;
   font-size: 20px;
   position: sticky;
+}
+
+.search {
+  padding: 2px;
+  margin: auto;
+  margin-top: 5px;
+  display: block;
+  width: 90%;
+  border: 2px solid rgba(107, 104, 172, 0.5176470588);
+}
+
+#filters {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.filter {
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.entriesContainer {
+  margin-left: 20%;
+  padding: 0px 10px;
+}
+
+.entry {
+  background-color: #fff;
+  margin: 10px;
+  margin-top: 67px;
+  width: 25%;
+  height: 100px;
+  border: 2px solid #000;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
