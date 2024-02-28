@@ -160,6 +160,11 @@ a:visited {
 
 .search {
   padding: 2px;
+  margin: auto;
+  margin-top: 5px;
+  display: block;
+  width: 90%;
+  border: 2px solid rgba(107, 104, 172, 0.5176470588);
 }
 
 #filters {

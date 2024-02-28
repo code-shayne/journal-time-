@@ -28,6 +28,11 @@
 
 .search {
     padding: 2px;
+    margin: auto;
+    margin-top: 5px;
+    display: block;
+    width: 90%;
+    border: 2px solid $filter-title-bgcolor;
 }
 
 #filters {
