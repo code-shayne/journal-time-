@@ -151,20 +151,20 @@ a:visited {
 }
 
 .entriesFilterTitle {
-  background-color: rgba(107, 104, 172, 0.5176470588);
+  background-color: #8b86d0;
   text-align: center;
   padding: 10px;
   font-size: 20px;
   position: sticky;
 }
 
-.search {
+.filterSearch {
   padding: 2px;
   margin: auto;
   margin-top: 5px;
   display: block;
   width: 90%;
-  border: 2px solid rgba(107, 104, 172, 0.5176470588);
+  border: 2px solid #8b86d0;
 }
 
 #filters {
@@ -190,4 +190,50 @@ a:visited {
   height: 100px;
   border: 2px solid #000;
   border-radius: 10px;
+}
+
+.shopHeader {
+  margin-top: 65px;
+}
+
+.storeSearch {
+  margin: 5px;
+  padding: 3px;
+  width: 30%;
+  font-size: 18px;
+  border: 2px solid #8b86d0;
+}
+
+#storeFilter {
+  background-color: #a19ce1;
+  border-radius: 5px;
+  border: 2px solid #8b86d0;
+  padding: 3px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+#storeSort {
+  background-color: #a19ce1;
+  border-radius: 5px;
+  border: 2px solid #8b86d0;
+  padding: 3px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.storeBalance {
+  margin-right: 10%;
+  margin-top: -35px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+span:hover {
+  cursor: default;
+}
+
+.hr {
+  border: 1px, solid, #8b86d0;
+  margin-top: 75px;
 }/*# sourceMappingURL=style.css.map */
