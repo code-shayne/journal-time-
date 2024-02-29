@@ -1,3 +1,48 @@
-// #store {
-//     filter: brightness(110%);
+.shopHeader {
+    margin-top: 65px;
+}
+
+.storeSearch {
+    margin: 5px;
+    padding: 3px;
+    width: 30%;
+    font-size: 18px;
+    border: 2px solid $filter-title-bgcolor;
+}
+
+// ::-webkit-search-cancel-button {
+//     -webkit-appearance: none;
 // }
+
+// ::-webkit-search-cancel-button:after {
+//     content: 'X';
+//     font-style: italic;
+//     color: red;
+// }
+
+#storeFilter {
+    background-color: $prompt-container-bgcolor;
+    border-radius: 5px;
+    border: 2px solid $filter-title-bgcolor;
+    padding: 3px;
+    margin: 5px;
+    font-size: 18px;
+}
+
+#storeSort {
+    background-color: $prompt-container-bgcolor;
+    border-radius: 5px;
+    border: 2px solid $filter-title-bgcolor;
+    padding: 3px;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.storeBalance {
+    margin-right: 10%;
+    margin-top: -35px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+span:hover { cursor:default; }
