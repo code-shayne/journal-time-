@@ -35,8 +35,12 @@
     border: 2px solid $filter-title-bgcolor;
 }
 
-#filters {
-    font-size: 18px;
+#filterTitle {
+    font-size: 20px;
+}
+
+#filterTypeLabel {
+    font-size: 30px;
     padding:5px;
 }
 
@@ -50,11 +54,26 @@
     padding: 0px 10px;
 }
 
-.entry {
+#entriesContainerFiller {
+    height: 70px;
+}
+
+#addEntry {
+    border:none;
+    color:#757575;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 2px;
+}
+
+#entry {
+    display:inline;
+    list-style-type: none;
     background-color: #fff;
     margin: 10px;
-    margin-top: 67px;
-    width: 25%;
+    margin-top: 10px;
+    padding:5px;
+    width: 100px;
     height: 100px;
     border: 2px solid #000;
     border-radius: 10px;
