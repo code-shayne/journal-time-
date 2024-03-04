@@ -179,8 +179,12 @@ a:visited {
   border: 2px solid #8b86d0;
 }
 
-#filters {
-  font-size: 18px;
+#filterTitle {
+  font-size: 20px;
+}
+
+#filterTypeLabel {
+  font-size: 30px;
   padding: 5px;
 }
 
@@ -194,11 +198,26 @@ a:visited {
   padding: 0px 10px;
 }
 
-.entry {
+#entriesContainerFiller {
+  height: 70px;
+}
+
+#addEntry {
+  border: none;
+  color: #757575;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 2px;
+}
+
+#entry {
+  display: inline;
+  list-style-type: none;
   background-color: #fff;
   margin: 10px;
-  margin-top: 67px;
-  width: 25%;
+  margin-top: 10px;
+  padding: 5px;
+  width: 100px;
   height: 100px;
   border: 2px solid #000;
   border-radius: 10px;
@@ -243,9 +262,4 @@ a:visited {
 
 span:hover {
   cursor: default;
-}
-
-.hr {
-  border: 1px, solid, #8b86d0;
-  margin-top: 75px;
 }/*# sourceMappingURL=style.css.map */
