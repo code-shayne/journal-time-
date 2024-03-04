@@ -38,7 +38,6 @@
     background-color: #B8336A;
     font-size: 20px;
     padding: 5px;
-    position: sticky;
   }
 
   body {
@@ -49,7 +48,9 @@
     background-color: #B8336A;
     font-size: 20px;
     padding: 5px;
-    position: sticky;
+    position: fixed;
+    width: 100%;
+    height: 60px;
   }
 
 #login,
@@ -257,7 +258,7 @@ button {
     box-shadow: 8px 8px 20px #0f355c;
     position: relative;
     overflow: hidden;
-    margin: 50px 33.5%; 
+    margin: 90px 33.5%; 
     border-radius: 50px;
 }
 
