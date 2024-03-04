@@ -18,10 +18,10 @@ function validate(){
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 if ( username == "Formget" && password == "formget#123"){
-    //change this to match with something in database
+    //*****change this to match with something in database
 alert ("Login successfully");
 window.location = "success.html"; // Redirecting to other page.
-//also change this to be able to access all of the entries on this account
+//*****also change this to be able to access all of the entries on this account
 return false;
 }
 else{
