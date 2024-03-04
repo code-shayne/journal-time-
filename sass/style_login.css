@@ -54,11 +54,12 @@
 
 #login,
 #pastEntries,
-#shop, 
-#about {
+#store, 
+#about,
+#tracking {
   background-color: #476CB0;
   font-family: "Fuzzy Bubbles", sans-serif;
-  color: #fff;
+  color: #000;
   padding: 3px;
   border-radius: 10px;
   border: 2px solid #175490;
@@ -157,6 +158,7 @@
     color:#000;
     font-size: 17px;
     margin: 75px 33.5%; 
+    font-family: "Fuzzy Bubbles", sans-serif;
   }
   
   #signin:hover {
@@ -189,6 +191,7 @@
     transition: transform 0.2s;
     width: 500px;
     text-align: center;
+    font-family: "Fuzzy Bubbles", sans-serif;
   }
 
 h1 {
@@ -203,6 +206,7 @@ label {
     text-align: left;
     color: #fff;
     font-weight: bold;
+    font-family: "Fuzzy Bubbles", sans-serif;
 }
  
  
@@ -214,6 +218,7 @@ input {
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-family: "Fuzzy Bubbles", sans-serif;
 }
  
 button {
@@ -253,13 +258,14 @@ button {
     position: relative;
     overflow: hidden;
     margin: 50px 33.5%; 
+    border-radius: 50px;
 }
 
 .btn {
     height: 60px;
     width: 300px;
     margin: 20px auto;
-    box-shadow: 10px 10px 30px #175490;
+    box-shadow: 10px 10px 30px #0f355c;
     border-radius: 50px;
     display: flex;
     justify-content: space-around;
