@@ -34,7 +34,7 @@ $filter-title-bgcolor: #8b86d0;
 
 html,body {
     font-size: 16px;
-    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-family:"Fuzzy Bubbles", sans-serif;
     color: $default-font-color;
     width: 100%;
     min-height: 100%;
@@ -105,7 +105,6 @@ body {
     padding: 5px;
     margin-right: 0.1cm;
     font-size: 17px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 #tracking {
@@ -114,7 +113,6 @@ body {
     padding: 5px;
     font-size: 17px;
     margin-right: 0.1cm;
-    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 #store {
@@ -123,7 +121,6 @@ body {
     padding: 5px;
     font-size: 17px;
     margin-right: 0.1cm;
-    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 #login {
@@ -133,7 +130,6 @@ body {
     padding: 5px;
     font-size: 17px;
     margin-right: 0.1cm;
-    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 #seriousPrompt {
@@ -142,7 +138,6 @@ body {
     padding: 3px;
     border-radius: 10px;
     border: 2px solid $hr-color;
-    font-family:Georgia, 'Times New Roman', Times, serif ;
 }
 
 #funnyPrompt {
@@ -151,7 +146,6 @@ body {
     padding: 3px;
     border-radius: 10px;
     border: 2px solid $hr-color;
-    font-family:Georgia, 'Times New Roman', Times, serif ;
 }
 
 #morePrompts {
@@ -160,7 +154,6 @@ body {
   padding: 3px;
   border-radius: 10px;
   border: 2px solid $hr-color;
-  font-family:Georgia, 'Times New Roman', Times, serif ;
 }
 
 
@@ -192,11 +185,22 @@ footer {
 }
 
 .footerContent #logo{
-    height: 40px;
+    height: 50px;
 }
 
 .footerItems {
-    display: inline;
+    display:inline;
     list-style-type: none;
-    font-size: 16px;
+    font-size: larger;
+}
+
+#footerTab {
+    margin-bottom: 10px;
+    margin-top: -25px;
+}
+
+#est {
+    font-size: small;
+    color:#444444;
+    text-align: center;
 }

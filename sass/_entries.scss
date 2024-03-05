@@ -22,7 +22,7 @@
     background-color: $filter-title-bgcolor;
     text-align:center;
     padding:10px;
-    font-size: 20px;
+    font-size: large;
     position:sticky;
 }
 
@@ -36,16 +36,16 @@
 }
 
 #filterTitle {
-    font-size: 20px;
+    font-size: larger;
 }
 
 #filterTypeLabel {
-    font-size: 30px;
+    font-size: medium;
     padding:5px;
 }
 
 .filter {
-    font-size: 16px;
+    font-size: smaller;
     padding-top: 5px;
 }
 

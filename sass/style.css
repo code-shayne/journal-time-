@@ -4,18 +4,6 @@
   box-sizing: border-box;
 }
 
-.fuzzy-bubbles-regular {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-bold {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 html, body {
   font-size: 16px;
   font-family: "Fuzzy Bubbles", sans-serif;
@@ -84,7 +72,6 @@ body {
   padding: 5px;
   margin-right: 0.1cm;
   font-size: 17px;
-  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 #tracking {
@@ -93,7 +80,6 @@ body {
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
-  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 #store {
@@ -102,7 +88,6 @@ body {
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
-  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 #login {
@@ -112,7 +97,6 @@ body {
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
-  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 #seriousPrompt {
@@ -121,7 +105,6 @@ body {
   padding: 3px;
   border-radius: 10px;
   border: 2px solid #175490;
-  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 #funnyPrompt {
@@ -130,7 +113,6 @@ body {
   padding: 3px;
   border-radius: 10px;
   border: 2px solid #175490;
-  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 #morePrompts {
@@ -139,7 +121,6 @@ body {
   padding: 3px;
   border-radius: 10px;
   border: 2px solid #175490;
-  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 a:link {
@@ -168,13 +149,24 @@ footer {
 }
 
 .footerContent #logo {
-  height: 40px;
+  height: 50px;
 }
 
 .footerItems {
   display: inline;
   list-style-type: none;
-  font-size: 16px;
+  font-size: larger;
+}
+
+#footerTab {
+  margin-bottom: 10px;
+  margin-top: -25px;
+}
+
+#est {
+  font-size: small;
+  color: #444444;
+  text-align: center;
 }
 
 .entriesFilter {
@@ -192,7 +184,7 @@ footer {
   background-color: #8b86d0;
   text-align: center;
   padding: 10px;
-  font-size: 20px;
+  font-size: large;
   position: sticky;
 }
 
@@ -206,16 +198,16 @@ footer {
 }
 
 #filterTitle {
-  font-size: 20px;
+  font-size: larger;
 }
 
 #filterTypeLabel {
-  font-size: 30px;
+  font-size: medium;
   padding: 5px;
 }
 
 .filter {
-  font-size: 16px;
+  font-size: smaller;
   padding-top: 5px;
 }
 
@@ -288,4 +280,8 @@ footer {
 
 span:hover {
   cursor: default;
+}
+
+.aboutPage {
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
