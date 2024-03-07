@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/style.css">
-    <link rel="icon" href="pencil.png">
+    <link rel="icon" href="images/pencil.png">
     <title>Store</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,12 +37,21 @@
         <div>
             <input class="storeSearch" type="search" placeholder="Search all items">
             <a href="#filterPopup" id="storeFilter" class="button" title="Filters">Filter</a>
-            <div id="filterPopup" class="popup">
-
-            </div>
-            <a href="#sortPopup" id="storeSort" class="button" title="Sort">Sort</a>
-            <div id="storePopup" class="popup">
-                
+            <select name="sortOptions" id="sortOptions" class="button" title="Sort">
+                <option value="featured">Featured</option>
+                <option value="bestSelling">Best Selling</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="priceHigh-low">Price Descending</option>
+                <option value="priceLow-high">Price Ascending</option>
+            </select>
+        </div>
+        <div id="filterPopup" class="popup">
+            <div class="content">
+                <hi>Filters</hi>
+                <a href="#" class="box-close">
+                    x
+                </a>
             </div>
         </div>
          <div class="storeBalance">

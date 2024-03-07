@@ -263,7 +263,7 @@ footer {
   font-size: 18px;
 }
 
-#storeSort {
+#sortOptions {
   background-color: #a19ce1;
   border-radius: 5px;
   border: 2px solid #8b86d0;
@@ -287,6 +287,43 @@ span:hover {
   height: 40px;
   margin-right: -150px;
   margin-top: -8px;
+}
+
+.popup {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.4s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.content {
+  position: absolute;
+  background: #a19ce1;
+  height: 100%;
+  width: 30%;
+  padding: 1em 2em;
+  border-radius: 4px;
+}
+
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.box-close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: #fe0606;
+  text-decoration: none;
+  font-size: 30px;
 }
 
 .aboutPage {
