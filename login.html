@@ -36,8 +36,8 @@
     <div class="container">
         <div class="slider"></div>
         <div class="btn">
-            <input type="button" value="Login" id="submit" onclick="validate()"/>
-            <input type="button" value="Signup" id="submit" onclick="validate()"/>
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
             <!--needs a new function-->
 
         </div>
@@ -56,6 +56,7 @@
                        id="password"
                        placeholder="password">
                 <button class="clkbtn" onclick="login()">Login</button>
+                <button class="clkbtn" onclick="resetAttempts()">Reset</button>
             </div>
              <div class="signup-box">
                 <label for="name">
@@ -84,6 +85,7 @@
                        class="password ele"
                        placeholder="Confirm password">
                 <button class="clkbtn" onclick="validate()">Signup</button>
+                <button class="clkbtn" onclick="resetAttempts()">Reset</button>
             </div>
         </div>
     </div>
