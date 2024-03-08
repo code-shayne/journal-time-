@@ -86,7 +86,18 @@ span:hover { cursor:default; }
     position: absolute;
     top: 0;
     right: 15px;
-    color: #fe0606;
+    color: #000000;
     text-decoration: none;
     font-size: 30px;
+}
+
+#clearFilters-s {
+    height: 20px;
+    width: 50px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 0px;
+    background-color: $prompt-container-bgcolor;
+    border: 1px solid $filter-title-bgcolor;
+    font-size: 15px;
 }

@@ -9,14 +9,27 @@
 
 .entriesFilter {
     background-color: $prompt-container-bgcolor;
-    height: 100%;
     width: 20%;
+    top: 0;
+    bottom: 0;
     position: fixed;
     z-index:1;
     margin-top: 58px;
     left: 0;
-    overflow-x: hidden;
+    overflow-y: scroll;
 }
+
+.entriesFilter::-webkit-scrollbar {
+    width: 5px;
+}
+
+.entriesFilter::-webkit-scrollbar-thumb {
+    background: $filter-title-bgcolor;
+  }
+
+.entriesFilter::-webkit-scrollbar-track {
+    background-color: $prompt-container-bgcolor;
+   }
 
 .entriesFilterTitle {
     background-color: $filter-title-bgcolor;
@@ -37,6 +50,22 @@
 
 #filterTitle {
     font-size: larger;
+}
+
+#clearFilters-e {
+    height: 20px;
+    width: 50px;
+    margin-right: 10px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 0px;
+    background-color: $prompt-container-bgcolor;
+    border: 1px solid $filter-title-bgcolor;
+    font-size: 15px;
+}
+
+.filterTypes {
+    position:static;
 }
 
 #filterTypeLabel {
@@ -60,8 +89,8 @@
 
 #addEntry {
     border:none;
-    color:#757575;
-    background-color: #fff;
+    color:#fff;
+    background-color: $prompt-color;
     font-size: 16px;
     padding: 2px;
 }
@@ -69,12 +98,14 @@
 #entry {
     display:inline;
     list-style-type: none;
-    background-color: #fff;
+    background-color: $prompt-color;
+    color: #fff;
     margin: 10px;
     margin-top: 10px;
     padding:5px;
     width: 100px;
     height: 100px;
-    border: 2px solid #000;
+    border: 2px solid $hr-color;
     border-radius: 10px;
+    align-items: center;
 }

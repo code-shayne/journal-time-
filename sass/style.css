@@ -172,13 +172,26 @@ footer {
 
 .entriesFilter {
   background-color: #a19ce1;
-  height: 100%;
   width: 20%;
+  top: 0;
+  bottom: 0;
   position: fixed;
   z-index: 1;
   margin-top: 58px;
   left: 0;
-  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.entriesFilter::-webkit-scrollbar {
+  width: 5px;
+}
+
+.entriesFilter::-webkit-scrollbar-thumb {
+  background: #8b86d0;
+}
+
+.entriesFilter::-webkit-scrollbar-track {
+  background-color: #a19ce1;
 }
 
 .entriesFilterTitle {
@@ -202,6 +215,22 @@ footer {
   font-size: larger;
 }
 
+#clearFilters-e {
+  height: 20px;
+  width: 50px;
+  margin-right: 10px;
+  margin-top: 5px;
+  text-align: center;
+  padding: 0px;
+  background-color: #a19ce1;
+  border: 1px solid #8b86d0;
+  font-size: 15px;
+}
+
+.filterTypes {
+  position: static;
+}
+
 #filterTypeLabel {
   font-size: medium;
   padding: 5px;
@@ -223,8 +252,8 @@ footer {
 
 #addEntry {
   border: none;
-  color: #757575;
-  background-color: #fff;
+  color: #fff;
+  background-color: #476CB0;
   font-size: 16px;
   padding: 2px;
 }
@@ -232,14 +261,16 @@ footer {
 #entry {
   display: inline;
   list-style-type: none;
-  background-color: #fff;
+  background-color: #476CB0;
+  color: #fff;
   margin: 10px;
   margin-top: 10px;
   padding: 5px;
   width: 100px;
   height: 100px;
-  border: 2px solid #000;
+  border: 2px solid #175490;
   border-radius: 10px;
+  align-items: center;
 }
 
 .shopHeader {
@@ -321,9 +352,20 @@ span:hover {
   position: absolute;
   top: 0;
   right: 15px;
-  color: #fe0606;
+  color: #000000;
   text-decoration: none;
   font-size: 30px;
+}
+
+#clearFilters-s {
+  height: 20px;
+  width: 50px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 0px;
+  background-color: #a19ce1;
+  border: 1px solid #8b86d0;
+  font-size: 15px;
 }
 
 .aboutPage {
