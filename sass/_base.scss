@@ -76,6 +76,39 @@ body {
     margin: 1%;
   }
 
+  #journalSpace {
+    height: 200px;
+    width: 60%;
+    font-family: "Fuzzy Bubbles", sans-serif;
+    padding: 5px;
+    border: 1.5px solid $hr-color;
+    border-radius: 10px;
+  }
+
+#highNegative {
+    height: 100px;
+    width: 100px;
+    background-color: #d33737;
+}
+
+#highPositive {
+    height: 100px;
+    width: 100px;
+    background-color: #d9b23e;
+}
+
+#lowNegative {
+    height: 100px;
+    width: 100px;
+    background-color: #5039e7;
+}
+
+#lowPositive {
+    height: 100px;
+    width: 100px;
+    background-color: #27bd3b;
+}
+
 //buttons
 
 .button {

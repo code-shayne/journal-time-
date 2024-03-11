@@ -17,7 +17,7 @@
         <section class = "logo">
             <div class = "gridContainer">
             <form id="logoSpace">
-                <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' class="button" 
+                <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' 
                     width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
                 <!-- <a href="./index.html" id="name" class="button" title="Home"
                 tabindex="0">Journal Time!</a> -->
@@ -52,9 +52,16 @@
             <section class = "journalEntry">
                 <hi>What's something you want to get off your chest?</hi>
                 <form id="itemEntryForm">
-                    <input id="newItem" type="text" size="95" wrap="hard"
-                    autocomplete="off" placeholder="Start journaling here..." tabindex="0"/>
+                    <textarea id="journalSpace" type="text" size="95" wrap="hard"
+                    autocomplete="off" placeholder="Start journaling here..." tabindex="0"></textarea>
                 </section>
+        <section class="emotionTracking" >
+            <hi>How are you feeling?</hi>
+            <button class="button" id="highNegative">High Energy Negative</button>
+            <button class="button" id="highPositive">High Energy Positive</button>
+            <button class="button" id="lowNegative">Low Energy Negative</button>
+            <button class="button" id="lowPositive">Low Energy Positive</button>
+        </section>
         <footer>
             <div class="footerContent">
                 <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' class="button" 
