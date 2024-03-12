@@ -46,6 +46,10 @@ body {
   margin: 1%;
 }
 
+.userInput {
+  display: inline;
+}
+
 #journalSpace {
   height: 200px;
   width: 60%;
@@ -53,6 +57,19 @@ body {
   padding: 5px;
   border: 1.5px solid #175490;
   border-radius: 10px;
+}
+
+.vl {
+  border-left: 2px solid #175490;
+}
+
+.emotionTracking {
+  margin: 1%;
+  width: 35%;
+}
+
+.emotionGroup {
+  margin-top: 5px;
 }
 
 #highNegative {

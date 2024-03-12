@@ -76,6 +76,10 @@ body {
     margin: 1%;
   }
 
+.userInput {
+    display: inline;
+}
+
   #journalSpace {
     height: 200px;
     width: 60%;
@@ -84,6 +88,19 @@ body {
     border: 1.5px solid $hr-color;
     border-radius: 10px;
   }
+
+.vl {
+    border-left: 2px solid $hr-color;
+}
+
+.emotionTracking {
+    margin: 1%;
+    width: 35%;
+}
+
+.emotionGroup {
+    margin-top: 5px;
+}
 
 #highNegative {
     height: 100px;
