@@ -72,27 +72,37 @@ body {
   margin-top: 5px;
 }
 
-#highNegative {
+.emotion-button {
   height: 100px;
   width: 100px;
+  vertical-align: middle;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+.emotion-button:hover {
+  cursor: pointer;
+}
+
+.emotion-button:hover {
+  filter: brightness(110%);
+  box-shadow: 4px 2px 5px #000;
+}
+
+#highNegative {
   background-color: #d33737;
 }
 
 #highPositive {
-  height: 100px;
-  width: 100px;
   background-color: #d9b23e;
 }
 
 #lowNegative {
-  height: 100px;
-  width: 100px;
   background-color: #5039e7;
 }
 
 #lowPositive {
-  height: 100px;
-  width: 100px;
   background-color: #27bd3b;
 }
 
