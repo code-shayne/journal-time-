@@ -106,6 +106,10 @@ body {
   background-color: #27bd3b;
 }
 
+.fade {
+  background-color: #000;
+}
+
 .button {
   vertical-align: middle;
   border-radius: 10px;

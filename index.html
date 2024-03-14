@@ -46,8 +46,8 @@
                 tabindex="0">Serious Prompt</button>
                 <button id="funnyPrompt" class="button" title = "Generate Funny Prompt"
                 tabindex="0">Funny Prompt</button>
-                <button id="morePrompts" class="button" title = "Add More Prompt Packages"
-                tabindex="0">+</button>
+                <a href="./store.html"><button id="morePrompts" class="button" title = "Add More Prompt Packages"
+                tabindex="0">+</button></a>
         </section>
         <div class="userInput">
             <section class = "journalEntry">
@@ -60,13 +60,14 @@
             <section class="emotionTracking">
                 <hi id="emotionTitle">How are you feeling?</hi>
                 <div class="emotionGroup">
-                    <button class="emotion-button" id="highNegative" onclick="emotionGroup()">High Energy Negative</button>
-                    <button class="emotion-button" id="highPositive" onclick="emotionGroup()">High Energy Positive</button>
+                    <button class="emotion-button" id="highNegative">High Energy Negative</button>
+                    <button class="emotion-button" id="highPositive">High Energy Positive</button>
                 </div>
                 <div class="emotionGroup">
-                    <button class="emotion-button" id="lowNegative" onclick="emotionGroup()">Low Energy Negative</button>
-                    <button class="emotion-button" id="lowPositive" onclick="emotionGroup()">Low Energy Positive</button>
+                    <button class="emotion-button" id="lowNegative">Low Energy Negative</button>
+                    <button class="emotion-button" id="lowPositive">Low Energy Positive</button>
                 </div>
+                <script src="index.js"></script>
             </section>
         </div>
         <footer>
@@ -82,7 +83,6 @@
                 <hi id="est">est. 2024</hi>
             </div>
         </footer>
-        <script src="index.js"></script>
     </main>
 </body>
 </html>
