@@ -52,6 +52,16 @@
     font-size: larger;
 }
 
+.entries-input {
+    display: auto;
+    width: 0;
+    margin-bottom: 0px;
+    padding: 0px;
+    box-sizing: auto;
+    border: none;
+    border-radius: 0;
+}
+
 #clearFilters-e {
     height: 20px;
     width: 50px;
