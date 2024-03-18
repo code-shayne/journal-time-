@@ -151,7 +151,8 @@ body {
   margin-right: 0.1cm;
 }
 
-#login {
+#login-page-button,
+#signup-page-button {
   background-color: #B8336A;
   filter: brightness(115%);
   border: 1px solid #fff;
@@ -534,25 +535,24 @@ h1 {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-#login-page-button {
+#login-page-button,
+#signup-page-button {
   padding: 15px;
+  font-size: 22px;
   border-radius: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 25px auto;
   border: none;
   color: white;
   cursor: pointer;
   background-color: #175490;
-  width: 100%;
+  width: 200px;
+  height: 50px;
   font-size: 16px;
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-#login-page-button:hover {
-  cursor: pointer;
-}
-
-#login-page-button:hover {
+#login-page-button:hover,
+#signup-page-button:hover {
   filter: brightness(102%);
   box-shadow: 4px 2px 5px #0f355c;
 }
@@ -577,8 +577,8 @@ h1 {
 .btn {
   height: 60px;
   width: 300px;
-  margin: 20px auto;
   box-shadow: 10px 10px 30px #0f355c;
+  margin: 25px auto;
   border-radius: 50px;
   display: flex;
   justify-content: space-around;
@@ -657,7 +657,7 @@ h1 {
   font-size: 18px;
 }
 
-#clkbtn {
+.slider, #clkbttn {
   height: 60px;
   width: 150px;
   border-radius: 50px;
@@ -677,12 +677,18 @@ h1 {
   .title {
     font-size: 15px;
   }
-  .btn {
-    height: 50px;
-    width: 200px;
+  .bttn {
+    height: 60px;
+    width: 300px;
     margin: 20px auto;
+    box-shadow: 10px 10px 30px rgb(0, 0, 0);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
-  #submit {
+  #login-page-button,
+  #signup-page-button {
     font-size: 19px;
   }
   .slider {
@@ -710,7 +716,7 @@ h1 {
     width: 250px;
     font-size: 15px;
   }
-  #clkbtn {
+  #clkbttn {
     height: 50px;
     width: 130px;
     font-size: 19px;
@@ -727,12 +733,13 @@ h1 {
   .title {
     font-size: 10px;
   }
-  .btn {
+  .bttn {
     height: 50px;
     width: 200px;
     margin: 20px auto;
   }
-  #submit {
+  #login-page-button,
+  #signup-page-button {
     font-size: 19px;
   }
   .slider {
@@ -760,7 +767,7 @@ h1 {
     width: 220px;
     font-size: 15px;
   }
-  .clkbtn {
+  .clkbttn {
     height: 50px;
     width: 130px;
     font-size: 19px;

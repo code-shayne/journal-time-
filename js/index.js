@@ -1,5 +1,3 @@
-// import node from "./login.js";
-
 let signup = document.querySelector(".signup");
 let login = document.querySelector(".login");
 let slider = document.querySelector(".slider");
@@ -19,56 +17,21 @@ function fade() {
     document.getElementById("highNegative").style.backgroundColor="green";
 }
 
-// let emotion = document.querySelector(".emotion-button");
+let emotion = document.querySelector(".emotion-button");
 
-// emotion.addEventListener("click", () => {
-//     emotion.classList.add("fade");
-// });
+emotion.addEventListener("click", () => {
+    emotion.classList.add("fade");
+});
 
-// function fade(element) {
-//     var op = 1;  // initial opacity
-//     var timer = setInterval(function () {
-//         if (op <= 0.1){
-//             clearInterval(timer);
-//             element.style.display = 'none';
-//         }
-//         element.style.opacity = op;
-//         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-//         op -= op * 0.1;
-//     }, 50);
-// }
-
-//let attempt = 3;
-
-    // function validate() {
-    //     var username = document.getElementById("username").value;
-    //     var password = document.getElementById("password").value;
-
-    //     if (username && password) {
-    //         alert("Login successfully");
-    //         window.location = "success.html"; // Redirecting to another page.
-    //         return false;
-    //     } else {
-    //         attempt--;
-
-    //         if (!isNaN(attempt) && attempt > 0) {
-    //             alert("You have left " + attempt + " attempts.");
-    //         } else {
-    //             alert("No attempts left. Please contact support.");
-    //             // Optionally, disable fields or perform additional actions here
-    //         }
-
-    //         // Disabling fields after 3 attempts.
-    //         if (attempt === 0) {
-    //             document.getElementById("username").disabled = true;
-    //             document.getElementById("password").disabled = true;
-    //             document.getElementById("submit").disabled = true;
-    //             return false;
-    //         }
-    //     }
-    // }
-
-    // // New function to reset attempts
-    // function resetAttempts() {
-    //     attempt = 3;
-    // }
+function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
