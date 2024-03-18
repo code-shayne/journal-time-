@@ -60,14 +60,19 @@
                 </section>
             <div class="vl"></div>
             <section class="emotionTracking">
+                <script>
+                    function fade(button) {
+                        button.style.visibility="hidden";
+                    }
+                </script>
                 <hi id="emotionTitle">How are you feeling?</hi>
                 <div class="emotionGroup">
-                    <button class="emotion-button" id="highNegative">High Energy Negative</button>
-                    <button class="emotion-button" id="highPositive">High Energy Positive</button>
+                    <button type="button" class="emotion-button" id="highNegative" onclick="fade(this)">High Energy Negative</button>
+                    <button type="button" class="emotion-button" id="highPositive" onclick="fade(this)">High Energy Positive</button>
                 </div>
                 <div class="emotionGroup">
-                    <button class="emotion-button" id="lowNegative">Low Energy Negative</button>
-                    <button class="emotion-button" id="lowPositive">Low Energy Positive</button>
+                    <button type="button" class="emotion-button" id="lowNegative" onclick="fade(this)">Low Energy Negative</button>
+                    <button type="button" class="emotion-button" id="lowPositive" onclick="fade(this)">Low Energy Positive</button>
                 </div>
             </section>
         </div>

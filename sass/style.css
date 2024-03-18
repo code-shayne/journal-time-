@@ -106,7 +106,7 @@ body {
   background-color: #27bd3b;
 }
 
-.fade {
+fade {
   background-color: #000;
 }
 
@@ -527,7 +527,7 @@ h1 {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-input {
+#login-input {
   display: block;
   width: 100%;
   margin-bottom: 15px;
@@ -661,7 +661,7 @@ input {
   font-size: 18px;
 }
 
-#clkbttn {
+#clkbtn {
   height: 60px;
   width: 150px;
   border-radius: 50px;
@@ -785,18 +785,4 @@ input {
   align-items: center;
   text-align: center;
   margin-top: -20px;
-}
-
-.bttn {
-  height: 60px;
-  width: 300px;
-  margin: 20px auto;
-  box-shadow: 10px 10px 30px #0f355c;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Fuzzy Bubbles", sans-serif;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
