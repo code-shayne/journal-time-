@@ -106,6 +106,26 @@ body {
   background-color: #27bd3b;
 }
 
+.emotion {
+  position: absolute;
+  margin: 5px;
+  margin-left: 1px;
+  width: 99px;
+  border-radius: 10px;
+  visibility: hidden;
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+.emotion:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: 4px 2px 5px #000;
+}
+
+#highNeg {
+  background-color: #e66d6d;
+}
+
 .button {
   vertical-align: middle;
   border-radius: 10px;
@@ -151,8 +171,7 @@ body {
   margin-right: 0.1cm;
 }
 
-#login-page-button,
-#signup-page-button {
+#login {
   background-color: #B8336A;
   filter: brightness(115%);
   border: 1px solid #fff;
@@ -535,24 +554,25 @@ h1 {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-#login-page-button,
-#signup-page-button {
+#login-page-button {
   padding: 15px;
-  font-size: 22px;
   border-radius: 10px;
-  margin: 25px auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border: none;
   color: white;
   cursor: pointer;
   background-color: #175490;
-  width: 200px;
-  height: 50px;
+  width: 100%;
   font-size: 16px;
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-#login-page-button:hover,
-#signup-page-button:hover {
+#login-page-button:hover {
+  cursor: pointer;
+}
+
+#login-page-button:hover {
   filter: brightness(102%);
   box-shadow: 4px 2px 5px #0f355c;
 }
@@ -577,8 +597,8 @@ h1 {
 .btn {
   height: 60px;
   width: 300px;
+  margin: 20px auto;
   box-shadow: 10px 10px 30px #0f355c;
-  margin: 25px auto;
   border-radius: 50px;
   display: flex;
   justify-content: space-around;
@@ -657,7 +677,7 @@ h1 {
   font-size: 18px;
 }
 
-.slider, #clkbttn {
+#clkbtn {
   height: 60px;
   width: 150px;
   border-radius: 50px;
@@ -677,18 +697,12 @@ h1 {
   .title {
     font-size: 15px;
   }
-  .bttn {
-    height: 60px;
-    width: 300px;
+  .btn {
+    height: 50px;
+    width: 200px;
     margin: 20px auto;
-    box-shadow: 10px 10px 30px rgb(0, 0, 0);
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
   }
-  #login-page-button,
-  #signup-page-button {
+  #submit {
     font-size: 19px;
   }
   .slider {
@@ -716,7 +730,7 @@ h1 {
     width: 250px;
     font-size: 15px;
   }
-  #clkbttn {
+  #clkbtn {
     height: 50px;
     width: 130px;
     font-size: 19px;
@@ -733,13 +747,12 @@ h1 {
   .title {
     font-size: 10px;
   }
-  .bttn {
+  .btn {
     height: 50px;
     width: 200px;
     margin: 20px auto;
   }
-  #login-page-button,
-  #signup-page-button {
+  #submit {
     font-size: 19px;
   }
   .slider {
@@ -767,7 +780,7 @@ h1 {
     width: 220px;
     font-size: 15px;
   }
-  .clkbttn {
+  .clkbtn {
     height: 50px;
     width: 130px;
     font-size: 19px;

@@ -136,6 +136,27 @@ body {
     background-color: #27bd3b;
 }
 
+.emotion {
+    position: absolute;
+    margin: 5px;
+    margin-left: 1px;
+    width: 99px;
+    border-radius: 10px;
+    visibility: hidden;
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+.emotion:hover { 
+    cursor: pointer;
+    filter: brightness(110%);
+    box-shadow: 4px 2px 5px #000;
+}
+
+#highNeg {
+    background-color:#e66d6d;
+}
+
+
 //buttons
 
 .button {

@@ -63,10 +63,26 @@
                 <script>
                     function fade(button) {
                         button.style.visibility="hidden";
+                        const buttons = document.querySelectorAll('.emotion-button');
+                        buttons.forEach(btn => {
+                            if (btn !== button && btn.style.visibility === "hidden") {
+                                btn.style.visibility = "visible";
+                            }
+                        });
+                        const emotions = document.querySelectorAll('.emotion');
+                        emotions.forEach(emotion => {
+                            if (emotion.style.visibility === "" || emotion.style.visibility === "hidden") {
+                                emotion.style.visibility = "visible";
+                            }
+                            if (emotion.parentNode !== button.parentNode && btn.style.visibility === "visible") {
+                                btn.style.visibility = "hidden";
+                            }
+                        });
                     }
                 </script>
                 <hi id="emotionTitle">How are you feeling?</hi>
                 <div class="emotionGroup">
+                    <button type="button" class="emotion" id="highNeg">anxious</button>
                     <button type="button" class="emotion-button" id="highNegative" onclick="fade(this)">High Energy Negative</button>
                     <button type="button" class="emotion-button" id="highPositive" onclick="fade(this)">High Energy Positive</button>
                 </div>
