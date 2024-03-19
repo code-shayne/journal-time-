@@ -151,8 +151,8 @@ body {
   margin-right: 0.1cm;
 }
 
-#login-page-button,
-#signup-page-button {
+.login,
+.signup {
   background-color: #B8336A;
   filter: brightness(115%);
   border: 1px solid #fff;
@@ -535,8 +535,8 @@ h1 {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-#login-page-button,
-#signup-page-button {
+.login,
+.signup {
   padding: 15px;
   font-size: 22px;
   border-radius: 10px;
@@ -551,8 +551,8 @@ h1 {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-#login-page-button:hover,
-#signup-page-button:hover {
+.login:hover,
+.signup:hover {
   filter: brightness(102%);
   box-shadow: 4px 2px 5px #0f355c;
 }
@@ -570,7 +570,7 @@ h1 {
   box-shadow: 8px 8px 20px #0f355c;
   position: relative;
   overflow: hidden;
-  margin: 90px 33.5%;
+  margin: 90px 33.5%; 
   border-radius: 50px;
 }
 
@@ -578,12 +578,24 @@ h1 {
   height: 60px;
   width: 300px;
   box-shadow: 10px 10px 30px #0f355c;
-  margin: 25px auto;
+  margin: 20px auto;
   border-radius: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+.login,
+.signup {
+    font-size: 22px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 60px;
 }
 
 #submit {
@@ -604,7 +616,7 @@ h1 {
   top: 20px;
   left: 100px;
   transition: all 0.5s ease-in-out;
-  font-family: "Fuzzy Bubbles", sans-serif;
+  border-radius: 50px;
 }
 
 .moveslider {
@@ -619,6 +631,7 @@ h1 {
   position: relative;
   transition: all 0.5s ease-in-out;
   left: 0px;
+  border-radius: 50px;
 }
 
 .form-section-move {
@@ -635,6 +648,7 @@ h1 {
   justify-content: center;
   padding: 0px 40px;
   font-family: "Fuzzy Bubbles", sans-serif;
+  border-radius: 50px;
 }
 
 .login-box {
@@ -657,7 +671,7 @@ h1 {
   font-size: 18px;
 }
 
-.slider, #clkbttn {
+.clkbtn {
   height: 60px;
   width: 150px;
   border-radius: 50px;
@@ -666,6 +680,7 @@ h1 {
   border: none;
   cursor: pointer;
   font-family: "Fuzzy Bubbles", sans-serif;
+  margin: 20px 30%;
 }
 
 @media screen and (max-width: 650px) {
@@ -687,8 +702,8 @@ h1 {
     justify-content: space-around;
     align-items: center;
   }
-  #login-page-button,
-  #signup-page-button {
+  .login,
+  .signup {
     font-size: 19px;
   }
   .slider {
@@ -716,7 +731,7 @@ h1 {
     width: 250px;
     font-size: 15px;
   }
-  #clkbttn {
+  #clkbtn {
     height: 50px;
     width: 130px;
     font-size: 19px;
@@ -738,8 +753,8 @@ h1 {
     width: 200px;
     margin: 20px auto;
   }
-  #login-page-button,
-  #signup-page-button {
+  .login,
+  .signup {
     font-size: 19px;
   }
   .slider {
@@ -767,7 +782,7 @@ h1 {
     width: 220px;
     font-size: 15px;
   }
-  .clkbttn {
+  .clkbtn {
     height: 50px;
     width: 130px;
     font-size: 19px;
