@@ -69,26 +69,117 @@
                                 btn.style.visibility = "visible";
                             }
                         });
-                        const emotions = document.querySelectorAll('.emotion');
-                        emotions.forEach(emotion => {
-                            if (emotion.style.visibility === "" || emotion.style.visibility === "hidden") {
-                                emotion.style.visibility = "visible";
-                            }
-                            if (emotion.parentNode !== button.parentNode && btn.style.visibility === "visible") {
-                                btn.style.visibility = "hidden";
-                            }
+                    }
+                    
+                    function highNegList(button) {
+                        const list1 = document.querySelectorAll('.highNeg-list');
+                        const list2 = document.querySelectorAll('.highPos-list');
+                        const list3 = document.querySelectorAll('.lowNeg-list');
+                        const list4 = document.querySelectorAll('.lowPos-list');
+                        list1.forEach(item => {
+                            item.style.visibility = "visible";
                         });
+                        list2.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list3.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list4.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                    }
+                    function highPosList(button) {
+                        const list1 = document.querySelectorAll('.highNeg-list');
+                        const list2 = document.querySelectorAll('.highPos-list');
+                        const list3 = document.querySelectorAll('.lowNeg-list');
+                        const list4 = document.querySelectorAll('.lowPos-list');
+                        list2.forEach(item => {
+                            item.style.visibility = "visible";
+                        });
+                        list1.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list3.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list4.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                    }
+                    function lowNegList(button) {
+                        const list1 = document.querySelectorAll('.highNeg-list');
+                        const list2 = document.querySelectorAll('.highPos-list');
+                        const list3 = document.querySelectorAll('.lowNeg-list');
+                        const list4 = document.querySelectorAll('.lowPos-list');
+                        list3.forEach(item => {
+                            item.style.visibility = "visible";
+                        });
+                        list1.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list2.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list4.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                    }
+                    function lowPosList(button) {
+                        const list1 = document.querySelectorAll('.highNeg-list');
+                        const list2 = document.querySelectorAll('.highPos-list');
+                        const list3 = document.querySelectorAll('.lowNeg-list');
+                        const list4 = document.querySelectorAll('.lowPos-list');
+                        list4.forEach(item => {
+                            item.style.visibility = "visible";
+                        });
+                        list1.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list2.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list3.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
                     }
                 </script>
                 <hi id="emotionTitle">How are you feeling?</hi>
                 <div class="emotionGroup">
-                    <button type="button" class="emotion" id="highNeg">anxious</button>
-                    <button type="button" class="emotion-button" id="highNegative" onclick="fade(this)">High Energy Negative</button>
-                    <button type="button" class="emotion-button" id="highPositive" onclick="fade(this)">High Energy Positive</button>
+                    <button type="button" class="emotion-button" id="highNegative" onclick="fade(this), highNegList(this)">High Energy Negative</button>
+                    <ul class="highNeg-list">
+                        <li><button type="button" class="emotion" id="highNeg">anxious</button></li>
+                        <li><button type="button" class="emotion" id="highNeg">angry</button></li>
+                        <li><button type="button" class="emotion" id="highNeg">stressed</button></li>
+                        <li><button type="button" class="emotion" id="highNeg">confused</button></li>
+                        <li><button type="button" class="emotion" id="highNeg">frustrated</button></li>
+                    </ul>
+                    <button type="button" class="emotion-button" id="highPositive" onclick="fade(this), highPosList(this)">High Energy Positive</button>
+                    <ul class="highPos-list">
+                        <li><button type="button" class="emotion" id="highPos">estatic</button></li>
+                        <li><button type="button" class="emotion" id="highPos">happy</button></li>
+                        <li><button type="button" class="emotion" id="highPos">excited</button></li>
+                        <li><button type="button" class="emotion" id="highPos">suprised</button></li>
+                        <li><button type="button" class="emotion" id="highPos">motivated</button></li>
+                    </ul>
                 </div>
                 <div class="emotionGroup">
-                    <button type="button" class="emotion-button" id="lowNegative" onclick="fade(this)">Low Energy Negative</button>
-                    <button type="button" class="emotion-button" id="lowPositive" onclick="fade(this)">Low Energy Positive</button>
+                    <button type="button" class="emotion-button" id="lowNegative" onclick="fade(this), lowNegList(this)">Low Energy Negative</button>
+                    <ul class="lowNeg-list">
+                        <li><button type="button" class="emotion" id="lowNeg">sad</button></li>
+                        <li><button type="button" class="emotion" id="lowNeg">bored</button></li>
+                        <li><button type="button" class="emotion" id="lowNeg">tired</button></li>
+                        <li><button type="button" class="emotion" id="lowNeg">miserable</button></li>
+                        <li><button type="button" class="emotion" id="lowNeg">disgusted</button></li>
+                    </ul>
+                    <button type="button" class="emotion-button" id="lowPositive" onclick="fade(this), lowPosList(this)">Low Energy Positive</button>
+                    <ul class="lowPos-list">
+                        <li><button type="button" class="emotion" id="lowPos">good</button></li>
+                        <li><button type="button" class="emotion" id="lowPos">relaxed</button></li>
+                        <li><button type="button" class="emotion" id="lowPos">satisfied</button></li>
+                        <li><button type="button" class="emotion" id="lowPos">content</button></li>
+                        <li><button type="button" class="emotion" id="lowPos">grateful</button></li>
+                    </ul>
                 </div>
             </section>
         </div>

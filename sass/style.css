@@ -111,8 +111,8 @@ body {
   margin: 5px;
   margin-left: 1px;
   width: 99px;
+  height: 18px;
   border-radius: 10px;
-  visibility: hidden;
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
@@ -122,8 +122,54 @@ body {
   box-shadow: 4px 2px 5px #000;
 }
 
+.highNeg-list {
+  visibility: hidden;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 380px;
+}
+
 #highNeg {
   background-color: #e66d6d;
+}
+
+.highPos-list {
+  visibility: hidden;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 380px;
+  left: 112px;
+}
+
+#highPos {
+  background-color: #dcbc5d;
+}
+
+.lowNeg-list {
+  visibility: hidden;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 484px;
+}
+
+#lowNeg {
+  background-color: #6450e5;
+}
+
+.lowPos-list {
+  visibility: hidden;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 484px;
+  left: 112px;
+}
+
+#lowPos {
+  background-color: #5de16e;
 }
 
 .button {
