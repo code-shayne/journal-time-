@@ -41,29 +41,26 @@ body {
   margin-top: 70px;
 }
 
-.journalEntry {
+#journalEntry {
   font-size: 15px;
   margin: 1%;
-}
-
-.userInput {
-  display: inline;
+  width: 60%;
 }
 
 #journalSpace {
   height: 200px;
-  width: 60%;
+  width: 100%;
   font-family: "Fuzzy Bubbles", sans-serif;
   padding: 5px;
   border: 1.5px solid #175490;
   border-radius: 10px;
 }
 
-.vl {
-  border-left: 2px solid #175490;
+.input {
+  display: inline-block;
 }
 
-.emotionTracking {
+#emotionTracking {
   margin: 1%;
   width: 35%;
 }
@@ -127,7 +124,7 @@ body {
   position: absolute;
   padding: 0;
   margin: 0;
-  top: 380px;
+  top: 185px;
 }
 
 #highNeg {
@@ -139,8 +136,8 @@ body {
   position: absolute;
   padding: 0;
   margin: 0;
-  top: 380px;
-  left: 112px;
+  top: 185px;
+  left: 523px;
 }
 
 #highPos {
@@ -152,7 +149,7 @@ body {
   position: absolute;
   padding: 0;
   margin: 0;
-  top: 484px;
+  top: 288px;
 }
 
 #lowNeg {
@@ -164,8 +161,8 @@ body {
   position: absolute;
   padding: 0;
   margin: 0;
-  top: 484px;
-  left: 112px;
+  top: 288px;
+  left: 523px;
 }
 
 #lowPos {

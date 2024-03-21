@@ -52,14 +52,13 @@
                 tabindex="0">+</button></a>
         </section>
         <div class="userInput">
-            <section class = "journalEntry">
+            <div class = "input" id="journalEntry">
                 <hi>What's something you want to get off your chest?</hi>
                 <form id="itemEntryForm">
                     <textarea id="journalSpace" type="text" name="entry"
                     autocomplete="off" placeholder="Start journaling here..." tabindex="0"></textarea>
-                </section>
-            <div class="vl"></div>
-            <section class="emotionTracking">
+                </div>
+            <div class="input" id="emotionTracking">
                 <script>
                     function fade(button) {
                         button.style.visibility="hidden";
@@ -181,7 +180,7 @@
                         <li><button type="button" class="emotion" id="lowPos">grateful</button></li>
                     </ul>
                 </div>
-            </section>
+            </div>
         </div>
         <footer>
             <div class="footerContent">
