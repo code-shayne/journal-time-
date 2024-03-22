@@ -811,7 +811,7 @@ h1 {
 
 /* new login page? */
 /* a is whatever is selected */
-a {
+.form a {
   text-align: left;
   flex-direction: column;
   text-decoration:none;
@@ -845,7 +845,7 @@ a {
     display: table;
     clear: both;
   }
-  li a {
+  .form li a {
     display:block;
     text-align: left;
     padding:0px;
@@ -863,7 +863,7 @@ a {
       color:white;
     }
   }
-  .active a {
+  .form .active a {
     background:#6d8cc5;
     text-align: left;
     color:white;
@@ -884,7 +884,7 @@ a {
   white-space: nowrap;
 }
 
-label {
+.form label {
   text-align:left;
   margin: 15px;
   color: white;
@@ -894,7 +894,7 @@ label {
   font-size:22px;
 }
 
-label.active {
+.form label.active {
   font-size:14px;
   text-align: left;
   .req {
@@ -902,11 +902,11 @@ label.active {
   }
 }
 
-label.highlight {
+.form label.highlight {
   color:white;
 }
 
-input, textarea {
+.form input, textarea {
   font-size:22px;
   text-align: left;
   display:block;
@@ -927,7 +927,7 @@ input, textarea {
   }
 }
 
-textarea {
+.form textarea {
   text-align: left;
   resize: vertical;
 }
