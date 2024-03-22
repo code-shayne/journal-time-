@@ -71,31 +71,37 @@ body {
     margin-top: 70px;
   }
 
-  .journalEntry {
+  #journalEntry {
     font-size: 15px;
     margin: 1%;
+    width: 60%;
   }
 
-.userInput {
-    display: inline;
-}
+// .userInput {
+//     display: inline-flex;
+// }
 
   #journalSpace {
-    height: 200px;
-    width: 60%;
+    height: 300px;
+    width: 100%;
+    resize:none;
     font-family: "Fuzzy Bubbles", sans-serif;
     padding: 5px;
     border: 1.5px solid $hr-color;
     border-radius: 10px;
   }
 
-.vl {
-    border-left: 2px solid $hr-color;
+.input {
+    display: inline-table;
 }
 
-.emotionTracking {
+#emotionTracking {
     margin: 1%;
     width: 35%;
+}
+
+#emotionTitle {
+    font-size: 16px;
 }
 
 .emotionGroup {
@@ -134,6 +140,76 @@ body {
 
 #lowPositive {
     background-color: #27bd3b;
+}
+
+.emotion {
+    margin-left: 1px;
+    width: 99px;
+    height: 18px;
+    border-radius: 10px;
+    font-family: "Fuzzy Bubbles", sans-serif;
+    float: left;
+    margin: 1px;
+}
+
+.emotion:hover { 
+    cursor: pointer;
+    filter: brightness(110%);
+    box-shadow: 4px 2px 5px #000;
+}
+
+.highNeg-list {
+    visibility: hidden;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -100px;
+}
+
+#highNeg {
+    background-color:#e66d6d;
+}
+
+.highPos-list {
+    visibility: hidden;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -100px;
+    margin-left: 107px;
+}
+
+#highPos {
+    background-color:#dcbc5d;
+}
+
+.lowNeg-list {
+    visibility: hidden;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -100px;
+}
+
+#lowNeg {
+    background-color:#6450e5;
+}
+
+.lowPos-list {
+    visibility: hidden;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -100px;
+    margin-left: 107px;
+}
+
+#lowPos {
+    background-color:#5de16e;
 }
 
 //buttons

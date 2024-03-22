@@ -89,31 +89,33 @@ body {
   margin-top: 70px;
 }
 
-.journalEntry {
+#journalEntry {
   font-size: 15px;
   margin: 1%;
-}
-
-.userInput {
-  display: inline;
+  width: 60%;
 }
 
 #journalSpace {
-  height: 200px;
-  width: 60%;
+  height: 300px;
+  width: 100%;
+  resize: none;
   font-family: "Fuzzy Bubbles", sans-serif;
   padding: 5px;
   border: 1.5px solid #175490;
   border-radius: 10px;
 }
 
-.vl {
-  border-left: 2px solid #175490;
+.input {
+  display: inline-table;
 }
 
-.emotionTracking {
+#emotionTracking {
   margin: 1%;
   width: 35%;
+}
+
+#emotionTitle {
+  font-size: 16px;
 }
 
 .emotionGroup {
@@ -154,7 +156,123 @@ body {
   background-color: #27bd3b;
 }
 
-.login, .signup {
+.emotion {
+  margin-left: 1px;
+  width: 99px;
+  height: 18px;
+  border-radius: 10px;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  float: left;
+  margin: 1px;
+}
+
+.emotion:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: 4px 2px 5px #000;
+}
+
+.highNeg-list {
+  visibility: hidden;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -100px;
+}
+
+#highNeg {
+  background-color: #e66d6d;
+}
+
+.highPos-list {
+  visibility: hidden;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -100px;
+  margin-left: 107px;
+}
+
+#highPos {
+  background-color: #dcbc5d;
+}
+
+.lowNeg-list {
+  visibility: hidden;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -100px;
+}
+
+#lowNeg {
+  background-color: #6450e5;
+}
+
+.lowPos-list {
+  visibility: hidden;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -100px;
+  margin-left: 107px;
+}
+
+#lowPos {
+  background-color: #5de16e;
+}
+
+.button {
+  vertical-align: middle;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(110%);
+  box-shadow: 4px 2px 5px #000;
+}
+
+#logo {
+  border: none;
+  padding: 0px;
+}
+
+#pastEntries {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  margin-right: 0.1cm;
+  font-size: 17px;
+}
+
+#tracking {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 17px;
+  margin-right: 0.1cm;
+}
+
+#store {
+  background-color: #B8336A;
+  border: none;
+  padding: 5px;
+  font-size: 17px;
+  margin-right: 0.1cm;
+}
+
+#login-page-button,
+#signup-page-button {
   background-color: #B8336A;
   filter: brightness(115%);
   border: 1px solid #fff;
@@ -541,23 +659,23 @@ h1 {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-.login, .signup {
+#login-page-button,
+#signup-page-button {
   padding: 15px;
-  font-size: 22px;
   border-radius: 10px;
-  margin: 25px auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border: none;
   color: white;
   cursor: pointer;
   background-color: #175490;
-  width: 200px;
-  height: 50px;
+  width: 100%;
   font-size: 16px;
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-.login:hover,
-.signup:hover{
+#login-page-button:hover,
+#signup-page-button:hover {
   filter: brightness(102%);
   box-shadow: 4px 2px 5px #0f355c;
 }
@@ -582,8 +700,9 @@ h1 {
 .btn {
   height: 60px;
   width: 300px;
-  box-shadow: 10px 10px 30px #0f355c;
   margin: 20px auto;
+  box-shadow: 10px 10px 30px #0f355c;
+  margin: 25px auto;
   border-radius: 50px;
   display: flex;
   justify-content: space-around;
@@ -675,7 +794,7 @@ h1 {
   font-size: 18px;
 }
 
-.clkbtn {
+.slider, #clkbttn {
   height: 60px;
   width: 150px;
   border-radius: 50px;
@@ -696,17 +815,13 @@ h1 {
   .title {
     font-size: 15px;
   }
-  .btn {
+  .bttn {
     height: 60px;
     width: 300px;
     margin: 20px auto;
-    box-shadow: 10px 10px 30px rgb(0, 0, 0);
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
   }
-  .login, .signup {
+  #login-page-button,
+  #signup-page-button {
     font-size: 19px;
   }
   .slider {
@@ -757,7 +872,8 @@ h1 {
     width: 200px;
     margin: 20px auto;
   }
-  .login, .signup {
+  #login-page-button,
+  #signup-page-button {
     font-size: 19px;
   }
   .slider {
