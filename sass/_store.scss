@@ -101,3 +101,81 @@ span:hover { cursor:default; }
     border: 1px solid $filter-title-bgcolor;
     font-size: 15px;
 }
+
+.product-items {
+    display: flex;
+    list-style-type: none;
+}
+
+.product {
+    margin: 5px;
+}
+
+#title {
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.themes {
+    border: 1px solid #000;
+}
+
+.prompts {
+    border: 1px solid #000;
+}
+
+.pets {
+    border: 1px solid #000;
+}
+
+.themes {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.theme::-webkit-scrollbar {
+    display: none;
+}
+
+.product-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.product-card {
+    margin: 5px;
+    margin-right: 50px;
+}
+
+.pre-btn, .nxt-btn{
+    border: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+}
+
+#pre-btn{
+    left: 0;
+    transform: rotate(180deg);
+    background-color:transparent;
+    border: none;
+}
+
+#nxt-btn{
+    right: 0;
+    background-color:transparent;
+    border: none;
+}
