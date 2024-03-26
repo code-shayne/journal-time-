@@ -1,46 +1,26 @@
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-  var $this = $(this),
-      label = $this.prev('label');
+function login() {
+  const loginBtn = document.getElementById("login-btn");
+  const signupBtn = document.getElementById("signup-btn");
+  const loginForm = document.querySelector(".login");
+  const signupForm = document.querySelector(".signup");
+    
+  loginBtn.classList.add("active");
+  signupBtn.classList.remove("active");
+  loginForm.style.display = "block";
+  signupForm.style.display = "none";
+}
 
-    if (e.type === 'keyup') {
-      if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
-        }
-    } else if (e.type === 'blur') {
-      if( $this.val() === '' ) {
-        label.removeClass('active highlight'); 
-      } else {
-        label.removeClass('highlight');   
-      }   
-    } else if (e.type === 'focus') {
-      
-      if( $this.val() === '' ) {
-        label.removeClass('highlight'); 
-      } 
-      else if( $this.val() !== '' ) {
-        label.addClass('highlight');
-      }
-    }
+function signup() {
+  const loginBtn = document.getElementById("login-btn");
+  const signupBtn = document.getElementById("signup-btn");
+  const loginForm = document.querySelector(".login");
+  const signupForm = document.querySelector(".signup");
 
-});
-
-$('.tab a').on('click', function (e) {
-  
-  e.preventDefault();
-  
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-  
-  target = $(this).attr('href');
-
-  $('.tab-content > div').not(target).hide();
-  
-  $(target).fadeIn(600);
-  
-});
+  signupBtn.classList.add("active");
+  loginBtn.classList.remove("active");
+  signupForm.style.display = "block";
+  loginForm.style.display = "none";
+}
 
 function fade() {
     document.getElementById("highNegative").style.backgroundColor="green";
@@ -64,51 +44,6 @@ function fade(element) {
         op -= op * 0.1;
     }, 50);
 }
-
-
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-    var $this = $(this),
-        label = $this.prev('label');
-  
-      if (e.type === 'keyup') {
-        if ($this.val() === '') {
-            label.removeClass('active highlight');
-          } else {
-            label.addClass('active highlight');
-          }
-      } else if (e.type === 'blur') {
-        if( $this.val() === '' ) {
-          label.removeClass('active highlight'); 
-        } else {
-          label.removeClass('highlight');   
-        }   
-      } else if (e.type === 'focus') {
-        
-        if( $this.val() === '' ) {
-          label.removeClass('highlight'); 
-        } 
-        else if( $this.val() !== '' ) {
-          label.addClass('highlight');
-        }
-      }
-  
-  });
-  
-  $('.tab a').on('click', function (e) {
-    
-    e.preventDefault();
-    
-    $(this).parent().addClass('active');
-    $(this).parent().siblings().removeClass('active');
-    
-    target = $(this).attr('href');
-  
-    $('.tab-content > div').not(target).hide();
-    
-    $(target).fadeIn(600);
-    
-  });
 
   const productContainers = [...document.querySelectorAll('.product-container')];
   const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
