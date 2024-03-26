@@ -118,26 +118,14 @@ span:hover { cursor:default; }
     font-size: 20px;
 }
 
-.themes {
-    border: 1px solid #000;
-}
-
-.prompts {
-    border: 1px solid #000;
-}
-
-.pets {
-    border: 1px solid #000;
-}
-
-.themes {
+.product-container {
     padding: 0 10vw;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
 }
 
-.theme::-webkit-scrollbar {
+.product-container::-webkit-scrollbar {
     display: none;
 }
 
@@ -153,8 +141,9 @@ span:hover { cursor:default; }
 }
 
 .pre-btn, .nxt-btn{
-    border: none;
+    // border: none;
     position: absolute;
+    margin-top: 70px;;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,16 +154,22 @@ span:hover { cursor:default; }
 .arrow {
     width: 30px;
     height: 30px;
+    opacity: 0.2;
+    margin: 5px;
 }
 
-#pre-btn{
+.arrow:hover {
+    opacity: 1;
+}
+
+.pre-btn{
     left: 0;
     transform: rotate(180deg);
     background-color:transparent;
     border: none;
 }
 
-#nxt-btn{
+.nxt-btn{
     right: 0;
     background-color:transparent;
     border: none;
