@@ -718,18 +718,17 @@ html, body {
   box-shadow:8px 8px 20px #0f355c;
 }
 
-.tab-group {
+.tab-group  {
   list-style:none;
   text-align: center;
   padding: 0;
-  margin: 30px;
+  margin: 0px;
 }
 .tab-group:after {
     content: "";
     display: table;
     clear: both;
 }
-
 
 .form a {
   display: block;
@@ -760,28 +759,52 @@ html, body {
   display:none;
 }
 
-.form h1 {
+.form .login h1 {
   text-align:center;
   color:white;
   margin:0 0 40px;
+  margin-top: 5px;
+  font-size: 35px;
+}
+
+.form .signup h1 {
+  text-align: center;
+  color: white;
+  margin: 0;
   font-size: 35px;
 }
 
 #signup-btn,
 #login-btn {
-  width: 100px;
-  height: 30px;
+  width: 200px;
+  height: 45px;
   font-family: "Fuzzy Bubbles", sans-serif;
   color: white;
+  border: none;
   background-color: #B8336A;
   text-align: center;
   margin-bottom: 30px;
   font-size: 20px;
   white-space: nowrap;
+  border-radius: 50px;
+}
+
+.req {
+  color: #b8336a;
+}
+
+.signup .field-wrap {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 #login, #signup {
   display: none;
+}
+
+#login-btn:hover, #signup-btn:hover {
+  cursor: pointer;
 }
 
 #signup-btn {
@@ -842,6 +865,8 @@ html, body {
 
 #enter {
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .form textarea {
@@ -903,7 +928,7 @@ html, body {
 .signup .field-wrap {
   align-items: center;
   margin: 1px;
-  padding:10px;
+  padding:5px;
 }
 
 .signup #submit {
@@ -911,6 +936,7 @@ html, body {
   display: block;
   text-align: center;
   margin: 0 auto;
+  margin-top: 5px;
   width: 180px;
   height: 80px;
   border-radius: 50px;

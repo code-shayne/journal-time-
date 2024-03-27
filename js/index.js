@@ -1,4 +1,4 @@
-function login() {
+function logIn() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
   const loginForm = document.querySelector(".login");
@@ -10,7 +10,7 @@ function login() {
   signupForm.style.display = "none";
 }
 
-function signup() {
+function signUp() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
   const loginForm = document.querySelector(".login");

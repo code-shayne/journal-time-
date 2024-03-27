@@ -36,8 +36,8 @@
     <hr/> 
     <div class="form">
         <div class="tab-group">
-          <button id="login-btn" onclick="login()">Log In</button>
-          <button id="signup-btn" onclick="signup()">Sign Up</button>
+          <button id="login-btn" onclick="logIn()">Log In</button>
+          <button id="signup-btn" onclick="signUp()">Sign Up</button>
         </div>
         <div class="tab-content">
           <!--login page-->
@@ -57,12 +57,12 @@
               <input id = "enter" type="password"required autocomplete="off"/>
             </div>
             <p class="forgot"><a href="#">Forgot Password?</a></p>
-            <button id= "login-page-btn" class="button button-block">Log In</button>
+            <button id= "login-page-btn" class="button button-block">Log In!</button>
           </form>
           </div>
         <!--signup page-->
           <div class="signup">   
-            <h1>Sign Up!</h1>
+            <h1>Start Journaling!</h1>
             <form action="/" method="post">
             <div class="top-row">
               <div class="field-wrap">
@@ -88,8 +88,9 @@
           </div>
         </div>
   </div>
+
 <script>
-  function login() {
+  function logIn() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
   const loginForm = document.querySelector(".login");
@@ -101,7 +102,7 @@
   signupForm.style.display = "none";
 }
 
-function signup() {
+function signUp() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
   const loginForm = document.querySelector(".login");
