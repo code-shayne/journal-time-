@@ -700,7 +700,7 @@ h1 {
   width: 500px;
   position: relative;
   overflow: hidden;
-  margin:10s0px 33.5%;
+  margin:100px 33.5%;
   border-radius: 50px;
   box-shadow:8px 8px 20px #0f355c;
 }
@@ -865,7 +865,7 @@ h1 {
     }
   
 
-#login-page {
+#login-page-btn {
   border:0;
   display: block;
   text-align: center;
@@ -883,7 +883,35 @@ h1 {
   transition:all.5s ease;
   -webkit-appearance: none;
 }
-  #login-page:hover, #login-page:focus {
+  #login-page-btn:hover, #login-page-btn:focus {
+    background:rgb(26, 82, 94);
+  }
+
+.signup .field-wrap {
+  align-items: center;
+  margin: 1px;
+  padding:10px;
+}
+
+.signup #submit {
+  border:0;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 180px;
+  height: 80px;
+  border-radius: 50px;
+  outline:none;
+  padding:15px 0;
+  font-size: 30px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background: rgb(26, 82, 94);
+  color:white;
+  transition:all.5s ease;
+  -webkit-appearance: none;
+}
+  #submit:hover, #submit:focus {
     background:rgb(26, 82, 94);
   }
 
