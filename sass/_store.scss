@@ -102,11 +102,6 @@ span:hover { cursor:default; }
     font-size: 15px;
 }
 
-.product-items {
-    display: flex;
-    list-style-type: none;
-}
-
 .product {
     margin: 5px;
 }
@@ -173,4 +168,22 @@ span:hover { cursor:default; }
     right: 0;
     background-color:transparent;
     border: none;
+}
+
+.product-group-page {
+    display: flex;
+    flex-wrap:wrap
+}
+
+#back-btn {
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
+}
+
+.back-arrow {
+    width: 25px;
+    height: 25px;
+    margin-right: -5px;
+    padding:0;
 }
