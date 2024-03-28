@@ -63,24 +63,6 @@
          </div>
     </section>
     <section class="section" id="storeItems">
-        <script>
-            const productContainers = document.querySelectorAll('.product-container');
-            const nxtBtn = document.querySelectorAll('.nxt-btn');
-            const preBtn = document.querySelectorAll('.pre-btn');
-
-             productContainers.forEach((item, i) => {
-                let containerDimensions = item.getBoundingClientRect();
-                let containerWidth = containerDimensions.width;
-    
-                nxtBtn[i].addEventListener('click', () => {
-                    item.scrollLeft += 100;
-                })
-
-                preBtn[i].addEventListener('click', () => {
-                    item.scrollLeft -= 100;
-                })
-            })
-        </script>
         <button class="button" id="title" onclick="showSection('themes')">Themes</button>
         <div class="product-container">
             <button class="pre-btn"><img src="images/arrow.png" class="arrow" alt=""></button>
@@ -237,7 +219,7 @@
         </div>
         <button class="button" id="title">Pets</button>
         <div class="product-container">
-            <button class="pre-btn"><img src="images/arrow.png" class="arrow" alt=""></button>
+            <button class="pre-btn" onclick="scrollContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
             <div class="product-card">
                 <div class="product-thumb">
                     <img src="images/crystal.png" class="product-image" alt="">
@@ -310,12 +292,12 @@
                     <span class="price">5 crystals</span>
                 </div>
             </div>
-            <button class="nxt-btn"><img src="images/arrow.png" class="arrow" alt=""></button>
+            <button class="nxt-btn" onclick="scrollContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
         </div>
     </section>
     <section class="section" id="themes">
         <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
-        <button class="button" id="title">Themes</button>
+        <button class="section-title" id="title">Themes</button>
         <div class="product-group-page">
             <div class="product-card">
                 <div class="product-thumb">
@@ -385,7 +367,7 @@
     </section>
     <section class="section" id="prompts">
         <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
-        <button class="button" id="title">Prompt Packages</button>
+        <button class="section-title" id="title">Prompt Packages</button>
         <div class="product-group-page">
             <div class="product-card">
                 <div class="product-thumb">

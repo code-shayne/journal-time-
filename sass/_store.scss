@@ -102,6 +102,14 @@ span:hover { cursor:default; }
     font-size: 15px;
 }
 
+.section {
+    visibility: hidden;
+}
+
+#storeItems {
+    visibility: visible;
+}
+
 .product {
     margin: 5px;
 }
@@ -113,8 +121,16 @@ span:hover { cursor:default; }
     font-size: 20px;
 }
 
+.section-title {
+    vertical-align: middle;
+    border-radius: 10px;
+    padding: 5px;
+    font-family:"Fuzzy Bubbles", sans-serif;
+}
+
 .product-container {
-    padding: 0 10vw;
+    width: 100%;
+    padding: 0 50px;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
