@@ -1,3 +1,4 @@
+//login & signup
 function logIn() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
@@ -9,7 +10,6 @@ function logIn() {
   loginForm.style.display = "block";
   signupForm.style.display = "none";
 }
-
 function signUp() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
@@ -21,7 +21,32 @@ function signUp() {
   signupForm.style.display = "block";
   loginForm.style.display = "none";
 }
+//forgot password
+const modal = document.getElementById("forgot-password-modal");
+const span = document.getElementsByClassName("close")[0];
+const forgotPasswordLink = document.querySelector(".login .forgot a");
+forgotPasswordLink.addEventListener("click", (event) => {
+  event.preventDefault();
+  modal.style.display = "block";
+});
+span.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+const forgotPasswordForm = document.getElementById("forgot-password-form");
+forgotPasswordForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const email = document.getElementById("forgot-password-email").value;
+  const newPassword = document.getElementById("forgot-password-password").value;
+  alert(`Email: ${email}\nNew Password: ${newPassword}`);
+  forgotPasswordForm.reset();
+});
 
+//fade emotion buttons
 function fade() {
     document.getElementById("highNegative").style.backgroundColor="green";
 }
@@ -44,7 +69,7 @@ function fade(element) {
         op -= op * 0.1;
     }, 50);
 }
-
+//move shop page
   const productContainers = [...document.querySelectorAll('.product-container')];
   const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
   const preBtn = [...document.querySelectorAll('.pre-btn')];

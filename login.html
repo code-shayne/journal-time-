@@ -56,7 +56,7 @@
               </label>
               <input id = "enter" type="password"required autocomplete="off"/>
             </div>
-            <p class="forgot"><a href="#">Forgot Password?</a></p>
+            <a href="#" id="forgot-password-link">Forgot Password?</a>
             <button id= "login-page-btn" class="button button-block">Log In!</button>
           </form>
           </div>
@@ -86,10 +86,29 @@
             <button id="submit" class="button button-block">Signup</button>
             </form>
           </div>
+          <!--forgot password-->
+          <div id="forgot-password-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Forgot Password</h2>
+              <form id="forgot-password-form">
+                <div class="field-wrap">
+                  <label>Enter your email:</label>
+                  <input type="email" id="forgot-password-email" required>
+                </div>
+                <div class="field-wrap">
+                  <label>Enter your new password:</label>
+                  <input type="password" id="forgot-password-password" required>
+                </div>
+                <button type="submit" class="button button-block">Reset Password</button>
+              </form>
+            </div>
+            </form>
+          </div>
         </div>
   </div>
-
 <script>
+  //login and signup
   function logIn() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
@@ -113,5 +132,35 @@ function signUp() {
   signupForm.style.display = "block";
   loginForm.style.display = "none";
 }
+//forgot password
+const modal = document.getElementById("forgot-password-modal");
+    const span = document.getElementsByClassName("close")[0];
+    const forgotPasswordLink = document.getElementById("forgot-password-link");
+
+    forgotPasswordLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      modal.style.display = "block";
+    });
+
+    span.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    const forgotPasswordForm = document.getElementById("forgot-password-form");
+    forgotPasswordForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.getElementById("forgot-password-email").value;
+      const newPassword = document.getElementById("forgot-password-password").value;
+
+      alert(`Email: ${email}\nNew Password: ${newPassword}`);
+
+      forgotPasswordForm.reset();
+    });
 </script>
 </body>
