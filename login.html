@@ -53,7 +53,7 @@
             </div>
             <div class="field-wrap">
               <label>
-                Enter your password<span class="req">*</span>
+                Enter your password: <span class="req">*</span>
               </label>
               <input id = "enter" type="password"required autocomplete="off"/>
             </div>
@@ -87,10 +87,9 @@
             </form>
           </div>
         <!--forgot password-->
-          <div class="forgot">
-          <h1>Forgot Password?</h1>
+        <div class="forgot">   
+          <h1>Reset your Password!</h1>
           <form action="/" method="post">
-          <div class="top-row">
             <div class="field-wrap">
             <label>
               Enter your email: <span class="req">*</span>
@@ -99,20 +98,19 @@
           </div>
           <div class="field-wrap">
             <label>
-              Enter your new password<span class="req">*</span>
+              Enter your new password: <span class="req">*</span>
             </label>
             <input id = "enter" type="password"required autocomplete="off"/>
           </div>
-          <button id="forgot-page-btn" class="button button-block">Reset Password</button>
-          </form>
-          </div>
+          <button id= "forgot-page-btn" class="button button-block">Reset!</button>
+        </form>
+        </div>
     </div>
   </div>
 
 <script>
-  let modal;
   //login and signup
-  function logIn() {
+function logIn() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
   const forgotBtn = document.getElementById("forgot-btn");
@@ -155,9 +153,9 @@ function forgotPass() {
   forgotBtn.classList.add("active");
   loginBtn.classList.remove("active");
   signupBtn.classList.remove("active");
-  forgotForm.style.display = "block";
-  signupForm.style.display = "none";
-  loginForm.style.display = "none";
+  forgotForm.style.display = "block"; 
+  loginForm.style.display = "none"; 
+  signupForm.style.display = "none"; 
 }
 </script>
 </body>
