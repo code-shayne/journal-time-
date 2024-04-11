@@ -62,10 +62,13 @@
             <img src="images/crystal.png" id="crystal" style="float:right" title="Journal to earn more crystals">
          </div>
     </section>
+    <script>
+
+    </script>
     <section class="section" id="storeItems">
         <button class="button" id="title" onclick="showSection('themes')">Themes</button>
-        <div class="product-container">
-            <button class="pre-btn"><img src="images/arrow.png" class="arrow" alt=""></button>
+        <div class="theme-container">
+            <button class="pre-btn" onclick="scrollThemeContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
             <div class="product-card">
                 <div class="product-thumb">
                     <img src="images/crystal.png" class="product-image" alt="">
@@ -138,11 +141,11 @@
                     <span class="price">5 crystals</span>
                 </div>
             </div>
-            <button class="nxt-btn"><img src="images/arrow.png" class="arrow" alt=""></button>
+            <button class="nxt-btn" onclick="scrollThemeContainer('right')"><img src="images/arrow.png" class="arrow" alt=""></button>
         </div>
         <button class="button" id="title" onclick="showSection('prompts')">Prompt Packages</button>
-        <div class="product-container">
-            <button class="pre-btn"><img src="images/arrow.png" class="arrow" alt=""></button>
+        <div class="prompt-container">
+            <button class="pre-btn" onclick="scrollPromptContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
             <div class="product-card">
                 <div class="product-thumb">
                     <img src="images/crystal.png" class="product-image" alt="">
@@ -215,11 +218,12 @@
                     <span class="price">5 crystals</span>
                 </div>
             </div>
-            <button class="nxt-btn"><img src="images/arrow.png" class="arrow" alt=""></button>
+            <button class="nxt-btn" onclick="scrollPromptContainer('right')"><img src="images/arrow.png" class="arrow" alt=""></button>
         </div>
         <button class="button" id="title">Pets</button>
-        <div class="product-container">
-            <button class="pre-btn" onclick="scrollContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
+        <div class="pet-container">
+            <button class="pre-btn" onclick="scrollPetContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
+            <button class="nxt-btn" onclick="scrollPetContainer('right')"><img src="images/arrow.png" class="arrow" alt=""></button>
             <div class="product-card">
                 <div class="product-thumb">
                     <img src="images/crystal.png" class="product-image" alt="">
@@ -292,7 +296,6 @@
                     <span class="price">5 crystals</span>
                 </div>
             </div>
-            <button class="nxt-btn" onclick="scrollContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
         </div>
     </section>
     <section class="section" id="themes">

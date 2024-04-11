@@ -27,6 +27,7 @@
     padding: 3px;
     margin: 5px;
     font-size: 18px;
+    visibility: hidden;
 }
 
 #sortOptions {
@@ -36,6 +37,7 @@
     padding: 3px;
     margin: 5px;
     font-size: 18px;
+    visibility: hidden;
 }
 
 .storeBalance {
@@ -128,15 +130,23 @@ span:hover { cursor:default; }
     font-family:"Fuzzy Bubbles", sans-serif;
 }
 
-.product-container {
+.theme-container, .prompt-container, .pet-container {
     width: 100%;
     padding: 0 50px;
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-behavior: smooth;
 }
 
-.product-container::-webkit-scrollbar {
+.theme-container::-webkit-scrollbar {
+    display: none;
+}
+
+.prompt-container::-webkit-scrollbar {
+    display: none;
+}
+
+.pet-container::-webkit-scrollbar {
     display: none;
 }
 
