@@ -34,7 +34,6 @@
     font-family: "Fuzzy Bubbles", sans-serif;
   }
   
-  /* new login page? */
   .form a {
     text-align: left;
     flex-direction: column;
@@ -45,8 +44,6 @@
   .form a:hover {
       color:rgb(66, 96, 103);
   }
-  
-  
   .form {
     background: #6d8cc5;
     text-align: center;
@@ -62,7 +59,6 @@
     border-radius: 50px;
     box-shadow:8px 8px 20px #0f355c;
   }
-  
   .tab-group  {
     list-style:none;
     text-align: center;
@@ -74,7 +70,6 @@
       display: table;
       clear: both;
   }
-  
   .form a {
     display: block;
     text-align: center;
@@ -98,8 +93,6 @@
       text-align: center;
       color:white;
     }
-  
-  
   .tab-content > div:last-child {
     display:none;
   }
@@ -129,7 +122,6 @@
     margin-top: 5px;
     font-size: 35px;
   }
-  
   .form .signup h1 {
     text-align: center;
     color: white;
@@ -161,17 +153,14 @@
     white-space: nowrap;
     border-radius: 50px;
   }
-  
   .req {
     color: #b8336a;
   }
-  
   .signup .field-wrap {
-    width: 100%;
+    width: 99%;
     padding: 0;
     margin: 0;
   }
-  
   #login, #signup {
     display: none;
   }
@@ -183,15 +172,12 @@
   #signup-btn {
     margin-top: 50px;
   }
-  
   .show-signup #login-btn {
     display: none;
   }
-  
   .show-login #signup-btn {
     display: none;
   }
-  
   .form label {
     text-align:center;
     margin: 15px;
@@ -201,7 +187,6 @@
     pointer-events: none;
     font-size:22px;
   }
-  
   .form label.active {
     font-size:14px;
     text-align: center;
@@ -231,30 +216,25 @@
       border-color:rgb(45, 125, 143);
       font-family: "Fuzzy Bubbles", sans-serif;
     }
-  
   .active {
     display:center;
   }
-  
   #enter {
     align-items: center;
     padding: 0;
     margin: 0;
   }
-  
   .form textarea {
     text-align: center;
     align-items: center;
     resize: vertical;
   }
-  
   .field-wrap {
     position:relative;
     text-align: center;
     margin-bottom:40px;
     width: 100%
   }
-  
   .top-row {
     text-align: center;
   }
@@ -263,7 +243,6 @@
       display: table;
       clear: both;
   }
-  
     .top-row > div {
       float:left;
       text-align: center;
@@ -275,7 +254,6 @@
         margin:0;
       }
     
-  
   #login-page-btn {
     border:0;
     display: block;
@@ -297,13 +275,11 @@
     #login-page-btn:hover, #login-page-btn:focus {
       background:rgb(26, 82, 94);
     }
-  
   .signup .field-wrap {
     align-items: center;
     margin: 1px;
     padding:5px;
   }
-  
   .signup #submit {
     border:0;
     display: block;
@@ -326,7 +302,6 @@
     #submit:hover, #submit:focus {
       background:rgb(26, 82, 94);
     }
-  
   .button-block {
     display:block;
     text-align: center;

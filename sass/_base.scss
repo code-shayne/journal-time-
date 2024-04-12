@@ -91,6 +91,11 @@ body {
     border-radius: 10px;
   }
 
+  #submit-entry {
+    background-color: $header-bgcolor;
+    margin-top: -2px;    
+  }
+
 .input {
     display: inline-table;
 }
@@ -127,19 +132,19 @@ body {
 }
 
 #highNegative {
-    background-color: #d33737;
+    background-color: #e03939;
 }
 
 #highPositive {
-    background-color: #d9b23e;
+    background-color: #facd46;
 }
 
 #lowNegative {
-    background-color: #5039e7;
+    background-color: #5840f4;
 }
 
 #lowPositive {
-    background-color: #27bd3b;
+    background-color: #2fcf44;
 }
 
 .emotion {
@@ -182,7 +187,7 @@ body {
 }
 
 #highPos {
-    background-color:#dcbc5d;
+    background-color:#f7d778;
 }
 
 .lowNeg-list {
@@ -195,7 +200,7 @@ body {
 }
 
 #lowNeg {
-    background-color:#6450e5;
+    background-color:#7260ea;
 }
 
 .lowPos-list {
