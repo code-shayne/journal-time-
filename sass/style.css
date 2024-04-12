@@ -29,7 +29,7 @@ body {
   width: 100%;
   height: 60px;
 }
-/*main page*/
+
 .promptContainer {
   background-color: #a19ce1;
   font-size: 17px;
@@ -55,6 +55,11 @@ body {
   padding: 5px;
   border: 1.5px solid #175490;
   border-radius: 10px;
+}
+
+#submit-entry {
+  background-color: #B8336A;
+  margin-top: -2px;
 }
 
 .input {
@@ -93,19 +98,19 @@ body {
 }
 
 #highNegative {
-  background-color: #d33737;
+  background-color: #e03939;
 }
 
 #highPositive {
-  background-color: #d9b23e;
+  background-color: #facd46;
 }
 
 #lowNegative {
-  background-color: #5039e7;
+  background-color: #5840f4;
 }
 
 #lowPositive {
-  background-color: #27bd3b;
+  background-color: #2fcf44;
 }
 
 .emotion {
@@ -148,7 +153,7 @@ body {
 }
 
 #highPos {
-  background-color: #dcbc5d;
+  background-color: #f7d778;
 }
 
 .lowNeg-list {
@@ -161,7 +166,7 @@ body {
 }
 
 #lowNeg {
-  background-color: #6450e5;
+  background-color: #7260ea;
 }
 
 .lowPos-list {
@@ -265,7 +270,7 @@ a:visited {
   color: #000;
   text-decoration: none;
 }
-/*footer*/
+
 footer {
   position: relative;
   width: 100%;
@@ -301,7 +306,7 @@ footer {
   color: #444444;
   text-align: center;
 }
-/*stored entries*/
+
 .entriesFilter {
   background-color: #a19ce1;
   width: 20%;
@@ -414,7 +419,7 @@ footer {
   border-radius: 10px;
   align-items: center;
 }
-/*store*/
+
 .shopHeader {
   margin-top: 65px;
 }
@@ -434,6 +439,7 @@ footer {
   padding: 3px;
   margin: 5px;
   font-size: 18px;
+  visibility: hidden;
 }
 
 #sortOptions {
@@ -443,6 +449,7 @@ footer {
   padding: 3px;
   margin: 5px;
   font-size: 18px;
+  visibility: hidden;
 }
 
 .storeBalance {
@@ -536,15 +543,23 @@ span:hover {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-.product-container {
+.theme-container, .prompt-container, .pet-container {
   width: 100%;
   padding: 0 50px;
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-behavior: smooth;
 }
 
-.product-container::-webkit-scrollbar {
+.theme-container::-webkit-scrollbar {
+  display: none;
+}
+
+.prompt-container::-webkit-scrollbar {
+  display: none;
+}
+
+.pet-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -682,7 +697,6 @@ html, body {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
-/* new login page? */
 .form a {
   text-align: left;
   flex-direction: column;
@@ -693,8 +707,6 @@ html, body {
 .form a:hover {
     color:rgb(66, 96, 103);
 }
-
-
 .form {
   background: #6d8cc5;
   text-align: center;
@@ -710,7 +722,6 @@ html, body {
   border-radius: 50px;
   box-shadow:8px 8px 20px #0f355c;
 }
-
 .tab-group  {
   list-style:none;
   text-align: center;
@@ -722,7 +733,6 @@ html, body {
     display: table;
     clear: both;
 }
-
 .form a {
   display: block;
   text-align: center;
@@ -746,8 +756,6 @@ html, body {
     text-align: center;
     color:white;
   }
-
-
 .tab-content > div:last-child {
   display:none;
 }
@@ -777,7 +785,6 @@ html, body {
   margin-top: 5px;
   font-size: 35px;
 }
-
 .form .signup h1 {
   text-align: center;
   color: white;
@@ -787,14 +794,6 @@ html, body {
 }
 
 .form .signup h1 {
-  text-align: center;
-  color: white;
-  margin: 0 0 40px;
-  margin-top: 5px;
-  font-size: 35px;
-}
-
-.form .forgot h1 {
   text-align:center;
   color:white;
   margin:0 0 40px;
@@ -817,19 +816,16 @@ html, body {
   white-space: nowrap;
   border-radius: 50px;
 }
-
 .req {
   color: #b8336a;
 }
-
 .signup .field-wrap {
   width: 99%;
-  align-items: center;
-  margin: 1px;
-  padding:5px;
+  padding: 0;
+  margin: 0;
 }
-
-#login, #signup, #forgot {
+.form #login, 
+.form #signup {
   display: none;
 }
 
@@ -840,29 +836,21 @@ html, body {
 #signup-btn {
   margin-top: 50px;
 }
-
 .show-signup #login-btn {
   display: none;
 }
-
 .show-login #signup-btn {
   display: none;
 }
-
-.show-forgot #forgot-btn {
-  display: none;
-}
-
 .form label {
   text-align:center;
   margin: 15px;
   color: white;
   transition:all 0.25s ease;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
   pointer-events: none;
   font-size:22px;
 }
-
 .form label.active {
   font-size:14px;
   text-align: center;
@@ -892,30 +880,25 @@ html, body {
     border-color:rgb(45, 125, 143);
     font-family: "Fuzzy Bubbles", sans-serif;
   }
-
 .active {
   display:center;
 }
-
 #enter {
   align-items: center;
   padding: 0;
   margin: 0;
 }
-
 .form textarea {
   text-align: center;
   align-items: center;
   resize: vertical;
 }
-
 .field-wrap {
   position:relative;
   text-align: center;
-  padding:5px;
+  margin-bottom:40px;
   width: 100%
 }
-
 .top-row {
   text-align: center;
 }
@@ -924,7 +907,6 @@ html, body {
     display: table;
     clear: both;
 }
-
   .top-row > div {
     float:left;
     text-align: center;
@@ -936,7 +918,6 @@ html, body {
       margin:0;
     }
   
-
 #login-page-btn {
   border:0;
   display: block;
@@ -958,13 +939,11 @@ html, body {
   #login-page-btn:hover, #login-page-btn:focus {
     background:rgb(26, 82, 94);
   }
-
 .signup .field-wrap {
   align-items: center;
   margin: 1px;
   padding:5px;
 }
-
 .signup #submit {
   border:0;
   display: block;
@@ -987,7 +966,6 @@ html, body {
   #submit:hover, #submit:focus {
     background:rgb(26, 82, 94);
   }
-
 .button-block {
   display:block;
   text-align: center;
@@ -1002,29 +980,6 @@ html, body {
 .forgot {
   margin-top:-20px;
   text-align: center;
-}
-
-#forgot-page-btn {
-  border: 0;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  width: 150px;
-  height: 50px;
-  border-radius: 50px;
-  outline: none;
-  padding: 15px 0;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  background: rgb(26, 82, 94);
-  color: white;
-  transition: all .5s ease;
-  -webkit-appearance: none;
-}
-
-#forgot-page-btn:hover, #forgot-page-btn:focus {
-  background: rgb(26, 82, 94);
 }
 
 /*about page*/
@@ -1042,6 +997,4 @@ html, body {
   align-items: center;
   text-align: center;
   margin-top: -20px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
