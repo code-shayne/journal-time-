@@ -180,25 +180,17 @@
         </div>
         <script>
             const themeToggle = document.getElementById('theme-toggle');
-            function random(min, max) {
-  const num = Math.floor(Math.random() * (max - min)) + min;
-  return num;
-}
-            function randomColor() {
-  return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
-}
+        
             function changeColor() {
-                body.style.setPorperty("background-color", 'randomColor()');
+                document.documentElement.style.setProperty("$background-color", '#EECFD4');
             }
-
-            themeToggle.addEventListener('click', changeColor);
-            // Switch to dark theme
-            // document.documentElement.style.setProperty('background-color', 'var(background-color-rose)');
-            // document.documentElement.style.setProperty('--secondary-color', 'var(--secondary-color-dark)');
-            // document.documentElement.style.setProperty('--font-color', 'var(--font-color-dark)');
-
+        
+        // Switch to dark theme
+        // document.documentElement.style.setProperty('background-color', 'var(background-color-rose)');
+        // document.documentElement.style.setProperty('--secondary-color', 'var(--secondary-color-dark)');
+        // document.documentElement.style.setProperty('--font-color', 'var(--font-color-dark)');
         </script>
-        <button id="theme-toggle">Toggle Theme</button>
+        <button id="theme-toggle" onclick="changeColor()">Toggle Theme</button>
         <footer>
             <div class="footerContent">
                 <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' class="button" 

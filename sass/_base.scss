@@ -1,5 +1,5 @@
 $default-font-color: #000;
-$backgroud-color: #a3b9e3;
+$background-color: #a3b9e3;
 $prompt-container-bgcolor: #a19ce1;
 $header-bgcolor: #B8336A;
 $outline-color: #8882e4;
@@ -9,9 +9,13 @@ $button-hovercolor: #000;
 $prompt-color: #476CB0;
 $filter-title-bgcolor: #8b86d0;
 
+:root {
+    --background-color: #a3b9e3; /* Default value */
+}
+
 // rose
 // $default-font-color: #000;
-$backgroud-color-rose: #EECFD4;
+$background-color-rose: #EECFD4;
 // $prompt-container-bgcolor: #AAC0AA;
 // $header-bgcolor: #AD9FBC;
 // $outline-color: #859785;
@@ -44,7 +48,7 @@ html,body {
 }
 
 body {
-    background-color: $backgroud-color;
+    background-color: $background-color-rose;
 }
 
 .logo {
