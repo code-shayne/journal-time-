@@ -793,12 +793,27 @@ html, body {
   font-size: 35px;
 }
 
+.form .forgot h1 {
+  text-align: center;
+  color: white;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 35px;
+}
+
 .form .signup h1 {
   text-align:center;
   color:white;
   margin:0 0 40px;
   margin-top: 5px;
   font-size: 35px;
+}
+
+.forgot .field-wrap {
+  position:relative;
+  text-align: center;
+  margin-bottom:40px;
+  width: 100%
 }
 
 #signup-btn,
@@ -825,7 +840,8 @@ html, body {
   margin: 0;
 }
 .form #login, 
-.form #signup {
+.form #signup,
+.form #forgot {
   display: none;
 }
 
@@ -839,9 +855,22 @@ html, body {
 .show-signup #login-btn {
   display: none;
 }
+.show-signup #forgot-btn {
+  display: none;
+}
 .show-login #signup-btn {
   display: none;
 }
+.show-login #forgot-btn {
+  display: none;
+}
+.show-forgot #signup-btn {
+  display: none;
+}
+.show-forgot #login-btn {
+  display: none;
+}
+
 .form label {
   text-align:center;
   margin: 15px;
@@ -886,7 +915,7 @@ html, body {
 #enter {
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin-left: 0;
 }
 .form textarea {
   text-align: center;
@@ -977,10 +1006,17 @@ html, body {
   border-radius: 50px;
 }
 
-.forgot {
-  margin-top:-20px;
+#forgot-page-btn {
+  display:block;
   text-align: center;
+  width: 150px;
+  height: 50px;
+  margin-left: 33.3%;
+  background-color: rgb(26, 82, 94);
+  border: none;
+  border-radius: 50px;
 }
+
 
 /*about page*/
 .aboutPage {
