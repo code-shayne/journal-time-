@@ -1,5 +1,13 @@
 :root {
-  --background-color: #a3b9e3; /* Default value */
+  --background-color: #a3b9e3;
+  --prompt-container-bgcolor: #a19ce1;
+  --header-bgcolor: #B8336A;
+  --outline-color: #8882e4;
+  --hr-color: #175490;
+  --button-textcolor: #fff;
+  --button-hovercolor: #000;
+  --prompt-color: #476CB0;
+  --filter-title-bgcolor: #8b86d0;
 }
 
 * {
@@ -22,11 +30,11 @@ html, body {
 }
 
 body {
-  background-color: #EECFD4;
+  background-color: var(--background-color);
 }
 
 .logo {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   font-size: 20px;
   padding: 5px;
   position: fixed;
@@ -35,12 +43,12 @@ body {
 }
 
 .promptContainer {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
   font-size: 17px;
   padding: 10px;
   width: 90%;
   margin: auto;
-  border: 2px solid #8882e4;
+  border: 2px solid var(--outline-color);
   border-radius: 10px;
   margin-top: 70px;
 }
@@ -57,12 +65,12 @@ body {
   resize: none;
   font-family: "Fuzzy Bubbles", sans-serif;
   padding: 5px;
-  border: 1.5px solid #175490;
+  border: 1.5px solid var(--hr-color);
   border-radius: 10px;
 }
 
 #submit-entry {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   margin-top: -2px;
 }
 
@@ -209,7 +217,7 @@ body {
 }
 
 #pastEntries {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   border: none;
   padding: 5px;
   margin-right: 0.1cm;
@@ -217,7 +225,7 @@ body {
 }
 
 #tracking {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   border: none;
   padding: 5px;
   font-size: 17px;
@@ -225,7 +233,7 @@ body {
 }
 
 #store {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   border: none;
   padding: 5px;
   font-size: 17px;
@@ -233,7 +241,7 @@ body {
 }
 
 #login {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   filter: brightness(115%);
   border: 1px solid #fff;
   padding: 5px;
@@ -242,36 +250,36 @@ body {
 }
 
 #seriousPrompt {
-  background-color: #476CB0;
-  color: #fff;
+  background-color: var(--prompt-color);
+  color: var(--button-textcolor);
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #175490;
+  border: 2px solid var(--hr-color);
 }
 
 #funnyPrompt {
-  background-color: #476CB0;
-  color: #fff;
+  background-color: var(--prompt-color);
+  color: var(--button-textcolor);
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #175490;
+  border: 2px solid var(--hr-color);
 }
 
 #morePrompts {
-  background-color: #476CB0;
-  color: #fff;
+  background-color: var(--prompt-color);
+  color: var(--button-textcolor);
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #175490;
+  border: 2px solid var(--hr-color);
 }
 
 a:link {
-  color: #000;
+  color: var(--default-font-color);
   text-decoration: none;
 }
 
 a:visited {
-  color: #000;
+  color: var(--default-font-color);
   text-decoration: none;
 }
 
@@ -312,7 +320,7 @@ footer {
 }
 
 .entriesFilter {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
   width: 20%;
   top: 0;
   bottom: 0;
@@ -328,15 +336,15 @@ footer {
 }
 
 .entriesFilter::-webkit-scrollbar-thumb {
-  background: #8b86d0;
+  background: var(--filter-title-bgcolor);
 }
 
 .entriesFilter::-webkit-scrollbar-track {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
 }
 
 .entriesFilterTitle {
-  background-color: #8b86d0;
+  background-color: var(--filter-title-bgcolor);
   text-align: center;
   padding: 10px;
   font-size: large;
@@ -349,7 +357,7 @@ footer {
   margin-top: 5px;
   display: block;
   width: 90%;
-  border: 2px solid #8b86d0;
+  border: 2px solid var(--filter-title-bgcolor);
 }
 
 #filterTitle {
@@ -373,8 +381,8 @@ footer {
   margin-top: 5px;
   text-align: center;
   padding: 0px;
-  background-color: #a19ce1;
-  border: 1px solid #8b86d0;
+  background-color: var(--prompt-container-bgcolor);
+  border: 1px solid var(--filter-title-bgcolor);
   font-size: 15px;
 }
 
@@ -404,7 +412,7 @@ footer {
 #addEntry {
   border: none;
   color: #fff;
-  background-color: #476CB0;
+  background-color: var(--prompt-color);
   font-size: 16px;
   padding: 2px;
 }
@@ -412,14 +420,14 @@ footer {
 #entry {
   display: inline;
   list-style-type: none;
-  background-color: #476CB0;
+  background-color: var(--prompt-color);
   color: #fff;
   margin: 10px;
   margin-top: 10px;
   padding: 5px;
   width: 100px;
   height: 100px;
-  border: 2px solid #175490;
+  border: 2px solid var(--hr-color);
   border-radius: 10px;
   align-items: center;
 }
@@ -433,13 +441,13 @@ footer {
   padding: 3px;
   width: 30%;
   font-size: 18px;
-  border: 2px solid #8b86d0;
+  border: 2px solid var(--filter-title-bgcolor);
 }
 
 #storeFilter {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
   border-radius: 5px;
-  border: 2px solid #8b86d0;
+  border: 2px solid var(--filter-title-bgcolor);
   padding: 3px;
   margin: 5px;
   font-size: 18px;
@@ -447,9 +455,9 @@ footer {
 }
 
 #sortOptions {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
   border-radius: 5px;
-  border: 2px solid #8b86d0;
+  border: 2px solid var(--filter-title-bgcolor);
   padding: 3px;
   margin: 5px;
   font-size: 18px;
@@ -489,7 +497,7 @@ span:hover {
 
 .content {
   position: absolute;
-  background: #a19ce1;
+  background: var(--prompt-container-bgcolor);
   height: 100%;
   width: 30%;
   padding: 1em 2em;
@@ -516,8 +524,8 @@ span:hover {
   margin-right: 10px;
   text-align: center;
   padding: 0px;
-  background-color: #a19ce1;
-  border: 1px solid #8b86d0;
+  background-color: var(--prompt-container-bgcolor);
+  border: 1px solid var(--filter-title-bgcolor);
   font-size: 15px;
 }
 

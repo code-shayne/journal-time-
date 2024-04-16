@@ -8,7 +8,6 @@
     <title>Journal Time!</title>
     <link rel="icon" href="images/pencil.png">
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <script src="index.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
@@ -178,18 +177,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            const themeToggle = document.getElementById('theme-toggle');
-        
-            function changeColor() {
-                document.documentElement.style.setProperty("$background-color", '#EECFD4');
-            }
-        
-        // Switch to dark theme
-        // document.documentElement.style.setProperty('background-color', 'var(background-color-rose)');
-        // document.documentElement.style.setProperty('--secondary-color', 'var(--secondary-color-dark)');
-        // document.documentElement.style.setProperty('--font-color', 'var(--font-color-dark)');
-        </script>
         <button id="theme-toggle" onclick="changeColor()">Toggle Theme</button>
         <footer>
             <div class="footerContent">
@@ -205,5 +192,6 @@
             </div>
         </footer>
     </main>
+    <script src="js/index.js"></script>
 </body>
 </html>

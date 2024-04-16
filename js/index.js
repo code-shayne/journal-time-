@@ -96,3 +96,17 @@ function fade(element) {
     // Show the selected section
     document.getElementById(sectionId).style.display = 'block';
 }
+
+const themeToggle = document.getElementById('theme-toggle');
+        
+            function changeColor() {
+                document.documentElement.style.setProperty("--background-color", '#EECFD4');
+                document.documentElement.style.setProperty("--prompt-container-bgcolor", '#AAC0AA');
+                document.documentElement.style.setProperty("--header-bgcolor", '#AD9FBC');
+                document.documentElement.style.setProperty("--outline-color", '#859785');
+                document.documentElement.style.setProperty("--hr-color", '#837472');
+                document.documentElement.style.setProperty("--button-textcolor", '#fff');
+                document.documentElement.style.setProperty("--button-hovercolor", '#000');
+                document.documentElement.style.setProperty("--prompt-color", '#938482');
+                // document.documentElement.style.setProperty("--filter-title-bgcolor", '#EECFD4');
+            }

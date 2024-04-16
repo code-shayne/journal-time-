@@ -8,7 +8,7 @@
 }
 
 .entriesFilter {
-    background-color: $prompt-container-bgcolor;
+    background-color: var(--prompt-container-bgcolor);
     width: 20%;
     top: 0;
     bottom: 0;
@@ -24,15 +24,15 @@
 }
 
 .entriesFilter::-webkit-scrollbar-thumb {
-    background: $filter-title-bgcolor;
+    background: var(--filter-title-bgcolor);
   }
 
 .entriesFilter::-webkit-scrollbar-track {
-    background-color: $prompt-container-bgcolor;
+    background-color: var(--prompt-container-bgcolor);
    }
 
 .entriesFilterTitle {
-    background-color: $filter-title-bgcolor;
+    background-color: var(--filter-title-bgcolor);
     text-align:center;
     padding:10px;
     font-size: large;
@@ -45,7 +45,7 @@
     margin-top: 5px;
     display: block;
     width: 90%;
-    border: 2px solid $filter-title-bgcolor;
+    border: 2px solid var(--filter-title-bgcolor);
 }
 
 #filterTitle {
@@ -69,8 +69,8 @@
     margin-top: 5px;
     text-align: center;
     padding: 0px;
-    background-color: $prompt-container-bgcolor;
-    border: 1px solid $filter-title-bgcolor;
+    background-color: var(--prompt-container-bgcolor);
+    border: 1px solid var(--filter-title-bgcolor);
     font-size: 15px;
 }
 
@@ -100,7 +100,7 @@
 #addEntry {
     border:none;
     color:#fff;
-    background-color: $prompt-color;
+    background-color: var(--prompt-color);
     font-size: 16px;
     padding: 2px;
 }
@@ -108,14 +108,14 @@
 #entry {
     display:inline;
     list-style-type: none;
-    background-color: $prompt-color;
+    background-color: var(--prompt-color);
     color: #fff;
     margin: 10px;
     margin-top: 10px;
     padding:5px;
     width: 100px;
     height: 100px;
-    border: 2px solid $hr-color;
+    border: 2px solid var(--hr-color);
     border-radius: 10px;
     align-items: center;
 }
