@@ -286,6 +286,15 @@ body {
     margin-right: 0.1cm;
 }
 
+#settings-icon {
+    height: 25px;
+    width: 25px;
+}
+
+#settings-popup {
+    width: 100%;
+}
+
 #seriousPrompt {
     background-color: var(--prompt-color);
     color: var(--button-textcolor);

@@ -8,11 +8,6 @@
   --button-hovercolor: #000;
   --prompt-color: #476CB0;
   --filter-title-bgcolor: #8b86d0;
-  --form-bgcolor: rgb(97, 140, 150);
-  --form-box-bgcolor: #6d8cc5;
-  --form-box-shadow: #0f355c;
-  --scroll-bgcolor: #d891af;
-  --scroll-color: #cf6d96;
 }
 
 * {
@@ -252,6 +247,15 @@ body {
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
+}
+
+#settings-icon {
+  height: 25px;
+  width: 25px;
+}
+
+#settings-popup {
+  width: 100%;
 }
 
 #seriousPrompt {
@@ -668,7 +672,7 @@ html, body {
   }
 }
 .main {
-  background-color: var(--form-bgcolor);
+  background-color: rgb(97, 140, 150);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
@@ -682,7 +686,7 @@ html, body {
   text-align: left;
   flex-direction: column;
   text-decoration: none;
-  color: var(--form-bgcolor);
+  color: rgb(97, 140, 150);
   transition: 0.5s ease;
 }
 
@@ -691,7 +695,7 @@ html, body {
 }
 
 .form {
-  background: var(--form-box-bgcolor);
+  background: #6d8cc5;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -703,7 +707,7 @@ html, body {
   overflow: hidden;
   margin: 100px 33.5%;
   border-radius: 50px;
-  box-shadow: 8px 8px 20px var(--form-box-shadow);
+  box-shadow: 8px 8px 20px #0f355c;
 }
 
 .tab-group {
@@ -723,7 +727,7 @@ html, body {
   display: block;
   text-align: center;
   padding: 0px;
-  background: var(--form-box-bgcolor);
+  background: #6d8cc5;
   color: white;
   font-family: "Fuzzy Bubbles", sans-serif;
   font-size: 20px;
@@ -734,12 +738,12 @@ html, body {
 }
 
 .form a:hover {
-  background: var(--form-box-bgcolor);
+  background: #6d8cc5;
   color: white;
 }
 
 .form .active a {
-  background: var(--form-box-bgcolor);
+  background: #6d8cc5;
   text-align: left;
   text-align: center;
   color: white;
@@ -751,7 +755,7 @@ html, body {
 
 .tab-content {
   overflow-y: auto;
-  scrollbar-color: var(--scroll-bgcolor) var(--scroll-color);
+  scrollbar-color: #d891af #cf6d96;
 }
 
 .tab-content::-webkit-scrollbar {
@@ -759,7 +763,7 @@ html, body {
 }
 
 .tab-content::-webkit-scrollbar-thumb {
-  background-color: var(--header-bgcolor);
+  background-color: #b8336a;
   border-radius: 4px;
 }
 
@@ -799,7 +803,7 @@ html, body {
   font-family: "Fuzzy Bubbles", sans-serif;
   color: white;
   border: none;
-  background-color: var(--header-bgcolor);
+  background-color: #B8336A;
   text-align: center;
   margin-bottom: 30px;
   font-size: 20px;
@@ -808,7 +812,7 @@ html, body {
 }
 
 .req {
-  color: var(--header-bgcolor);
+  color: #b8336a;
 }
 
 .signup .field-wrap {
@@ -817,8 +821,7 @@ html, body {
   margin: 0;
 }
 
-.form #login, 
-.form #signup {
+#login, #signup {
   display: none;
 }
 
@@ -877,7 +880,7 @@ html, body {
 
 .form input:focus, .form textarea:focus {
   outline: 0;
-  border-color: var(--form-bgcolor);
+  border-color: rgb(45, 125, 143);
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 

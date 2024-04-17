@@ -19,6 +19,8 @@
             <form id="logoSpace">
                 <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' 
                     width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
+                <a href="#settings-popup" class="button" id="settings" title="Settings" 
+                    tabindex="0" style="float:right"><img id="settings-icon" src="images/settings icon.webp"></a>
                 <a href="login.html" id="login" class="button" title="Login"
                 tabindex="0" style="float:right">Login
                    </a>
@@ -54,90 +56,6 @@
                 </form>
                 </div>
             <div class="input" id="emotionTracking">
-                <script>
-                    function fade(button) {
-                        button.style.visibility="hidden";
-                        const buttons = document.querySelectorAll('.emotion-button');
-                        buttons.forEach(btn => {
-                            if (btn !== button && btn.style.visibility === "hidden") {
-                                btn.style.visibility = "visible";
-                            }
-                        });
-                    }
-                    
-                    function highNegList(button) {
-                        const list1 = document.querySelectorAll('.highNeg-list');
-                        const list2 = document.querySelectorAll('.highPos-list');
-                        const list3 = document.querySelectorAll('.lowNeg-list');
-                        const list4 = document.querySelectorAll('.lowPos-list');
-                        list1.forEach(item => {
-                            item.style.visibility = "visible";
-                        });
-                        list2.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                        list3.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                        list4.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                    }
-                    function highPosList(button) {
-                        const list1 = document.querySelectorAll('.highNeg-list');
-                        const list2 = document.querySelectorAll('.highPos-list');
-                        const list3 = document.querySelectorAll('.lowNeg-list');
-                        const list4 = document.querySelectorAll('.lowPos-list');
-                        list2.forEach(item => {
-                            item.style.visibility = "visible";
-                        });
-                        list1.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                        list3.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                        list4.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                    }
-                    function lowNegList(button) {
-                        const list1 = document.querySelectorAll('.highNeg-list');
-                        const list2 = document.querySelectorAll('.highPos-list');
-                        const list3 = document.querySelectorAll('.lowNeg-list');
-                        const list4 = document.querySelectorAll('.lowPos-list');
-                        list3.forEach(item => {
-                            item.style.visibility = "visible";
-                        });
-                        list1.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                        list2.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                        list4.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                    }
-                    function lowPosList(button) {
-                        const list1 = document.querySelectorAll('.highNeg-list');
-                        const list2 = document.querySelectorAll('.highPos-list');
-                        const list3 = document.querySelectorAll('.lowNeg-list');
-                        const list4 = document.querySelectorAll('.lowPos-list');
-                        list4.forEach(item => {
-                            item.style.visibility = "visible";
-                        });
-                        list1.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                        list2.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                        list3.forEach(item => {
-                            item.style.visibility = "hidden";
-                        })
-                    }
-                </script>
                 <hi id="emotionTitle">How are you feeling?</hi>
                 <div class="emotionGroup">
                     <button type="button" class="emotion-button" id="highNegative" onclick="fade(this), highNegList(this)">High Energy Negative</button>
@@ -177,7 +95,12 @@
                 </div>
             </div>
         </div>
-        <button id="theme-toggle" onclick="changeColor()">Toggle Theme</button>
+        <div id="settings-popup" class="popup">        
+            <div class="content" id="settings-content">
+                <button class="button" id="theme-toggle" onclick="changeColor()">Toggle Theme</button>
+                <a href="#" class="box-close">x</a>
+            </div>
+        </div>
         <footer>
             <div class="footerContent">
                 <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' class="button" 

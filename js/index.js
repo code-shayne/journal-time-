@@ -47,28 +47,91 @@ forgotPasswordForm.addEventListener("submit", (event) => {
 });
 
 //fade emotion buttons
-function fade() {
-    document.getElementById("highNegative").style.backgroundColor="green";
-}
 
-let emotion = document.querySelector(".emotion-button");
-
-emotion.addEventListener("click", () => {
-    emotion.classList.add("fade");
-});
-
-function fade(element) {
-    var op = 1;  // initial opacity
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-            element.style.display = 'none';
+function fade(button) {
+    button.style.visibility="hidden";
+    const buttons = document.querySelectorAll('.emotion-button');
+    buttons.forEach(btn => {
+        if (btn !== button && btn.style.visibility === "hidden") {
+            btn.style.visibility = "visible";
         }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 50);
+    });
 }
+
+function highNegList(button) {
+    const list1 = document.querySelectorAll('.highNeg-list');
+    const list2 = document.querySelectorAll('.highPos-list');
+    const list3 = document.querySelectorAll('.lowNeg-list');
+    const list4 = document.querySelectorAll('.lowPos-list');
+    list1.forEach(item => {
+        item.style.visibility = "visible";
+    });
+    list2.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+    list3.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+    list4.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+}
+function highPosList(button) {
+    const list1 = document.querySelectorAll('.highNeg-list');
+    const list2 = document.querySelectorAll('.highPos-list');
+    const list3 = document.querySelectorAll('.lowNeg-list');
+    const list4 = document.querySelectorAll('.lowPos-list');
+    list2.forEach(item => {
+        item.style.visibility = "visible";
+    });
+    list1.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+    list3.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+    list4.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+}
+function lowNegList(button) {
+    const list1 = document.querySelectorAll('.highNeg-list');
+    const list2 = document.querySelectorAll('.highPos-list');
+    const list3 = document.querySelectorAll('.lowNeg-list');
+    const list4 = document.querySelectorAll('.lowPos-list');
+    list3.forEach(item => {
+        item.style.visibility = "visible";
+    });
+    list1.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+    list2.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+    list4.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+}
+function lowPosList(button) {
+    const list1 = document.querySelectorAll('.highNeg-list');
+    const list2 = document.querySelectorAll('.highPos-list');
+    const list3 = document.querySelectorAll('.lowNeg-list');
+    const list4 = document.querySelectorAll('.lowPos-list');
+    list4.forEach(item => {
+        item.style.visibility = "visible";
+    });
+    list1.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+    list2.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+    list3.forEach(item => {
+        item.style.visibility = "hidden";
+    })
+}
+
+
 //move shop page
   const productContainers = [...document.querySelectorAll('.product-container')];
   const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
