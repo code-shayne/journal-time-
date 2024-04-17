@@ -97,8 +97,14 @@
         </div>
         <div id="settings-popup" class="popup">        
             <div class="content" id="settings-content">
-                <button class="button" id="theme-toggle" onclick="changeColor()">Toggle Theme</button>
+                <!--<button class="button" id="theme-toggle" onclick="changeColor()">Toggle Theme</button>-->
                 <a href="#" class="box-close">x</a>
+                <button class="button" id="theme-toggle" onclick="applyTheme('sass/style.css')">Default Theme</button>
+                <button class="button" id="theme-toggle" onclick="applyTheme('sass/test_theme.css')">Test Theme</button>
+                <button class="button" id="theme-toggle" onclick="applyTheme('sass/rose_theme.css')">Rose Theme</button>
+                <button class="button" id="theme-toggle" onclick="applyTheme('sass/beach_theme.css')">Beach Theme</button>
+                <button class="button" id="theme-toggle" onclick="applyTheme('sass/wild_west_theme.css')">Wild West Theme</button>
+                <!--add more themes here, do with different css files-->
             </div>
         </div>
         <footer>

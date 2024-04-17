@@ -1,18 +1,13 @@
 :root {
-    --background-color: #a9e3a3;
-    --prompt-container-bgcolor: #9cc2e1;
-    --header-bgcolor: #33b876;
-    --outline-color: #2d22cd;
-    --hr-color: #907e17;
+    --background-color: #ceb1be;
+    --prompt-container-bgcolor: #b97375;
+    --header-bgcolor: #561d25;
+    --outline-color: #8882e4;
+    --hr-color: #4f6d7a;
     --button-textcolor: #fff;
     --button-hovercolor: #000;
-    --prompt-color: #8847b0;
-    --filter-title-bgcolor: #abd086;
-    --form-bgcolor: rgb(122, 150, 97);
-    --form-box-bgcolor: #c56d9d;
-    --form-box-shadow: #135c0f;
-    --scroll-bgcolor: #9d91d8;
-    --scroll-color: #6dcfb3;
+    --prompt-color: #9F7277;
+    --filter-title-bgcolor: #C4929A;
   }
   
   * {
@@ -262,7 +257,7 @@
   #settings-popup {
     width: 100%;
   }
-  
+
   #settings-popup #theme-toggle {
     background-color: var(--prompt-color);
     outline-color: var(--hr-color);

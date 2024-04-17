@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Journaling, Journal, emotions, pets, online journaling, online journal, emotions">
     <!--<link rel="stylesheet" href="sass/_login.scss"> -->
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/style.css" id="theme-stylesheet">
     <link rel="icon" href="images/pencil.png">
     <title>Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,4 +161,8 @@ function forgotPass() {
   signupForm.style.display = "none"; 
 }
 </script>
+<script src="js/index.js"></script>
+    <script>
+          window.onload = loadSelectedTheme;
+    </script>
 </body>
