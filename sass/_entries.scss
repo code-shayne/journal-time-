@@ -24,7 +24,7 @@
 }
 
 .entriesFilter::-webkit-scrollbar-thumb {
-    background: var(--filter-title-bgcolor);
+    background: var(--outline-color);
   }
 
 .entriesFilter::-webkit-scrollbar-track {
@@ -32,7 +32,7 @@
    }
 
 .entriesFilterTitle {
-    background-color: var(--filter-title-bgcolor);
+    background-color: var(--outline-color);
     text-align:center;
     padding:10px;
     font-size: large;

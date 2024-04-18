@@ -1,13 +1,12 @@
 :root {
     --background-color: #ceb1be;
     --prompt-container-bgcolor: #b97375;
-    --header-bgcolor: #561d25;
-    --outline-color: #8882e4;
-    --hr-color: #4f6d7a;
+    --header-bgcolor: #712e37;
+    --outline-color: #C4929A;
+    --hr-color: #5e6662;
     --button-textcolor: #fff;
     --button-hovercolor: #000;
     --prompt-color: #9F7277;
-    --filter-title-bgcolor: #C4929A;
   }
   
   * {
@@ -351,7 +350,7 @@
   }
   
   .entriesFilter::-webkit-scrollbar-thumb {
-    background: var(--filter-title-bgcolor);
+    background: var(--outline-color);
   }
   
   .entriesFilter::-webkit-scrollbar-track {
@@ -359,7 +358,7 @@
   }
   
   .entriesFilterTitle {
-    background-color: var(--filter-title-bgcolor);
+    background-color: var(--outline-color);
     text-align: center;
     padding: 10px;
     font-size: large;

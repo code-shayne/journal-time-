@@ -240,7 +240,7 @@ body {
   margin-right: 0.1cm;
 }
 
-.logo #login {
+#login {
   background-color: var(--header-bgcolor);
   filter: brightness(115%);
   border: 1px solid #fff;
@@ -256,12 +256,6 @@ body {
 
 #settings-popup {
   width: 100%;
-}
-
-#settings-popup #theme-toggle {
-  background-color: var(--prompt-color);
-  outline-color: var(--hr-color);
-  color: #fff;
 }
 
 #seriousPrompt {
@@ -351,7 +345,7 @@ footer {
 }
 
 .entriesFilter::-webkit-scrollbar-thumb {
-  background: var(--filter-title-bgcolor);
+  background: var(--outline-color);
 }
 
 .entriesFilter::-webkit-scrollbar-track {
@@ -359,7 +353,7 @@ footer {
 }
 
 .entriesFilterTitle {
-  background-color: var(--filter-title-bgcolor);
+  background-color: var(--outline-color);
   text-align: center;
   padding: 10px;
   font-size: large;

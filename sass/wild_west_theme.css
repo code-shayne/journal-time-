@@ -1,13 +1,12 @@
 :root {
     --background-color: #9db4b6;
-    --prompt-container-bgcolor: #00565f;
+    --prompt-container-bgcolor: #007e8c;
     --header-bgcolor: #914236;
     --outline-color: #0f666f;
-    --hr-color: #175490;
+    --hr-color: #654a0a;
     --button-textcolor: #fff;
     --button-hovercolor: #000;
-    --prompt-color: #d77d49;
-    --filter-title-bgcolor: #664d51;
+    --prompt-color: #b86230;
   }
   
   * {
@@ -351,7 +350,7 @@
   }
   
   .entriesFilter::-webkit-scrollbar-thumb {
-    background: var(--filter-title-bgcolor);
+    background: var(--outline-color);
   }
   
   .entriesFilter::-webkit-scrollbar-track {
@@ -359,7 +358,7 @@
   }
   
   .entriesFilterTitle {
-    background-color: var(--filter-title-bgcolor);
+    background-color: var(--outline-color);
     text-align: center;
     padding: 10px;
     font-size: large;
@@ -372,7 +371,7 @@
     margin-top: 5px;
     display: block;
     width: 90%;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
   }
   
   #filterTitle {
@@ -397,7 +396,7 @@
     text-align: center;
     padding: 0px;
     background-color: var(--prompt-container-bgcolor);
-    border: 1px solid var(--filter-title-bgcolor);
+    border: 1px solid var(--outline-color);
     font-size: 15px;
   }
   
@@ -456,13 +455,13 @@
     padding: 3px;
     width: 30%;
     font-size: 18px;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
   }
   
   #storeFilter {
     background-color: var(--prompt-container-bgcolor);
     border-radius: 5px;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
     padding: 3px;
     margin: 5px;
     font-size: 18px;
@@ -472,7 +471,7 @@
   #sortOptions {
     background-color: var(--prompt-container-bgcolor);
     border-radius: 5px;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
     padding: 3px;
     margin: 5px;
     font-size: 18px;
@@ -540,7 +539,7 @@
     text-align: center;
     padding: 0px;
     background-color: var(--prompt-container-bgcolor);
-    border: 1px solid var(--filter-title-bgcolor);
+    border: 1px solid var(--outline-color);
     font-size: 15px;
   }
   

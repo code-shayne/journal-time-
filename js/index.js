@@ -132,34 +132,6 @@ function lowPosList(button) {
 }
 
 
-//move shop page
-  const productContainers = [...document.querySelectorAll('.product-container')];
-  const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-  const preBtn = [...document.querySelectorAll('.pre-btn')];
-
-  productContainers.forEach((item, i) => {
-    let containerDimensions = item.getBoundingClientRect();
-    let containerWidth = containerDimensions.width;
-    
-    nxtBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth;
-    })
-
-    preBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth;
-    })
-  })
-
-  function showSection(sectionId) {
-    // Hide all sections
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.display = 'none';
-    });
-
-    // Show the selected section
-    document.getElementById(sectionId).style.display = 'block';
-}
-
 // const themeToggle = document.getElementById('theme-toggle');
         
 //             function changeColor() {
@@ -188,3 +160,53 @@ function loadSelectedTheme() {
       themeLink.setAttribute('href', selectedTheme);
     }
   }
+
+//store
+function showSection(sectionId) {
+  // Hide all sections
+  document.querySelectorAll('.section').forEach(section => {
+      section.style.display = 'none';
+  });
+
+  // Show the selected section
+  document.getElementById(sectionId).style.display = 'block';
+  document.getElementById(sectionId).style.visibility = 'visible';
+  document.getElementById("storeFilter").style.visibility = 'visible';
+  document.getElementById("sortOptions").style.visibility = 'visible';
+}
+
+function scrollThemeContainer(direction) {
+  const container = document.querySelector('.theme-container');
+  const containerWidth = container.offsetWidth; // Width of the container
+  const scrollAmount = containerWidth; // Adjust this value as needed
+
+  if (direction === 'left') {
+      container.scrollLeft -= scrollAmount; // Scroll left
+  } else if (direction === 'right') {
+      container.scrollLeft += scrollAmount; // Scroll right
+  }
+}
+
+function scrollPromptContainer(direction) {
+  const container = document.querySelector('.prompt-container');
+  const containerWidth = container.offsetWidth; // Width of the container
+  const scrollAmount = containerWidth; // Adjust this value as needed
+
+  if (direction === 'left') {
+      container.scrollLeft -= scrollAmount; // Scroll left
+  } else if (direction === 'right') {
+      container.scrollLeft += scrollAmount; // Scroll right
+  }
+}
+
+function scrollPetContainer(direction) {
+  const container = document.querySelector('.pet-container');
+  const containerWidth = container.offsetWidth; // Width of the container
+  const scrollAmount = containerWidth; // Adjust this value as needed
+
+  if (direction === 'left') {
+      container.scrollLeft -= scrollAmount; // Scroll left
+  } else if (direction === 'right') {
+      container.scrollLeft += scrollAmount; // Scroll right
+  }
+}
