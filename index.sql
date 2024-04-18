@@ -11,7 +11,7 @@ CREATE TABLE users (
 
 CREATE TABLE entries (
     entry_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
+    user_id INT FOREIGN KEY,
     emotion VARCHAR(255) NOT NULL,
     entry_title VARCHAR(255) NOT NULL,
     entry_body VARCHAR(255) NOT NULL,
