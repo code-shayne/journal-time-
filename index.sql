@@ -1,3 +1,5 @@
+CREATE DATABASE journaltime;
+USE journaltime;
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
@@ -11,7 +13,7 @@ CREATE TABLE users (
 
 CREATE TABLE entries (
     entry_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT FOREIGN KEY,
+    user_id INT,
     emotion VARCHAR(255) NOT NULL,
     entry_title VARCHAR(255) NOT NULL,
     entry_body VARCHAR(255) NOT NULL,
@@ -22,6 +24,7 @@ CREATE TABLE entries (
 -- Function to generate a random salt
 DELIMITER //
 CREATE FUNCTION generate_salt(length INT) RETURNS VARCHAR(255)
+READS SQL DATA
 BEGIN
     DECLARE characters VARCHAR(62) DEFAULT 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     DECLARE salt VARCHAR(255) DEFAULT '';
@@ -39,8 +42,10 @@ DELIMITER ;
 -- Example registration query
 -- Replace 'input_username', 'input_email', and 'input_password' with actual user input
 SET @salt = generate_salt(32);
-INSERT INTO users (username, email, password_hash, salt, first_name, last_name)
-VALUES ('input_username', 'input_email@example.com', SHA2(CONCAT('input_password', @salt), 256), @salt, 'Full Name');
 
-INSERT INTO entries (user_id, emotion, entry_title, entry_body)
-VALUES ('userid', 'emotion', 'entry_title', 'entry_body');
+-- sample insert statements
+-- INSERT INTO users (username, email, password_hash, salt, first_name, last_name)
+-- VALUES ('username', 'email', 'password_hash', @salt, 'first_name', 'last_name');
+
+-- INSERT INTO entries (emotion, entry_title, entry_body)
+-- VALUES ('emotion', 'entry_title', 'entry_body');
