@@ -371,7 +371,7 @@
     margin-top: 5px;
     display: block;
     width: 90%;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
   }
   
   #filterTitle {
@@ -396,7 +396,7 @@
     text-align: center;
     padding: 0px;
     background-color: var(--prompt-container-bgcolor);
-    border: 1px solid var(--filter-title-bgcolor);
+    border: 1px solid var(--outline-color);
     font-size: 15px;
   }
   
@@ -455,13 +455,13 @@
     padding: 3px;
     width: 30%;
     font-size: 18px;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
   }
   
   #storeFilter {
     background-color: var(--prompt-container-bgcolor);
     border-radius: 5px;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
     padding: 3px;
     margin: 5px;
     font-size: 18px;
@@ -471,7 +471,7 @@
   #sortOptions {
     background-color: var(--prompt-container-bgcolor);
     border-radius: 5px;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
     padding: 3px;
     margin: 5px;
     font-size: 18px;
@@ -539,7 +539,7 @@
     text-align: center;
     padding: 0px;
     background-color: var(--prompt-container-bgcolor);
-    border: 1px solid var(--filter-title-bgcolor);
+    border: 1px solid var(--outline-color);
     font-size: 15px;
   }
   
