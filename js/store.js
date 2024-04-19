@@ -7,18 +7,43 @@ function showSection(sectionId) {
     // Show the selected section
     document.getElementById(sectionId).style.display = 'block';
     document.getElementById(sectionId).style.visibility = 'visible';
+    document.getElementById("storeFilter").style.visibility = 'visible';
+    document.getElementById("sortOptions").style.visibility = 'visible';
 }
 
-function scrollContainer(direction) {
-    const container = document.querySelector('.product-container');
-    const containerDimensions = container.getBoundingClientRect();
-    const containerWidth = containerDimensions.width;
+function scrollThemeContainer(direction) {
+    const container = document.querySelector('.theme-container');
+    const containerWidth = container.offsetWidth; // Width of the container
     const scrollAmount = containerWidth; // Adjust this value as needed
 
     if (direction === 'left') {
-        container.scrollLeft -= scrollAmount;
+        container.scrollLeft -= scrollAmount; // Scroll left
     } else if (direction === 'right') {
-        container.scrollLeft += scrollAmount;
+        container.scrollLeft += scrollAmount; // Scroll right
+    }
+}
+
+function scrollPromptContainer(direction) {
+    const container = document.querySelector('.prompt-container');
+    const containerWidth = container.offsetWidth; // Width of the container
+    const scrollAmount = containerWidth; // Adjust this value as needed
+
+    if (direction === 'left') {
+        container.scrollLeft -= scrollAmount; // Scroll left
+    } else if (direction === 'right') {
+        container.scrollLeft += scrollAmount; // Scroll right
+    }
+}
+
+function scrollPetContainer(direction) {
+    const container = document.querySelector('.pet-container');
+    const containerWidth = container.offsetWidth; // Width of the container
+    const scrollAmount = containerWidth; // Adjust this value as needed
+
+    if (direction === 'left') {
+        container.scrollLeft -= scrollAmount; // Scroll left
+    } else if (direction === 'right') {
+        container.scrollLeft += scrollAmount; // Scroll right
     }
 }
 
