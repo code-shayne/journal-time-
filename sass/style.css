@@ -782,12 +782,12 @@ html, body {
 .form .signup h1 {
   text-align: center;
   color: white;
-  margin: 0;
+  margin: 0 0 40px;
   margin-top: 5px;
   font-size: 35px;
 }
 
-.form .signup h1 {
+.form .forgot h1 {
   text-align: center;
   color: white;
   margin: 0 0 40px;
@@ -821,7 +821,9 @@ html, body {
   margin: 0;
 }
 
-#login, #signup {
+.tab-content #login, 
+.tab-content #signup,
+.tab-content #forgot {
   display: none;
 }
 
@@ -837,7 +839,23 @@ html, body {
   display: none;
 }
 
+.show-signup #forgot-btn {
+  display: none;
+}
+
 .show-login #signup-btn {
+  display: none;
+}
+
+.show-login #forgot-btn {
+  display: none;
+}
+
+.show-forgot #signup-btn {
+  display: none;
+}
+
+.show-forgot #login-btn {
   display: none;
 }
 
@@ -963,13 +981,12 @@ html, body {
   display: block;
   text-align: center;
   margin: 0 auto;
-  margin-top: 5px;
-  width: 180px;
-  height: 80px;
+  width: 150px;
+  height: 50px;
   border-radius: 50px;
   outline: none;
   padding: 15px 0;
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background: rgb(26, 82, 94);
@@ -994,10 +1011,30 @@ html, body {
 }
 
 .forgot {
-  margin-top: -20px;
   text-align: center;
 }
+#forgot-page-btn {
+  border: 0;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  outline: none;
+  padding: 15px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgb(26, 82, 94);
+  color: white;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
 
+#forgot-page-btn:hover, #forgot-page-btn:focus {
+  background: rgb(26, 82, 94);
+}
 
 .aboutPage {
   align-items: center;

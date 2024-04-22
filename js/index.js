@@ -32,22 +32,22 @@ function signUp() {
   forgotForm.style.display = "none";
 }
 
-// function forgotPass() {
-//     const loginBtn = document.getElementById("login-btn");
-//     const signupBtn = document.getElementById("signup-btn");
-//     const forgotBtn = document.getElementById("forgot-btn");
-//     const loginForm = document.querySelector(".login");
-//     const signupForm = document.querySelector(".signup");
-//     const forgotForm = document.querySelector(".forgot");
+function forgotPass() {
+    const loginBtn = document.getElementById("login-btn");
+    const signupBtn = document.getElementById("signup-btn");
+    const forgotBtn = document.getElementById("forgot-btn");
+    const loginForm = document.querySelector(".login");
+    const signupForm = document.querySelector(".signup");
+    const forgotForm = document.querySelector(".forgot");
   
-//     forgotBtn.classList.add("active");
-//     loginBtn.classList.remove("active");
-//     signupBtn.classList.remove("active");
-//     forgotForm.style.display = "block";
-//     loginForm.style.display = "none";
-//     signupForm.style.display = "none";
+    forgotBtn.classList.add("active");
+    loginBtn.classList.remove("active");
+    signupBtn.classList.remove("active");
+    forgotForm.style.display = "block";
+    loginForm.style.display = "none";
+    signupForm.style.display = "none";
 
-//   }
+  }
 
 //fade emotion buttons
 

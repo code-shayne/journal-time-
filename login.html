@@ -112,7 +112,6 @@
   </div>
 
 <script>
-  //login and signup
 function logIn() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
@@ -144,8 +143,9 @@ function signUp() {
   loginForm.style.display = "none";
   forgotForm.style.display = "none";
 }
-//forgot password
+
 function forgotPass() {
+  console.log('forgotPass() called');
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
   const forgotBtn = document.getElementById("forgot-btn");
