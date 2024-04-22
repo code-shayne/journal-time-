@@ -2,49 +2,49 @@
 function logIn() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
+  const forgotBtn = document.getElementById("forgot-btn");
   const loginForm = document.querySelector(".login");
   const signupForm = document.querySelector(".signup");
+  const forgotForm = document.querySelector(".forgot");
     
   loginBtn.classList.add("active");
+  forgotBtn.classList.remove("active");
   signupBtn.classList.remove("active");
   loginForm.style.display = "block";
+  forgotForm.style.display = "none";
   signupForm.style.display = "none";
 }
 function signUp() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
+  const forgotBtn = document.getElementById("forgot-btn");
   const loginForm = document.querySelector(".login");
   const signupForm = document.querySelector(".signup");
+  const forgotForm = document.querySelector(".forgot");
 
   signupBtn.classList.add("active");
+  forgotBtn.classList.remove("active");
   loginBtn.classList.remove("active");
   signupForm.style.display = "block";
   loginForm.style.display = "none";
+  forgotForm.style.display = "none";
 }
-//forgot password
-const modal = document.getElementById("forgot-password-modal");
-const span = document.getElementsByClassName("close")[0];
-const forgotPasswordLink = document.querySelector(".login .forgot a");
-forgotPasswordLink.addEventListener("click", (event) => {
-  event.preventDefault();
-  modal.style.display = "block";
-});
-span.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
-const forgotPasswordForm = document.getElementById("forgot-password-form");
-forgotPasswordForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const email = document.getElementById("forgot-password-email").value;
-  const newPassword = document.getElementById("forgot-password-password").value;
-  alert(`Email: ${email}\nNew Password: ${newPassword}`);
-  forgotPasswordForm.reset();
-});
+
+function forgotPass() {
+  const loginBtn = document.getElementById("login-btn");
+  const signupBtn = document.getElementById("signup-btn");
+  const forgotBtn = document.getElementById("forgot-btn");
+  const loginForm = document.querySelector(".login");
+  const signupForm = document.querySelector(".signup");
+  const forgotForm = document.querySelector(".forgot");
+
+  forgotBtn.classList.add("active");
+  signupBtn.classList.remove("active");
+  loginBtn.classList.remove("active");
+  forgotForm.style.display = "block";
+  signupForm.style.display = "none";
+  loginForm.style.display = "none";
+}
 
 //fade emotion buttons
 function fade() {
