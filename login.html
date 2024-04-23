@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Journaling, Journal, emotions, pets, online journaling, online journal, emotions">
     <!--<link rel="stylesheet" href="sass/_login.scss"> -->
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/style.css" id="theme-stylesheet">
     <link rel="icon" href="images/pencil.png">
     <title>Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +19,9 @@
                  <a href="./login.html" id="login" class="button" title="Login"
                     tabindex="0" style="float:right">Login
                         </a>
+                <a href="#settings-popup" class="button" id="settings" title="Settings" 
+                        tabindex="0" style="float:right">
+                        <img id="settings-icon" src="images/settings icon.webp"></a>
                 <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo'  
                     width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
                 <a href="./store.html" id="store" class="button" title="Store"
@@ -86,31 +89,29 @@
             <button id="submit" class="button button-block">Signup</button>
             </form>
           </div>
-        <!--forgot password-->
-        <div class="forgot">   
-          <h1>Reset your Password!</h1>
-          <form action="/" method="post">
-          <div class="top-row">
-            <div class="field-wrap">
-            <label>
-              Enter your email: <span class="req">*</span>
-            </label>
-            <input id= "enter" type="email"required autocomplete="off"/>
-          </div>
-          <div class="field-wrap">
-            <label>
-              Enter your new password: <span class="req">*</span>
-            </label>
-            <input id = "enter" type="password"required autocomplete="off"/>
-          </div>
-          <button id="forgot-page-btn" class="button button-block">Reset!</button>
-        </form>
-        </div>
-        </div>
+    </div>
+    <!--forgot password-->
+    <div class="forgot">   
+      <h1>Reset your Password!</h1>
+      <form action="/" method="post">
+        <div class="field-wrap">
+        <label>
+          Enter your email: <span class="req">*</span>
+        </label>
+        <input id= "enter" type="email"required autocomplete="off"/>
       </div>
+      <div class="field-wrap">
+        <label>
+          Enter your new password: <span class="req">*</span>
+        </label>
+        <input id = "enter" type="password"required autocomplete="off"/>
       </div>
+      <button id= "forgot-page-btn" class="button button-block">Reset!</button>
+    </form>
+    </div>
+  </div>
+
 <script>
-//login and signup
 function logIn() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
@@ -118,14 +119,15 @@ function logIn() {
   const loginForm = document.querySelector(".login");
   const signupForm = document.querySelector(".signup");
   const forgotForm = document.querySelector(".forgot");
-    
+
   loginBtn.classList.add("active");
-  forgotBtn.classList.remove("active");
   signupBtn.classList.remove("active");
+  forgotBtn.classList.remove("active")
   loginForm.style.display = "block";
-  forgotForm.style.display = "none";
   signupForm.style.display = "none";
+  forgotForm.style.display = "none";
 }
+
 function signUp() {
   const loginBtn = document.getElementById("login-btn");
   const signupBtn = document.getElementById("signup-btn");
@@ -135,8 +137,8 @@ function signUp() {
   const forgotForm = document.querySelector(".forgot");
 
   signupBtn.classList.add("active");
-  forgotBtn.classList.remove("active");
   loginBtn.classList.remove("active");
+  forgotBtn.classList.remove("active");
   signupForm.style.display = "block";
   loginForm.style.display = "none";
   forgotForm.style.display = "none";
@@ -151,12 +153,15 @@ function forgotPass() {
   const forgotForm = document.querySelector(".forgot");
 
   forgotBtn.classList.add("active");
-  signupBtn.classList.remove("active");
   loginBtn.classList.remove("active");
-  forgotForm.style.display = "block";
-  signupForm.style.display = "none";
-  loginForm.style.display = "none";
+  signupBtn.classList.remove("active");
+  forgotForm.style.display = "block"; 
+  loginForm.style.display = "none"; 
+  signupForm.style.display = "none"; 
 }
 </script>
+<script src="js/index.js"></script>
+    <script>
+          window.onload = loadSelectedTheme;
+    </script>
 </body>
-</html>
