@@ -19,8 +19,6 @@
             <form id="logoSpace">
                 <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' 
                     width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
-                <a href="#settings-popup" class="button" id="settings" title="Settings" 
-                    tabindex="0" style="float:right"><img id="settings-icon" src="images/settings icon.webp"></a>
                 <a href="login.html" id="login" class="button" title="Login"
                 tabindex="0" style="float:right">Login
                    </a>
@@ -56,6 +54,90 @@
                 </form>
                 </div>
             <div class="input" id="emotionTracking">
+                <script>
+                    function fade(button) {
+                        button.style.visibility="hidden";
+                        const buttons = document.querySelectorAll('.emotion-button');
+                        buttons.forEach(btn => {
+                            if (btn !== button && btn.style.visibility === "hidden") {
+                                btn.style.visibility = "visible";
+                            }
+                        });
+                    }
+                    
+                    function highNegList(button) {
+                        const list1 = document.querySelectorAll('.highNeg-list');
+                        const list2 = document.querySelectorAll('.highPos-list');
+                        const list3 = document.querySelectorAll('.lowNeg-list');
+                        const list4 = document.querySelectorAll('.lowPos-list');
+                        list1.forEach(item => {
+                            item.style.visibility = "visible";
+                        });
+                        list2.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list3.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list4.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                    }
+                    function highPosList(button) {
+                        const list1 = document.querySelectorAll('.highNeg-list');
+                        const list2 = document.querySelectorAll('.highPos-list');
+                        const list3 = document.querySelectorAll('.lowNeg-list');
+                        const list4 = document.querySelectorAll('.lowPos-list');
+                        list2.forEach(item => {
+                            item.style.visibility = "visible";
+                        });
+                        list1.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list3.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list4.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                    }
+                    function lowNegList(button) {
+                        const list1 = document.querySelectorAll('.highNeg-list');
+                        const list2 = document.querySelectorAll('.highPos-list');
+                        const list3 = document.querySelectorAll('.lowNeg-list');
+                        const list4 = document.querySelectorAll('.lowPos-list');
+                        list3.forEach(item => {
+                            item.style.visibility = "visible";
+                        });
+                        list1.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list2.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list4.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                    }
+                    function lowPosList(button) {
+                        const list1 = document.querySelectorAll('.highNeg-list');
+                        const list2 = document.querySelectorAll('.highPos-list');
+                        const list3 = document.querySelectorAll('.lowNeg-list');
+                        const list4 = document.querySelectorAll('.lowPos-list');
+                        list4.forEach(item => {
+                            item.style.visibility = "visible";
+                        });
+                        list1.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list2.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                        list3.forEach(item => {
+                            item.style.visibility = "hidden";
+                        })
+                    }
+                </script>
                 <hi id="emotionTitle">How are you feeling?</hi>
                 <div class="emotionGroup">
                     <button type="button" class="emotion-button" id="highNegative" onclick="fade(this), highNegList(this)">High Energy Negative</button>
@@ -95,41 +177,17 @@
                 </div>
             </div>
         </div>
-        <div id="settings-popup" class="popup">        
-            <div class="content" id="settings-content">
-                <!--<button class="button" id="theme-toggle" onclick="changeColor()">Toggle Theme</button>-->
-                <a href="#" class="box-close">x</a>
-                <button class="button" id="default-theme-toggle">Default Theme</button>
-                <button class="button" id="slime-theme-toggle">Slime Theme</button>
-                <button class="button" id="rose-theme-toggle">Rose Theme</button>
-                <button class="button" id="beach-theme-toggle">Beach Theme</button>
-                <button class="button" id="wild-west-theme-toggle">Wild West Theme</button>
-                <!--add more themes here, do with different css files-->
-                <!-- onclick="applyTheme('sass/style.css')"
-                onclick="applyTheme('sass/test_theme.css')"
-                onclick="applyTheme('sass/rose_theme.css')"
-                onclick="applyTheme('sass/beach_theme.css')"
-                onclick="applyTheme('sass/beach_theme.css')"
-                onclick="applyTheme('sass/wild_west_theme.css')" -->
-            </div>
-        </div>
-        <footer>
-            <div class="footerContent">
-                <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' class="button" 
-                    width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
-            </div>
-            <div class="footerContainter">
-                <ul class="footerItems">
-                    <li><a href="./about.html" class="button" id="footerTab">About</a></li>
-                    <li><a href="./about.html#contact" class="button" id="footerTab">Contact</a></li>
-                </ul>
-                <hi id="est">est. 2024</hi>
-            </div>
-        </footer>
+        <div id="theme-selection">
+            <h3>Select a Theme:</h3>
+            <button onclick="applyTheme('test_theme.css')">Theme 1</button>
+            <button onclick="applyTheme('style.css')">Theme 2</button>
+          </div>
     </main>
-    <script src="js/index.js"></script>
-    <!-- <script>
-        window.onload = loadSelectedTheme;
-  </script> -->
+    <script>
+        function applyTheme(cssFile) {
+            const themeLink = document.getElementById('theme-stylesheet');
+            themeLink.setAttribute('href', cssFile);
+            }
+    </script>
 </body>
 </html>
