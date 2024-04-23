@@ -256,6 +256,8 @@ body {
 
 #settings-popup {
   width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
 #seriousPrompt {
@@ -366,7 +368,7 @@ footer {
   margin-top: 5px;
   display: block;
   width: 90%;
-  border: 2px solid var(--filter-title-bgcolor);
+  border: 2px solid var(--outline-color);
 }
 
 #filterTitle {
@@ -391,7 +393,7 @@ footer {
   text-align: center;
   padding: 0px;
   background-color: var(--prompt-container-bgcolor);
-  border: 1px solid var(--filter-title-bgcolor);
+  border: 1px solid var(--outline-color);
   font-size: 15px;
 }
 
@@ -450,13 +452,13 @@ footer {
   padding: 3px;
   width: 30%;
   font-size: 18px;
-  border: 2px solid var(--filter-title-bgcolor);
+  border: 2px solid var(--outline-color);
 }
 
 #storeFilter {
   background-color: var(--prompt-container-bgcolor);
   border-radius: 5px;
-  border: 2px solid var(--filter-title-bgcolor);
+  border: 2px solid var(--outline-color);
   padding: 3px;
   margin: 5px;
   font-size: 18px;
@@ -466,7 +468,7 @@ footer {
 #sortOptions {
   background-color: var(--prompt-container-bgcolor);
   border-radius: 5px;
-  border: 2px solid var(--filter-title-bgcolor);
+  border: 2px solid var(--outline-color);
   padding: 3px;
   margin: 5px;
   font-size: 18px;
@@ -782,12 +784,12 @@ html, body {
 .form .signup h1 {
   text-align: center;
   color: white;
-  margin: 0 0 40px;
+  margin: 0;
   margin-top: 5px;
   font-size: 35px;
 }
 
-.form .forgot h1 {
+.form .signup h1 {
   text-align: center;
   color: white;
   margin: 0 0 40px;
@@ -821,9 +823,7 @@ html, body {
   margin: 0;
 }
 
-.tab-content #login, 
-.tab-content #signup,
-.tab-content #forgot {
+#login, #signup {
   display: none;
 }
 
@@ -839,23 +839,7 @@ html, body {
   display: none;
 }
 
-.show-signup #forgot-btn {
-  display: none;
-}
-
 .show-login #signup-btn {
-  display: none;
-}
-
-.show-login #forgot-btn {
-  display: none;
-}
-
-.show-forgot #signup-btn {
-  display: none;
-}
-
-.show-forgot #login-btn {
   display: none;
 }
 
@@ -981,12 +965,13 @@ html, body {
   display: block;
   text-align: center;
   margin: 0 auto;
-  width: 150px;
-  height: 50px;
+  margin-top: 5px;
+  width: 180px;
+  height: 80px;
   border-radius: 50px;
   outline: none;
   padding: 15px 0;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background: rgb(26, 82, 94);
@@ -1011,30 +996,10 @@ html, body {
 }
 
 .forgot {
+  margin-top: -20px;
   text-align: center;
-}
-#forgot-page-btn {
-  border: 0;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  width: 150px;
-  height: 50px;
-  border-radius: 50px;
-  outline: none;
-  padding: 15px 0;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  background: rgb(26, 82, 94);
-  color: white;
-  transition: all 0.5s ease;
-  -webkit-appearance: none;
 }
 
-#forgot-page-btn:hover, #forgot-page-btn:focus {
-  background: rgb(26, 82, 94);
-}
 
 .aboutPage {
   align-items: center;

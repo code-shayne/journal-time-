@@ -45,7 +45,7 @@
     margin-top: 5px;
     display: block;
     width: 90%;
-    border: 2px solid var(--filter-title-bgcolor);
+    border: 2px solid var(--outline-color);
 }
 
 #filterTitle {
@@ -70,7 +70,7 @@
     text-align: center;
     padding: 0px;
     background-color: var(--prompt-container-bgcolor);
-    border: 1px solid var(--filter-title-bgcolor);
+    border: 1px solid var(--outline-color);
     font-size: 15px;
 }
 

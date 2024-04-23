@@ -177,18 +177,16 @@ function lowPosList(button) {
           '--button-textcolor': '#fff',
           '--button-hovercolor': '#000',
           '--prompt-color': '#476CB0',
-            // Define other variables for the default theme
         },
         'slime': {
             '--background-color': '#a9e3a3',
-            '--prompt-container-bgcolor': '#9cc2e1',
-            '--header-bgcolor': '#33b876',
-            '--outline-color': '#2d22cd',
-            '--hr-color': '#907e17',
+            '--prompt-container-bgcolor': '#adfbc4',
+            '--header-bgcolor': '#854eb4',
+            '--outline-color': '#559a60',
+            '--hr-color': '#17908a',
             '--button-textcolor': '#fff',
             '--button-hovercolor': '#000',
-            '--prompt-color': '#8847b0',
-            // Define other variables for the test theme
+            '--prompt-color': '#33b876',
         },   
         'rose': {
           '--background-color': '#ceb1be',
@@ -205,7 +203,7 @@ function lowPosList(button) {
           '--prompt-container-bgcolor': '#0fa3b1',
           '--header-bgcolor': '#e4b363',
           '--outline-color': '#5fbcc5',
-          '--hr-color': '#f3ebcc',
+          '--hr-color': '#925f00',
           '--button-textcolor': '#fff',
           '--button-hovercolor': '#000',
           '--prompt-color': '#ad6a6c',
@@ -260,6 +258,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+function loadSelectedTheme() {
+  const selectedTheme = localStorage.getItem('selectedTheme');
+  if (selectedTheme) {
+      applyTheme(selectedTheme);
+  }
+  }
 
 //store
 function showSection(sectionId) {
