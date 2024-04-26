@@ -255,6 +255,23 @@ function lowPosList(button) {
           '--scroll-color': '#914236',
           '--textbox-color': 'rgba(250, 250, 250, 0.2)',
           '--bgcolor': '#007e8c'
+        },
+        'forest': {
+          '--background-color': '#c6e1bb',
+          '--prompt-container-bgcolor': '#869d7a',
+          '--header-bgcolor': '#91785d',
+          '--outline-color': '#5b764c',
+          '--hr-color': '#28522d',
+          '--button-textcolor': '#fff',
+          '--button-hovercolor': '#000',
+          '--prompt-color': '#785a3a',
+          '--filter-title-bgcolor': '#223168',
+          '--form-bgcolor': '#b86230',
+          '--form-shadow': '#0f355c',
+          '--scroll-bgcolor': '#a86258',
+          '--scroll-color': '#914236',
+          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+          '--bgcolor': '#007e8c'
         }
     };
 
@@ -285,6 +302,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   document.getElementById('wild-west-theme-toggle').addEventListener('click', function() {
       applyTheme('wild-west');
+  });
+  document.getElementById('forest-theme-toggle').addEventListener('click', function() {
+      applyTheme('forest')
   });
 
 

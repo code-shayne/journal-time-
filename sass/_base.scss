@@ -277,6 +277,32 @@ body {
     z-index: 1;
 }
 
+details {
+    margin-bottom: 20px; /* Add some spacing between details elements */
+  }
+
+  /* Style for opened details elements */
+  details[open] + details {
+    margin-top: 20px; /* Push down the next details element */
+  }
+
+#set-themes > button {
+    background-color: var(--header-bgcolor);
+    margin-top: 5px;
+    border: 2px solid #000;
+}
+
+#set-account {
+    margin-top: 10px;
+}
+
+#set-account > a{
+    margin-top: 5px;
+    background-color: var(--header-bgcolor);
+    border: 2px solid #000;
+    font-size: 14px;
+}
+
 #seriousPrompt {
     background-color: var(--prompt-color);
     color: var(--button-textcolor);
