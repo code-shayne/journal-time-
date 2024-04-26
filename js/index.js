@@ -191,7 +191,7 @@ function lowPosList(button) {
         'slime': {
           '--background-color': '#a9e3a3',
           '--prompt-container-bgcolor': '#adfbc4',
-          '--header-bgcolor': '#854eb4',
+          '--header-bgcolor': '#8c69d3',
           '--outline-color': '#559a60',
           '--hr-color': '#17908a',
           '--button-textcolor': '#fff',
