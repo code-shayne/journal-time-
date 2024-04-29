@@ -434,19 +434,24 @@ function scrollPetContainer(direction) {
   }
 }
 
-src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js">
-    function loadXLSX() {
-        fetch('prompts.xlsx')
-            .then(response => response.arrayBuffer())
-            .then(buffer => {
-                const data = parseXLSX(buffer);
-                document.getElementById('seriousPrompt').addEventListener('click', () => generatePrompt(data, 'serious'));
-                document.getElementById('funnyPrompt').addEventListener('click', () => generatePrompt(data, 'funny'));
-                document.getElementById('selfPrompt').addEventListener('click', () => generatePrompt(data, 'self_reflection'));
-                document.getElementById('wyrPrompt').addEventListener('click', () => generatePrompt(data, 'wyr'));
-                document.getElementById('gratitudePrompt').addEventListener('click', () => generatePrompt(data, 'gratitude'));
-            })
-    }
+function loadXLSX() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'prompts.xlsx', true);
+    xhr.responseType = 'arraybuffer';
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const data = parseXLSX(xhr.response);
+            document.getElementById('seriousPrompt').addEventListener('click', () => generatePrompt(data, 'serious'));
+            document.getElementById('funnyPrompt').addEventListener('click', () => generatePrompt(data, 'funny'));
+            document.getElementById('selfPrompt').addEventListener('click', () => generatePrompt(data, 'self_reflection'));
+            document.getElementById('wyrPrompt').addEventListener('click', () => generatePrompt(data, 'wyr'));
+            document.getElementById('gratitudePrompt').addEventListener('click', () => generatePrompt(data, 'gratitude'));
+        }
+    };
+
+    xhr.send();
+}
 
     // Function to parse XLSX data
     function parseXLSX(buffer) {
@@ -466,7 +471,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js">
         const sheetData = data[sheetName];
         // Randomly select a prompt
         const randomIndex = Math.floor(Math.random() * sheetData.length);
-        const randomPrompt = sheetData[randomIndex].Prompt;
+        const randomPrompt = sheetData[randomIndex][0];
         // Display prompt in textarea
         document.getElementById('journalSpace').value = randomPrompt;
     }
