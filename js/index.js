@@ -272,6 +272,57 @@ function lowPosList(button) {
           '--scroll-color': '#914236',
           '--textbox-color': 'rgba(250, 250, 250, 0.2)',
           '--bgcolor': '#007e8c'
+        },
+        'pizza': {
+          '--background-color': '#9F817F',
+          '--prompt-container-bgcolor': '#ECCEAC',
+          '--header-bgcolor': '#C44536',
+          '--outline-color': '#65473E',
+          '--hr-color': '#28522F',
+          '--button-textcolor': '#fff',
+          '--button-hovercolor': '#000',
+          '--prompt-color': '#3D7B46',
+          '--filter-title-bgcolor': '#223168',
+          '--form-bgcolor': '#b86230',
+          '--form-shadow': '#0f355c',
+          '--scroll-bgcolor': '#a86258',
+          '--scroll-color': '#914236',
+          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+          '--bgcolor': '#007e8c'
+        },
+        'sunset': {
+          '--background-color': '#E3AA63',
+          '--prompt-container-bgcolor': '#F2CD60',
+          '--header-bgcolor': '#CE713B',
+          '--outline-color': '#E2AE12',
+          '--hr-color': '#EA85AF',
+          '--button-textcolor': '#fff',
+          '--button-hovercolor': '#000',
+          '--prompt-color': '#E1518D',
+          '--filter-title-bgcolor': '#223168',
+          '--form-bgcolor': '#b86230',
+          '--form-shadow': '#0f355c',
+          '--scroll-bgcolor': '#a86258',
+          '--scroll-color': '#914236',
+          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+          '--bgcolor': '#007e8c'
+        },
+        'christmas': {
+          '--background-color': '#4F7033',
+          '--prompt-container-bgcolor': '#b42d1a',
+          '--header-bgcolor': '#891515',
+          '--outline-color': '#6B1A0F',
+          '--hr-color': '#46622D',
+          '--button-textcolor': '#fff',
+          '--button-hovercolor': '#000',
+          '--prompt-color': '#BEA660',
+          '--filter-title-bgcolor': '#223168',
+          '--form-bgcolor': '#b86230',
+          '--form-shadow': '#0f355c',
+          '--scroll-bgcolor': '#a86258',
+          '--scroll-color': '#914236',
+          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+          '--bgcolor': '#007e8c'
         }
     };
 
@@ -306,6 +357,16 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('forest-theme-toggle').addEventListener('click', function() {
       applyTheme('forest')
   });
+  document.getElementById('pizza-theme-toggle').addEventListener('click', function() {
+    applyTheme('pizza')
+  });
+  document.getElementById('sunset-theme-toggle').addEventListener('click', function() {
+  applyTheme('sunset')
+  });
+  document.getElementById('christmas-theme-toggle').addEventListener('click', function() {
+    applyTheme('christmas')
+    });
+
 
 
 
