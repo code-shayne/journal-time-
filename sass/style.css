@@ -292,15 +292,7 @@ details[open] + details {
   font-size: 14px;
 }
 
-#seriousPrompt {
-  background-color: var(--prompt-color);
-  color: var(--button-textcolor);
-  padding: 3px;
-  border-radius: 10px;
-  border: 2px solid var(--hr-color);
-}
-
-#funnyPrompt {
+.promptContainer button {
   background-color: var(--prompt-color);
   color: var(--button-textcolor);
   padding: 3px;

@@ -266,12 +266,12 @@ function lowPosList(button) {
           '--button-hovercolor': '#000',
           '--prompt-color': '#785a3a',
           '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#b86230',
+          '--form-bgcolor': '#ACAD8C',
           '--form-shadow': '#0f355c',
-          '--scroll-bgcolor': '#a86258',
-          '--scroll-color': '#914236',
+          '--scroll-bgcolor': '#9cad8c',
+          '--scroll-color': '#859577',
           '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#007e8c'
+          '--bgcolor': '#457c45'
         },
         'pizza': {
           '--background-color': '#9F817F',
@@ -283,12 +283,12 @@ function lowPosList(button) {
           '--button-hovercolor': '#000',
           '--prompt-color': '#3D7B46',
           '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#b86230',
-          '--form-shadow': '#0f355c',
-          '--scroll-bgcolor': '#a86258',
-          '--scroll-color': '#914236',
+          '--form-bgcolor': '#4F4F31',
+          '--form-shadow': '#474D37',
+          '--scroll-bgcolor': '#4F4F31',
+          '--scroll-color': '#938f6f',
           '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#007e8c'
+          '--bgcolor': '#B14736'
         },
         'sunset': {
           '--background-color': '#E3AA63',
@@ -300,12 +300,12 @@ function lowPosList(button) {
           '--button-hovercolor': '#000',
           '--prompt-color': '#E1518D',
           '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#b86230',
-          '--form-shadow': '#0f355c',
-          '--scroll-bgcolor': '#a86258',
-          '--scroll-color': '#914236',
+          '--form-bgcolor': '#EC979C',
+          '--form-shadow': '#EFB27E',
+          '--scroll-bgcolor': '#EDABB7',
+          '--scroll-color': '#E38092',
           '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#007e8c'
+          '--bgcolor': '#DC7B75'
         },
         'christmas': {
           '--background-color': '#4F7033',
@@ -317,12 +317,12 @@ function lowPosList(button) {
           '--button-hovercolor': '#000',
           '--prompt-color': '#BEA660',
           '--filter-title-bgcolor': '#223168',
-          '--form-bgcolor': '#b86230',
-          '--form-shadow': '#0f355c',
-          '--scroll-bgcolor': '#a86258',
-          '--scroll-color': '#914236',
+          '--form-bgcolor': '#9F2118',
+          '--form-shadow': '#941B17',
+          '--scroll-bgcolor': '#EF9B95',
+          '--scroll-color': '#EA7971',
           '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-          '--bgcolor': '#007e8c'
+          '--bgcolor': '#79291B'
         }
     };
 
@@ -433,3 +433,43 @@ function scrollPetContainer(direction) {
       container.scrollLeft += scrollAmount; // Scroll right
   }
 }
+
+src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js">
+    function loadXLSX() {
+        fetch('prompts.xlsx')
+            .then(response => response.arrayBuffer())
+            .then(buffer => {
+                const data = parseXLSX(buffer);
+                document.getElementById('seriousPrompt').addEventListener('click', () => generatePrompt(data, 'serious'));
+                document.getElementById('funnyPrompt').addEventListener('click', () => generatePrompt(data, 'funny'));
+                document.getElementById('selfPrompt').addEventListener('click', () => generatePrompt(data, 'self_reflection'));
+                document.getElementById('wyrPrompt').addEventListener('click', () => generatePrompt(data, 'wyr'));
+                document.getElementById('gratitudePrompt').addEventListener('click', () => generatePrompt(data, 'gratitude'));
+            })
+    }
+
+    // Function to parse XLSX data
+    function parseXLSX(buffer) {
+        // Parse XLSX into array of objects
+        const workbook = XLSX.read(buffer, { type: 'array' });
+        const data = {};
+        workbook.SheetNames.forEach(sheetName => {
+            const worksheet = workbook.Sheets[sheetName];
+            data[sheetName] = XLSX.utils.sheet_to_json(worksheet);
+        });
+        return data;
+    }
+
+    // Function to generate random prompt
+    function generatePrompt(data, sheetName) {
+        // Get data for the selected sheet
+        const sheetData = data[sheetName];
+        // Randomly select a prompt
+        const randomIndex = Math.floor(Math.random() * sheetData.length);
+        const randomPrompt = sheetData[randomIndex].Prompt;
+        // Display prompt in textarea
+        document.getElementById('journalSpace').value = randomPrompt;
+    }
+
+    // Load XLSX file when the page loads
+    document.addEventListener('DOMContentLoaded', loadXLSX);
