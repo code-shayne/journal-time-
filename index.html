@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js"></script>
 </head>
 <body>
     <main>
@@ -40,22 +41,24 @@
         <section class="promptContainer">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js"></script>
                 <hi>Prompts:</hi>
-                <button id="seriousPrompt" class="button" title = "Generate Serious Prompt"
+                <button id="seriousPrompt" class="button" title = "Generate Serious Prompt" onclick="getRandomPrompt('serious')"
                 tabindex="0">Serious Prompt</button>
-                <button id="funnyPrompt" class="button" title = "Generate Fun Prompt"
+                <button id="funnyPrompt" class="button" title = "Generate Fun Prompt" onclick="getRandomPrompt('fun')"
                 tabindex="0">Fun Prompt</button>
-                <button id="selfPrompt" class="button" title = "Generate Self-Reflection Prompt"
+                <button id="selfPrompt" class="button" title = "Generate Self-Reflection Prompt" onclick="getRandomPrompt('self_reflection')"
                 tabindex="0">Self-Reflection Prompt</button>
-                <button id="wyrPrompt" class="button" title = "Generate Would You Rather Prompt"
+                <button id="wyrPrompt" class="button" title = "Generate Would You Rather Prompt" onclick="getRandomPrompt('wyr')"
                 tabindex="0">Would You Rather Prompt</button>
-                <button id="gratitudePrompt" class="button" title = "Generate Gratitude Prompt"
+                <button id="gratitudePrompt" class="button" title = "Generate Gratitude Prompt" onclick="getRandomPrompt('gratitude')"
                 tabindex="0">Gratitude Prompt</button>
                 <a href="./store.html"><button id="morePrompts" class="button" title = "Add More Prompt Packages"
                 tabindex="0">+</button></a>
         </section>
         <div class="userInput">
             <div class = "input" id="journalEntry">
-                <hi>What's something you want to get off your chest?</hi>
+                <div id = "h1Title">
+                    <hi>What's something you want to get off your chest?</hi>
+                    </div>
                 <form id="itemEntryForm">
                     <textarea id="journalSpace" type="text" name="entry"
                     autocomplete="off" placeholder="Start journaling here..." tabindex="0"></textarea>

@@ -434,47 +434,134 @@ function scrollPetContainer(direction) {
   }
 }
 
-function loadXLSX() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'prompts.xlsx', true);
-    xhr.responseType = 'arraybuffer';
+const promptsData = {
+    serious: [
+        "What's something you want to get off your chest?",     
+        "How was your day?",
+        "What was the best thing that happened today?",
+        "What was the worst thing that happened today?",
+        "What are you thankful for recently?",
+        "What is something you wish you did differently?",
+        "What emotion have you felt the most recently?",
+        "What's one thing you can't live without?",
+        "What is the best gift you have ever given?",
+        "What is the best gift you have ever recieved?",
+        "What decision are you facing right now?",
+        "In general, how do you feel your life is going right now?",
+        "How do you usually handle your emotions?",
+        "What emotion you tend to supress more than others?",
+        "What life experiences have shaped who you are today?",
+        "What are you afraid of?",
+        "What is something you are looking forward to?",
+        "What goals do you have for the future?",
+        "What is the most important value you have?",
+        "What advice would you give to your younger self?",
+        "When was the last time you went out of your comfort zone? What did you learn?",
+        "What skill are you most grateful to have learned?",
+        "What is something unexpected that happened today?",
+        "What are three goals you wish to achieve in the next year?"
+    ],
+    fun: [
+        "What is your favorite joke and why does it make you laugh?",
+        "If you could have any superpower, which one would you choose?",
+        "Who would you switch lives with for a day if you could?",
+        "What was your favorite childhood toy?",
+        "What place do you want to travel to most?",
+        "What is your best memory from childhood?",
+        "If your mind was an ocean right now, what would it look like?",
+        "Write a letter to yourself 10 years in the future.",
+        "If you could have dinner with anyone, dead or alive, who would you choose?",
+        "What advice would you give your past self?",
+        "Describe what a perfect day would look like for you?",
+        "What animal would you want to be?",
+        "Where's the first place you would go if you had a time machine?",
+        "What fictional world from any book or movie would you visit if you could?",
+        "Who was your favorite teacher ever?",
+        "What is something unique that you do?",
+        "If you life were a movie, what genre would it be?",
+        "What is your personal theme song?",
+        "What is your ultimate confort food?",
+        "What is the most valuable piece of advice you have been given?",
+        "What is your favorite way to express yourself?",
+        "Write a letter to someone who has had an impact on your life.",
+        "What is on your bucket list?",
+        "Rewrite the ending to your favorite childhood book or movie.",
+        "Create a time capsule filled with items that represent your life right now. What would you include, and when would it be opened?",
+        "What did you dream last night?"
+    ],
+    self_reflection: [
+        "What is your favorite thing about yourself?",
+        "What is your biggest strength?",
+        "What is your biggest weakness?",
+        "What habits do you want to cultivate or break?",
+        "What are you passionate about?",
+        "What are some things that make you feel confident?",
+        "What parts of yourself do you hide?",
+        "What boundaries do you set for yourself and others?",
+        "How do you define your beliefs and values?",
+        "What are five things you are good at?",
+        "What makes you happy?",
+        "What is important to you? Why is it important?",
+        "What motivates you?",
+        "What do you think your best quality is?"
+    ],
+    wyr: [
+        "Would you rather have telekines or telepathy?",
+        "Would you rather find true love today or win the lottery next year?",
+        "Would you rather have universal respect or unlimited power?",
+        "Would you rather labor under a hot sun or extreme cold?",
+        "Would you rather have a personal maid or a personal chef?",
+        "Would you rather always be 10 minutes late or always be 20 minutes early?",
+        "Would you rather have a pause or a rewind button in your life?",
+        "Would you rather die in 20 years with no regrets or live to 100 with a lot of regrets?",
+        "Would you rather be able to take back anything you say or hear any conversation that is about you?",
+        "Would you rather travel to the past or the future?"
+    ],
+    gratitude: [
+        "Who are three people in your life that you are grateful for, and why?",
+        "What is something you take for granted in your life?",
+        "What is something in your life that you feel lucky to have?",
+        "In what ways have you grown as a person in the last year?",
+        "How can you show your gratitude?",
+        "What simple delights have you enjoyed recently?"
+    ]
+  };
 
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            const data = parseXLSX(xhr.response);
-            document.getElementById('seriousPrompt').addEventListener('click', () => generatePrompt(data, 'serious'));
-            document.getElementById('funnyPrompt').addEventListener('click', () => generatePrompt(data, 'funny'));
-            document.getElementById('selfPrompt').addEventListener('click', () => generatePrompt(data, 'self_reflection'));
-            document.getElementById('wyrPrompt').addEventListener('click', () => generatePrompt(data, 'wyr'));
-            document.getElementById('gratitudePrompt').addEventListener('click', () => generatePrompt(data, 'gratitude'));
-        }
-    };
-
-    xhr.send();
-}
-
-    // Function to parse XLSX data
-    function parseXLSX(buffer) {
-        // Parse XLSX into array of objects
-        const workbook = XLSX.read(buffer, { type: 'array' });
-        const data = {};
-        workbook.SheetNames.forEach(sheetName => {
-            const worksheet = workbook.Sheets[sheetName];
-            data[sheetName] = XLSX.utils.sheet_to_json(worksheet);
-        });
-        return data;
+  function getRandomPrompt(sheetName) {
+    const prompts = promptsData[sheetName];
+    if (!prompts || prompts.length === 0) {
+      console.error(`No prompts found for sheet "${sheetName}".`);
+      return;
     }
+  
+    const randomIndex = Math.floor(Math.random() * prompts.length);
+    const randomPrompt = prompts[randomIndex];
+  
+    const promptElement = document.querySelector('#h1Title');    
+    promptElement.textContent = randomPrompt;
+  }
 
-    // Function to generate random prompt
-    function generatePrompt(data, sheetName) {
-        // Get data for the selected sheet
-        const sheetData = data[sheetName];
-        // Randomly select a prompt
-        const randomIndex = Math.floor(Math.random() * sheetData.length);
-        const randomPrompt = sheetData[randomIndex][0];
-        // Display prompt in textarea
-        document.getElementById('journalSpace').value = randomPrompt;
-    }
+const seriousPrompt = document.getElementById('seriousPrompt');
+seriousPrompt.addEventListener('click', () => {
+  getRandomPrompt('serious');
+});
 
-    // Load XLSX file when the page loads
-    document.addEventListener('DOMContentLoaded', loadXLSX);
+const funPrompt = document.getElementById('funPrompt');
+funPrompt.addEventListener('click', () => {
+  getRandomPrompt('fun');
+});
+
+const selfPrompt = document.getElementById('selfPrompt');
+selfPrompt.addEventListener('click', () => {
+  getRandomPrompt('self_reflection');
+});
+
+const wyrPrompt = document.getElementById('wyrPrompt');
+wyrPrompt.addEventListener('click', () => {
+  getRandomPrompt('wyr');
+});
+
+const gratitudePrompt = document.getElementById('gratitudePrompt');
+gratitudePrompt.addEventListener('click', () => {
+  getRandomPrompt('gratitude');
+});
