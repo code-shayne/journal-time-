@@ -69,10 +69,6 @@ body {
     width: 60%;
   }
 
-// .userInput {
-//     display: inline-flex;
-// }
-
   #journalSpace {
     height: 300px;
     width: 100%;
@@ -278,6 +274,51 @@ body {
     z-index: 1;
 }
 
+    /* toggle in label designing */
+    .toggle {
+        position : relative ;
+        display : inline-block;
+        width : 75px;
+        height : 37px;
+        border-radius: 30px;
+        border: 2px solid #000;
+        margin-top: 10px;
+    }
+           
+    /* After slide changes */
+    .toggle:after {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: var(--header-bgcolor);
+        top: -.5px; 
+        left: 0px;
+        transition:  all 0.3s;
+    }
+           
+    /* Checkbox checked effect */
+    .checkbox:checked + .toggle::after {
+        left : 37px; 
+    }
+           
+    /* Checkbox checked toggle label bg color */
+    .checkbox:checked + .toggle {
+        background-color: var(--prompt-color);
+    }
+           
+    /* Checkbox vanished */
+    .checkbox { 
+        display : none;
+    }
+
+    #set-notif {
+        font-size: 18px;
+        text-align: center;
+        margin-top : 5px;
+    }
+
 details {
     margin-bottom: 20px; /* Add some spacing between details elements */
   }
@@ -291,6 +332,7 @@ details {
     background-color: var(--header-bgcolor);
     margin-top: 5px;
     border: 2px solid #000;
+    font-size: 18px;
 }
 
 #set-account {
@@ -301,7 +343,7 @@ details {
     margin-top: 5px;
     background-color: var(--header-bgcolor);
     border: 2px solid #000;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 #seriousPrompt {
