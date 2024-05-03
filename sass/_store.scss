@@ -151,8 +151,8 @@ span:hover { cursor:default; }
 }
 
 .product-image{
-    width: 175px;
-    height: 175px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -180,6 +180,13 @@ span:hover { cursor:default; }
 
 .price {
     font-size: large;
+}
+
+.price-img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: -9px;
+    margin-left: -5px;
 }
 
 .pre-btn, .nxt-btn{
