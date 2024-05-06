@@ -462,7 +462,12 @@ const promptsData = {
         "When was the last time you went out of your comfort zone? What did you learn?",
         "What skill are you most grateful to have learned?",
         "What is something unexpected that happened today?",
-        "What are three goals you wish to achieve in the next year?"
+        "What are three goals you wish to achieve in the next year?",
+        "What is holding you back from achieving your goals? What can you do to change that?",
+        "When was the last time you felt a strong sense of purpose? What were you doing?",
+        "Write about a place that holds special significance for you.",
+        "What do you admire most about your role model?",
+        "What is your biggest dream? Do you think you will reach it?"
     ],
     fun: [
         "What is your favorite joke and why does it make you laugh?",
@@ -506,7 +511,13 @@ const promptsData = {
         "What makes you happy?",
         "What is important to you? Why is it important?",
         "What motivates you?",
-        "What do you think your best quality is?"
+        "What do you think your best quality is?",
+        "How did you respond to a recent setback or failure? Looking back, would you change anything?",
+        "Are you on track to reaching your goals?",
+        "How do you practice self-care or self-love?",
+        "How do you define success? Under this definition, have you succeeded?",
+        "How do you embrace or resist change?",
+        "What is one thing you do for yourself?"
     ],
     wyr: [
         "Would you rather have telekines or telepathy?",
@@ -518,7 +529,11 @@ const promptsData = {
         "Would you rather have a pause or a rewind button in your life?",
         "Would you rather die in 20 years with no regrets or live to 100 with a lot of regrets?",
         "Would you rather be able to take back anything you say or hear any conversation that is about you?",
-        "Would you rather travel to the past or the future?"
+        "Would you rather travel to the past or the future?",
+        "Would you rather have unlimited money or unlimited time?",
+        "Would you rather have the power of eternal youth or the wisdom of old age?",
+        "Would you rather have the power to heal any illness or injury instantly or have the ability to bring joy to anyone's life?",
+        "Would you rather have the ability to know every detail about your past or every detail about your future?"
     ],
     gratitude: [
         "Who are three people in your life that you are grateful for, and why?",
@@ -527,6 +542,18 @@ const promptsData = {
         "In what ways have you grown as a person in the last year?",
         "How can you show your gratitude?",
         "What simple delights have you enjoyed recently?"
+    ],
+    grief: [
+      "What is the fondest memory you have of the person you lost?",
+      "What do you miss most about the person you lost?",
+      "How has this loss impacted your daily routine?",
+      "How can you deal with your grief?",
+      "How can you find support and comfort?",
+      "Who is someone you can open up to about your grief?",
+      "What are some healthy ways to work through your grief?",
+      "What has brought you the most comfort recently?",
+      "What positive things do you have in your life right now?",
+      "What can you do to care for yourself right now?"
     ]
   };
 
@@ -572,6 +599,11 @@ wyrPrompt.addEventListener('click', () => {
 const gratitudePrompt = document.getElementById('gratitudePrompt');
 gratitudePrompt.addEventListener('click', () => {
   getRandomPrompt('gratitude');
+});
+
+const griefPrompt = document.getElementById('griefPrompt');
+griefPrompt.addEventListener('click', () => {
+  getRandomPrompt('grief');
 });
 
 //submit popup
