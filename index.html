@@ -41,9 +41,10 @@
         <section class="promptContainer">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js"></script>
                 <hi>Prompts:</hi>
+                <button id="freeJournal" class="button" title="Journal about whatever you'd like">Free Journal</button>
                 <button id="seriousPrompt" class="button" title = "Generate Serious Prompt" onclick="getRandomPrompt('serious')"
                 tabindex="0">Serious Prompt</button>
-                <button id="funnyPrompt" class="button" title = "Generate Fun Prompt" onclick="getRandomPrompt('fun')"
+                <button id="funPrompt" class="button" title = "Generate Fun Prompt" onclick="getRandomPrompt('fun')"
                 tabindex="0">Fun Prompt</button>
                 <button id="selfPrompt" class="button" title = "Generate Self-Reflection Prompt" onclick="getRandomPrompt('self_reflection')"
                 tabindex="0">Self-Reflection Prompt</button>
@@ -57,14 +58,18 @@
         <div class="userInput">
             <div class = "input" id="journalEntry">
                 <div id = "h1Title">
-                    <hi>Click a button to choose a prompt or start writing to journal without one!</hi>
+                    <hi>Click a button to choose a prompt!</hi>
                     </div>
                 <form id="itemEntryForm">
                     <textarea id="journalSpace" type="text" name="entry"
                     autocomplete="off" placeholder="Start journaling here..." tabindex="0"></textarea>
-                    <button class="button" id="submit-entry">Submit</button>
+                    <button class="button" id="submit-entry" type="button">Submit</button>
                 </form>
                 </div>
+            <div id="crystal-popup">
+                <button id='close-popup' class="box-close">x</button>
+                <hi>+1 <img class="crystal-img" src="images/crystal.png"></hi>
+            </div>
             <div class="input" id="emotionTracking">
                 <hi id="emotionTitle">How are you feeling?</hi>
                 <div class="emotionGroup">

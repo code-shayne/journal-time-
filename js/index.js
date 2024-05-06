@@ -435,6 +435,9 @@ function scrollPetContainer(direction) {
 }
 
 const promptsData = {
+    freeJournal: [
+      "Write whatever you want!"
+    ],
     serious: [
         "What's something you want to get off your chest?",     
         "How was your day?",
@@ -541,6 +544,11 @@ const promptsData = {
     promptElement.textContent = randomPrompt;
   }
 
+const freeJournal = document.getElementById('freeJournal');
+freeJournal.addEventListener('click', () => {
+  getRandomPrompt('freeJournal');
+})
+
 const seriousPrompt = document.getElementById('seriousPrompt');
 seriousPrompt.addEventListener('click', () => {
   getRandomPrompt('serious');
@@ -565,3 +573,13 @@ const gratitudePrompt = document.getElementById('gratitudePrompt');
 gratitudePrompt.addEventListener('click', () => {
   getRandomPrompt('gratitude');
 });
+
+//submit popup
+const submit = document.getElementById('submit-entry');
+const close = document.getElementById('close-popup');
+submit.addEventListener('click', () => {
+  document.getElementById('crystal-popup').style.visibility = 'visible';
+});
+close.addEventListener('click', () => {
+  document.getElementById('crystal-popup').style.visibility = 'hidden';
+})
