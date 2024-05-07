@@ -19,10 +19,10 @@
 > Journal Time! is a web app that allows users to journal and store entries online. The web app provides prompts or free-journaling options and save all entries to unique user accounts. Users can also track emotions by indicating what they are feeling at the time of journaling. After each entry the user will receive a certain number of points or currency, incentivising journaling. The points can be used to buy accessories within the website such as different prompt packages, website themes, or journaling pets. Users can track their journaling progress and view graphs and summaries of their emotions in a separate space on the web app. The aim of this project is to encourage journaling, which is a useful practice for mental health and wellbeing. It will also make the process more accessible and fun for users.
 
 ## Built With
-> [![HTML](images/html.png)](https://html.spec.whatwg.org/multipage/)
-> [![CSS](images/css.png)](https://www.w3.org/Style/CSS/)
-> [![SCSS](images/sass.png)](https://www.w3schools.com/sass/sass_intro.php)
-> [![JavaScript](images/js.png)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+> [![HTML](images/html.png)](https://html.spec.whatwg.org/multipage/)\
+> [![CSS](images/css.png)](https://www.w3.org/Style/CSS/)\
+> [![SCSS](images/sass.png)](https://www.w3schools.com/sass/sass_intro.php)\
+> [![JavaScript](images/js.png)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)\
 > [![SQL](images/sql.png)](https://www.w3schools.com/sql/sql_intro.asp)
 
 ## Prerequisites
