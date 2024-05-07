@@ -81,22 +81,28 @@ body {
 
   #submit-entry {
     background-color: var(--header-bgcolor);
-    margin-top: -2px;    
+    margin-top: -2px;  
+    font-size: 18px;  
   }
+
+  .crystal-count {
+    font-size: 22px;
+  }
+
 
   #crystal-popup {
     visibility: hidden;
     align-items: center;
     justify-content: center;
-    display: flex;
-    background-color: var(--header-bgcolor);
-    position:fixed;
-    height: 150px;
-    width: 150px;
+    // display: flex;
+    background-color: var(--background-color);
+    position:relative;
+    height: 40px;
+    width: 30px;
     border-radius: 10%;
-    top: 50%;
-    left: 50%;
-    font-size: 30px;
+    margin-top: 10px;
+    left: 20px;
+    font-size: 22px;
     transition: all 0.4s;
   }
 
@@ -104,11 +110,12 @@ body {
     background-color: transparent;
     border: none;
     font-family: "Fuzzy Bubbles", sans-serif;
+    font-size: 16px;
   }
 
   .crystal-img {
-    height: 50px;
-    width:50px;
+    height: 35px;
+    width:35px;
   }
 
 .input {
