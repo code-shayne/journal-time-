@@ -980,6 +980,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   pointer-events: none;
   font-size: 22px;
 }
@@ -1080,6 +1081,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.5s ease;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 #login-page-btn:hover, #login-page-btn:focus {
@@ -1110,6 +1112,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.5s ease;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 #submit:hover, #submit:focus {
