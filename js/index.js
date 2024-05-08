@@ -501,11 +501,9 @@ const promptsData = {
         "What is your favorite thing about yourself?",
         "What is your biggest strength?",
         "What is your biggest weakness?",
-        "What habits do you want to cultivate or break?",
         "What are you passionate about?",
         "What are some things that make you feel confident?",
         "What parts of yourself do you hide?",
-        "What boundaries do you set for yourself and others?",
         "How do you define your beliefs and values?",
         "What are five things you are good at?",
         "What makes you happy?",
@@ -515,9 +513,8 @@ const promptsData = {
         "How did you respond to a recent setback or failure? Looking back, would you change anything?",
         "Are you on track to reaching your goals?",
         "How do you practice self-care or self-love?",
-        "How do you define success? Under this definition, have you succeeded?",
         "How do you embrace or resist change?",
-        "What is one thing you do for yourself?"
+        "What is one thing you do for just yourself?"
     ],
     wyr: [
         "Would you rather have telekines or telepathy?",
@@ -554,6 +551,34 @@ const promptsData = {
       "What has brought you the most comfort recently?",
       "What positive things do you have in your life right now?",
       "What can you do to care for yourself right now?"
+    ],
+    story: [
+      "Create a story where the main character finds an old key in the attic. Where does it lead?",
+      "Create a story that describes a chance encounter that changes the main character's life.",
+      "Create a story about the consequences of a character time traveling.",
+      "Create a story where the main character receives a letter from their future self.",
+      "Create a story where the main character recalls a forgotten childhood memory.",
+      "Create a story where the main character has to survive being stranded with strangers.",
+      "Create a story where the main character has to savigate a world where everything is opposite.",
+      "Create a story where the main character inherits an artifact with mystical powers.",
+      "Create a story where society regulates emotions with technology.",
+      "Create a story where dreams become the reality.",
+      "Create a story where the main character has to choose between two paths that lead to different futures.",
+      "Create a story about someone who receives a mysterious message outlining an adventure.",
+      "Create a story where the main character witnesses a miraculous event that defies all known laws of physics.",
+      "Create a story where the main character discovers a mirror that shows them alternate universes.",
+      "Create a story where the main character is trapped in a never-ending cycle of deja vu."
+    ],
+    goals: [
+      "Envision your ideal life five years from now. Describe it in detail, including your career, relationships, health, and hobbies.",
+      "Reflect on your current priorities in life. What areas do you want to focus on improving, and why? Set three priority goals for the next six months.",
+      "Think about a skill or area of knowledge you want to improve. How can you dedicate time to learning and growing in this area?",
+      "What new experiences or places do you want to explore? Set a goal that encourages you to step out of your comfort zone and embrace new opportunities.",
+      "Reflect on ways you can contribute to your community or give back to others. How can you volunteer your time, skills, or resources to make a positive difference?",
+      "What habits do you want to cultivate or break? How do you aim to change these habits?",
+      "What boundaries do you set for yourself and others? How do you maintain these boundaries?",
+      "How do you define success? Under this definition, have you succeeded? How can you succeed more in the future?",
+      "What steps can you take to advance your career or pursue new opportunities?"
     ]
   };
 
@@ -604,6 +629,16 @@ gratitudePrompt.addEventListener('click', () => {
 const griefPrompt = document.getElementById('griefPrompt');
 griefPrompt.addEventListener('click', () => {
   getRandomPrompt('grief');
+});
+
+const storyPrompt = document.getElementById('storyPrompt');
+griefPrompt.addEventListener('click', () => {
+  getRandomPrompt('story');
+});
+
+const goalsPrompt = document.getElementById('goalsPrompt');
+griefPrompt.addEventListener('click', () => {
+  getRandomPrompt('goals');
 });
 
 //submit popup
