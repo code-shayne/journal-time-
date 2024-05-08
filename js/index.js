@@ -608,10 +608,6 @@ griefPrompt.addEventListener('click', () => {
 
 //submit popup
 const submit = document.getElementById('submit-entry');
-// const close = document.getElementById('close-popup');
-// close.addEventListener('click', () => {
-//   document.getElementById('crystal-popup').style.visibility = 'hidden';
-// })
 
 submit.addEventListener('click', () => {
   document.getElementById('crystal-popup').style.visibility = 'visible'; 
