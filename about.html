@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/style.css" id="theme-stylesheet">
     <title>Journal Time!</title>
     <link rel="icon" href="images/pencil.png">
     <!-- <link rel="stylesheet" href="style.css"> -->
@@ -21,7 +21,10 @@
                     width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
                 <!-- <a href="./index.html" id="name" class="button" title="Home"
                 tabindex="0">Journal Time!</a> -->
-                <a href="./login.html" id="login" class="button" title="Login" onclick=login()
+                <a href="#settings-popup" class="button" id="settings" title="Settings" 
+                tabindex="0" style="float:right">
+                <img id="settings-icon" src="images/settings icon.webp"></a>
+                <a href="./login.html" id="login-" class="button" title="Login" onclick=login()
                 tabindex="0" style="float:right">
                     Login</a>
                     <script> function login() {
@@ -43,8 +46,11 @@
             <h1>About Journal Time!</h1>
             <div id="description">
                 <h5>Journal Time! is a project created by three high school students. Our goal is to provide a free and easy access online journaling option. 
-                Journaling is a useful habit to help with mental health and wellbeing. We hope to simplify and incentivise the process through Journal Time! 
+                Journaling is a useful habit to help with mental health and wellbeing. We hope to simplify and incentivise the process through Journal Time!
                 </h5>
+                <a target="_blank" href="https://github.com/code-shayne/journal-time-" title="Github Repository">
+                <img  id= github-logo src="images/github-logo.png">
+                </a>
             </div>
         </section>
         <section id="contact">
@@ -54,5 +60,35 @@
             </div>
         </section>
     </main>
+    <div id="settings-popup" class="popup">        
+        <div class="content" id="settings-content">
+            <a href="#" class="box-close">x</a>
+            <details>
+                <summary>Theme</summary>
+                <p id="set-themes">
+                    <button class="button" id="default-theme-toggle">Default Theme</button>
+                    <button class="button" id="slime-theme-toggle">Slime Theme</button>
+                    <button class="button" id="rose-theme-toggle">Rose Theme</button>
+                    <button class="button" id="beach-theme-toggle">Beach Theme</button>
+                    <button class="button" id="wild-west-theme-toggle">Wild West Theme</button>
+                    <button class="button" id="forest-theme-toggle">Forest Theme</button>
+                    <button class="button" id="pizza-theme-toggle">Pizza Theme</button>
+                    <button class="button" id="sunset-theme-toggle">Sunset Theme</button> 
+                    <button class="button" id="christmas-theme-toggle">Christmas Theme</button>
+                    <button class="button"><a href="store.html">+</a></button>
+                </p>
+            </details>
+            <details>
+                <summary>Account</summary>
+                <p id="set-account">
+                    <a href="login.html" class="button">Login</a>
+                </p>
+            </details>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script>
+          window.onload = loadSelectedTheme;
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head></head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/style.css" id="theme-stylesheet">
     <link rel="icon" href="images/pencil.png">
     <title>Tracking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,10 @@
              <form id="logoSpace">
                 <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo'  
                     width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
-                <a href="./login.html" id="login" class="button" title="Login"
+                <a href="#settings-popup" class="button" id="settings" title="Settings" 
+                    tabindex="0" style="float:right">
+                    <img id="settings-icon" src="images/settings icon.webp"></a>
+                <a href="./login.html" id="login-" class="button" title="Login"
                     tabindex="0" style="float:right">
                         Login</a>
                 <a href="./store.html" id="store" class="button" title="Store"
@@ -31,5 +34,31 @@
              </form>
             </div>
     </section>
-    <hr/>
+    <div id="settings-popup" class="popup">        
+        <div class="content" id="settings-content">
+            <a href="#" class="box-close">x</a>
+            <details>
+                <summary>Theme</summary>
+                <p id="set-themes">
+                    <button class="button" id="default-theme-toggle">Default Theme</button>
+                    <button class="button" id="slime-theme-toggle">Slime Theme</button>
+                    <button class="button" id="rose-theme-toggle">Rose Theme</button>
+                    <button class="button" id="beach-theme-toggle">Beach Theme</button>
+                    <button class="button" id="wild-west-theme-toggle">Wild West Theme</button>
+                    <button class="button" id="forest-theme-toggle">Forest Theme</button>
+                    <button class="button" id="pizza-theme-toggle">Pizza Theme</button>
+                    <button class="button" id="sunset-theme-toggle">Sunset Theme</button> 
+                    <button class="button" id="christmas-theme-toggle">Christmas Theme</button>
+                    <button class="button"><a href="store.html">+</a></button>
+                </p>
+            </details>
+            <details>
+                <summary>Account</summary>
+                <p id="set-account">
+                    <a href="login.html" class="button">Login</a>
+                </p>
+            </details>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
 </body>

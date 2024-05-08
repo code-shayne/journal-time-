@@ -1,3 +1,15 @@
+:root {
+  --background-color: #a3b9e3;
+  --prompt-container-bgcolor: #a19ce1;
+  --header-bgcolor: #B8336A;
+  --outline-color: #8882e4;
+  --hr-color: #175490;
+  --button-textcolor: #fff;
+  --button-hovercolor: #000;
+  --prompt-color: #476CB0;
+  --filter-title-bgcolor: #8b86d0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +30,11 @@ html, body {
 }
 
 body {
-  background-color: #a3b9e3;
+  background-color: var(--background-color);
 }
 
 .logo {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   font-size: 20px;
   padding: 5px;
   position: fixed;
@@ -31,12 +43,12 @@ body {
 }
 
 .promptContainer {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
   font-size: 17px;
   padding: 10px;
   width: 90%;
   margin: auto;
-  border: 2px solid #8882e4;
+  border: 2px solid var(--outline-color);
   border-radius: 10px;
   margin-top: 70px;
 }
@@ -53,13 +65,45 @@ body {
   resize: none;
   font-family: "Fuzzy Bubbles", sans-serif;
   padding: 5px;
-  border: 1.5px solid #175490;
+  border: 1.5px solid var(--hr-color);
   border-radius: 10px;
 }
 
 #submit-entry {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   margin-top: -2px;
+  font-size: 18px;
+}
+
+.crystal-count {
+  font-size: 22px;
+}
+
+#crystal-popup {
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  position: relative;
+  height: 40px;
+  width: 30px;
+  border-radius: 10%;
+  margin-top: 10px;
+  left: 20px;
+  font-size: 22px;
+  transition: all 0.4s;
+}
+
+#close-popup {
+  background-color: transparent;
+  border: none;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-size: 16px;
+}
+
+.crystal-img {
+  height: 35px;
+  width: 35px;
 }
 
 .input {
@@ -205,7 +249,7 @@ body {
 }
 
 #pastEntries {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   border: none;
   padding: 5px;
   margin-right: 0.1cm;
@@ -213,7 +257,7 @@ body {
 }
 
 #tracking {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   border: none;
   padding: 5px;
   font-size: 17px;
@@ -221,15 +265,15 @@ body {
 }
 
 #store {
-  background-color: #B8336A;
+  background-color: var(--header-bgcolor);
   border: none;
   padding: 5px;
   font-size: 17px;
   margin-right: 0.1cm;
 }
 
-#login {
-  background-color: #B8336A;
+#login- {
+  background-color: var(--header-bgcolor);
   filter: brightness(115%);
   border: 1px solid #fff;
   padding: 5px;
@@ -237,37 +281,105 @@ body {
   margin-right: 0.1cm;
 }
 
-#seriousPrompt {
-  background-color: #476CB0;
-  color: #fff;
-  padding: 3px;
-  border-radius: 10px;
-  border: 2px solid #175490;
+#settings-icon {
+  height: 25px;
+  width: 25px;
 }
 
-#funnyPrompt {
-  background-color: #476CB0;
-  color: #fff;
-  padding: 3px;
-  border-radius: 10px;
-  border: 2px solid #175490;
+#settings-popup {
+  width: 100%;
+  position: fixed;
+  overflow: scroll;
+  z-index: 1;
 }
 
-#morePrompts {
-  background-color: #476CB0;
-  color: #fff;
+/* toggle in label designing */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 37px;
+  border-radius: 30px;
+  border: 2px solid #000;
+  margin-top: 10px;
+}
+
+/* After slide changes */
+.toggle:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--header-bgcolor);
+  top: -0.5px;
+  left: 0px;
+  transition: all 0.3s;
+}
+
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+  left: 37px;
+}
+
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+  background-color: var(--prompt-color);
+}
+
+/* Checkbox vanished */
+.checkbox {
+  display: none;
+}
+
+#set-notif {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+details {
+  margin-bottom: 20px; /* Add some spacing between details elements */
+}
+
+/* Style for opened details elements */
+details[open] + details {
+  margin-top: 20px; /* Push down the next details element */
+}
+
+#set-themes > button {
+  background-color: var(--header-bgcolor);
+  margin-top: 5px;
+  border: 2px solid #000;
+  font-size: 18px;
+}
+
+#set-account {
+  margin-top: 10px;
+}
+
+#set-account > a {
+  margin-top: 5px;
+  background-color: var(--header-bgcolor);
+  border: 2px solid #000;
+  font-size: 18px;
+}
+
+.promptContainer .button {
+  background-color: var(--prompt-color);
+  color: var(--button-textcolor);
   padding: 3px;
   border-radius: 10px;
-  border: 2px solid #175490;
+  border: 2px solid var(--hr-color);
 }
 
 a:link {
-  color: #000;
+  color: var(--default-font-color);
   text-decoration: none;
 }
 
 a:visited {
-  color: #000;
+  color: var(--default-font-color);
   text-decoration: none;
 }
 
@@ -277,7 +389,7 @@ footer {
   padding: 20px;
   padding-left: 40px;
   padding-bottom: 80px;
-  background-color: #8395b8;
+  background-color: var(--header-bgcolor);
 }
 
 .footerContent {
@@ -308,7 +420,7 @@ footer {
 }
 
 .entriesFilter {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
   width: 20%;
   top: 0;
   bottom: 0;
@@ -324,15 +436,15 @@ footer {
 }
 
 .entriesFilter::-webkit-scrollbar-thumb {
-  background: #8b86d0;
+  background: var(--outline-color);
 }
 
 .entriesFilter::-webkit-scrollbar-track {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
 }
 
 .entriesFilterTitle {
-  background-color: #8b86d0;
+  background-color: var(--outline-color);
   text-align: center;
   padding: 10px;
   font-size: large;
@@ -345,7 +457,7 @@ footer {
   margin-top: 5px;
   display: block;
   width: 90%;
-  border: 2px solid #8b86d0;
+  border: 2px solid var(--outline-color);
 }
 
 #filterTitle {
@@ -369,8 +481,8 @@ footer {
   margin-top: 5px;
   text-align: center;
   padding: 0px;
-  background-color: #a19ce1;
-  border: 1px solid #8b86d0;
+  background-color: var(--prompt-container-bgcolor);
+  border: 1px solid var(--outline-color);
   font-size: 15px;
 }
 
@@ -400,7 +512,7 @@ footer {
 #addEntry {
   border: none;
   color: #fff;
-  background-color: #476CB0;
+  background-color: var(--prompt-color);
   font-size: 16px;
   padding: 2px;
 }
@@ -408,14 +520,14 @@ footer {
 #entry {
   display: inline;
   list-style-type: none;
-  background-color: #476CB0;
+  background-color: var(--prompt-color);
   color: #fff;
-  margin: 0;
+  margin: 10px;
   margin-top: 10px;
   padding: 5px;
   width: 100px;
   height: 100px;
-  border: 2px solid #175490;
+  border: 2px solid var(--hr-color);
   border-radius: 10px;
   align-items: center;
 }
@@ -429,13 +541,13 @@ footer {
   padding: 3px;
   width: 30%;
   font-size: 18px;
-  border: 2px solid #8b86d0;
+  border: 2px solid var(--outline-color);
 }
 
 #storeFilter {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
   border-radius: 5px;
-  border: 2px solid #8b86d0;
+  border: 2px solid var(--outline-color);
   padding: 3px;
   margin: 5px;
   font-size: 18px;
@@ -443,9 +555,9 @@ footer {
 }
 
 #sortOptions {
-  background-color: #a19ce1;
+  background-color: var(--prompt-container-bgcolor);
   border-radius: 5px;
-  border: 2px solid #8b86d0;
+  border: 2px solid var(--outline-color);
   padding: 3px;
   margin: 5px;
   font-size: 18px;
@@ -485,7 +597,7 @@ span:hover {
 
 .content {
   position: absolute;
-  background: #a19ce1;
+  background: var(--prompt-container-bgcolor);
   height: 100%;
   width: 30%;
   padding: 1em 2em;
@@ -512,8 +624,8 @@ span:hover {
   margin-right: 10px;
   text-align: center;
   padding: 0px;
-  background-color: #a19ce1;
-  border: 1px solid #8b86d0;
+  background-color: var(--prompt-container-bgcolor);
+  border: 1px solid var(--filter-title-bgcolor);
   font-size: 15px;
 }
 
@@ -564,15 +676,43 @@ span:hover {
 }
 
 .product-image {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
 }
 
 .product-card {
   margin: 5px;
   margin-right: 50px;
+}
+
+.product-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-size: large;
+  text-align: left;
+}
+
+.product-btn:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: 4px 2px 5px #000;
+}
+
+.price {
+  font-size: large;
+}
+
+.price-img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: -9px;
+  margin-left: -5px;
 }
 
 .pre-btn, .nxt-btn {
@@ -651,42 +791,6 @@ html, body {
   }
 }
 .main {
-  background-color: rgb(26, 82, 94);
-  border-radius: 10px;
-  height: 50px;
-  width: 120px;
-  align-content: center;
-  border-color: rgb(26, 82, 94);
-  color: #000;
-  font-size: 17px;
-  margin: 75px 33.5%;
-  font-family: "Fuzzy Bubbles", sans-serif;
-}
-
-#signin:hover {
-  cursor: pointer;
-  background-color: rgb(45, 125, 143);
-  text-decoration: underline;
-}
-
-#signin:active {
-  background-color: rgb(65, 145, 163);
-  color: black;
-  text-decoration: none;
-}
-
-.heading {
-  grid-area: title;
-  color: rgb(97, 140, 150);
-  font-size: 30pt;
-}
-
-.numerror {
-  width: 100%;
-  text-align: center;
-}
-
-.main {
   background-color: rgb(97, 140, 150);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -700,13 +804,15 @@ html, body {
 .form a {
   text-align: left;
   flex-direction: column;
-  text-decoration:none;
-  color: rgb(97,140,150);
-  transition:.5s ease;
+  text-decoration: none;
+  color: rgb(97, 140, 150);
+  transition: 0.5s ease;
 }
+
 .form a:hover {
-    color:rgb(66, 96, 103);
+  color: rgb(66, 96, 103);
 }
+
 .form {
   background: #6d8cc5;
   text-align: center;
@@ -718,50 +824,56 @@ html, body {
   width: 500px;
   position: relative;
   overflow: hidden;
-  margin:100px 33.5%;
+  margin: 100px 33.5%;
   border-radius: 50px;
-  box-shadow:8px 8px 20px #0f355c;
+  box-shadow: 8px 8px 20px #0f355c;
 }
-.tab-group  {
-  list-style:none;
+
+.tab-group {
+  list-style: none;
   text-align: center;
   padding: 0;
   margin: 0px;
 }
+
 .tab-group:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
+
 .form a {
   display: block;
   text-align: center;
-  padding:0px;
-  background:#6d8cc5;
-  color:white;
+  padding: 0px;
+  background: #6d8cc5;
+  color: white;
   font-family: "Fuzzy Bubbles", sans-serif;
   font-size: 20px;
-  float:left;
+  float: left;
   width: 50%;
-  cursor:pointer;
-  transition:.5s ease;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
-  .form a:hover {
-      background:#6d8cc5;
-      color:white;
-  }
-  .form .active a {
-    background:#6d8cc5;
-    text-align: left;
-    text-align: center;
-    color:white;
-  }
+
+.form a:hover {
+  background: #6d8cc5;
+  color: white;
+}
+
+.form .active a {
+  background: #6d8cc5;
+  text-align: left;
+  text-align: center;
+  color: white;
+}
+
 .tab-content > div:last-child {
-  display:none;
+  display: none;
 }
 
 .tab-content {
-  overflow-y: auto; 
+  overflow-y: auto;
   scrollbar-color: #d891af #cf6d96;
 }
 
@@ -779,13 +891,6 @@ html, body {
 }
 
 .form .login h1 {
-  text-align:center;
-  color:white;
-  margin:0 0 40px;
-  margin-top: 5px;
-  font-size: 35px;
-}
-.form .signup h1 {
   text-align: center;
   color: white;
   margin: 0 0 40px;
@@ -793,7 +898,7 @@ html, body {
   font-size: 35px;
 }
 
-.form .forgot h1 {
+.form .signup h1 {
   text-align: center;
   color: white;
   margin: 0;
@@ -801,11 +906,12 @@ html, body {
   font-size: 35px;
 }
 
-.form .field-wrap {
-  position:relative;
+.form .signup h1 {
   text-align: center;
-  margin-bottom:40px;
-  width: 100%
+  color: white;
+  margin: 0 0 40px;
+  margin-top: 5px;
+  font-size: 35px;
 }
 
 #signup-btn,
@@ -823,17 +929,18 @@ html, body {
   white-space: nowrap;
   border-radius: 50px;
 }
+
 .req {
   color: #b8336a;
 }
+
 .signup .field-wrap {
   width: 99%;
   padding: 0;
   margin: 0;
 }
-.form #login, 
-.form #signup,
-.form #forgot {
+
+#login, #signup {
   display: none;
 }
 
@@ -841,130 +948,137 @@ html, body {
   cursor: pointer;
 }
 
+#signup-btn {
+  margin-top: 50px;
+}
+
 .show-signup #login-btn {
   display: none;
 }
-.show-signup #forgot-btn {
-  display: none;
-}
+
 .show-login #signup-btn {
-  display: none;
-}
-.show-login #forgot-btn {
-  display: none;
-}
-.show-forgot #signup-btn {
-  display: none;
-}
-.show-forgot #login-btn {
   display: none;
 }
 
 .form label {
-  text-align:center;
+  text-align: center;
   margin: 15px;
   color: white;
-  transition:all 0.25s ease;
+  transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
-  font-size:22px;
+  font-size: 22px;
 }
+
 .form label.active {
-  font-size:14px;
+  font-size: 14px;
   text-align: center;
-  .req {
-    opacity:0;
-  }
 }
+.form label.active .req {
+  opacity: 0;
+}
+
 .form label.highlight {
-  color:white;
+  color: white;
 }
+
 .form input, .form textarea {
-  font-size:22px;
+  font-size: 22px;
   text-align: left;
-  display:block;
-  width:100%;
-  height:50px;
-  padding:5px 10px;
-  background: rgba(250,250,250, 0.2);
-  color:white;
-  border-radius:50px;
-  transition:border-color .25s ease, box-shadow .25s ease;
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 5px 10px;
+  background: rgba(250, 250, 250, 0.2);
+  color: white;
+  border-radius: 50px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
   border: none;
   margin-bottom: 10px;
 }
-  .form input:focus, .form textarea:focus {
-    outline:0;
-    border-color:rgb(45, 125, 143);
-    font-family: "Fuzzy Bubbles", sans-serif;
-  }
-.active {
-  display:center;
+
+.form input:focus, .form textarea:focus {
+  outline: 0;
+  border-color: rgb(45, 125, 143);
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
+
+.active {
+  display: center;
+}
+
 #enter {
   align-items: center;
   padding: 0;
-  margin-left: 0;
+  margin: 0;
 }
+
 .form textarea {
   text-align: center;
   align-items: center;
   resize: vertical;
 }
+
 .field-wrap {
-  position:relative;
+  position: relative;
   text-align: center;
-  margin-bottom:40px;
-  width: 100%
+  margin-bottom: 40px;
+  width: 100%;
 }
+
 .top-row {
   text-align: center;
 }
+
 .top-row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
-  .top-row > div {
-    float:left;
-    text-align: center;
-    float:center;
-    width:48%;
-    margin-right:4%;
-  }
-    .top-row > div:last-child { 
-      margin:0;
-    }
-  
-#login-page-btn, #forgot-page-btn {
-  border:0;
+
+.top-row > div {
+  float: left;
+  text-align: center;
+  float: center;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.top-row > div:last-child {
+  margin: 0;
+}
+
+#login-page-btn {
+  border: 0;
   display: block;
   text-align: center;
   margin: 0 auto;
   width: 150px;
   height: 50px;
   border-radius: 50px;
-  outline:none;
-  padding:15px 0;
+  outline: none;
+  padding: 15px 0;
   font-size: 20px;
-  text-transform:uppercase;
-  letter-spacing:.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   background: rgb(26, 82, 94);
-  color:white;
-  transition:all.5s ease;
+  color: white;
+  transition: all 0.5s ease;
   -webkit-appearance: none;
 }
-  #login-page-btn:hover, #login-page-btn:focus,
-  #forgot-page-btn:hover, #forgot-page-btn:focus {
-    background:rgb(26, 82, 94);
-  }
+
+#login-page-btn:hover, #login-page-btn:focus {
+  background: rgb(26, 82, 94);
+}
+
 .signup .field-wrap {
   align-items: center;
   margin: 1px;
-  padding:5px;
+  padding: 5px;
 }
+
 .signup #submit {
-  border:0;
+  border: 0;
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -972,21 +1086,23 @@ html, body {
   width: 180px;
   height: 80px;
   border-radius: 50px;
-  outline:none;
-  padding:15px 0;
+  outline: none;
+  padding: 15px 0;
   font-size: 30px;
-  text-transform:uppercase;
-  letter-spacing:.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   background: rgb(26, 82, 94);
-  color:white;
-  transition:all.5s ease;
+  color: white;
+  transition: all 0.5s ease;
   -webkit-appearance: none;
 }
-  #submit:hover, #submit:focus {
-    background:rgb(26, 82, 94);
-  }
+
+#submit:hover, #submit:focus {
+  background: rgb(26, 82, 94);
+}
+
 .button-block {
-  display:block;
+  display: block;
   text-align: center;
   width: 150px;
   height: 50px;
@@ -996,7 +1112,12 @@ html, body {
   border-radius: 50px;
 }
 
-/*about page*/
+.forgot {
+  margin-top: -20px;
+  text-align: center;
+}
+
+
 .aboutPage {
   align-items: center;
   padding: 85px;
@@ -1011,4 +1132,10 @@ html, body {
   align-items: center;
   text-align: center;
   margin-top: -20px;
+}
+
+#github-logo {
+  height: 50px;
+  width: 50px;
+  margin: 15px;
 }/*# sourceMappingURL=style.css.map */

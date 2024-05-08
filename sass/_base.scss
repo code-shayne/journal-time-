@@ -1,24 +1,16 @@
 $default-font-color: #000;
-$backgroud-color: #a3b9e3;
-$prompt-container-bgcolor: #a19ce1;
-$header-bgcolor: #B8336A;
-$outline-color: #8882e4;
-$hr-color: #175490;
-$button-textcolor: #fff;
-$button-hovercolor: #000;
-$prompt-color: #476CB0;
-$filter-title-bgcolor: #8b86d0;
 
-// rose
-// $default-font-color: #000;
-// $backgroud-color: #EECFD4;
-// $prompt-container-bgcolor: #AAC0AA;
-// $header-bgcolor: #AD9FBC;
-// $outline-color: #859785;
-// $hr-color: #837472;
-// $button-textcolor: #fff;
-// $button-hovercolor: #000;
-// $prompt-color: #938482;
+:root {
+    --background-color: #a3b9e3;
+    --prompt-container-bgcolor: #a19ce1;
+    --header-bgcolor: #B8336A;
+    --outline-color: #8882e4;
+    --hr-color: #175490;
+    --button-textcolor: #fff;
+    --button-hovercolor: #000;
+    --prompt-color: #476CB0;
+    --filter-title-bgcolor: #8b86d0;
+}
 
 @mixin mp($size) {
     @media only screen and (min-width: $size) {
@@ -44,11 +36,11 @@ html,body {
 }
 
 body {
-    background-color: $backgroud-color;
+    background-color: var(--background-color);
 }
 
 .logo {
-    background-color: $header-bgcolor;
+    background-color: var(--header-bgcolor);
     font-size: 20px;
     padding: 5px;
     position: fixed;
@@ -57,16 +49,16 @@ body {
 }
 
 // hr {
-//     border: 2px solid $hr-color;
+//     border: 2px solid var(--hr-color;
 // }
 
 .promptContainer {
-    background-color: $prompt-container-bgcolor;
+    background-color: var(--prompt-container-bgcolor);
     font-size: 17px;
     padding: 10px;
     width: 90%;
     margin: auto;
-    border: 2px solid $outline-color;
+    border: 2px solid var(--outline-color);
     border-radius: 10px;
     margin-top: 70px;
   }
@@ -77,23 +69,53 @@ body {
     width: 60%;
   }
 
-// .userInput {
-//     display: inline-flex;
-// }
-
   #journalSpace {
     height: 300px;
     width: 100%;
     resize:none;
     font-family: "Fuzzy Bubbles", sans-serif;
     padding: 5px;
-    border: 1.5px solid $hr-color;
+    border: 1.5px solid var(--hr-color);
     border-radius: 10px;
   }
 
   #submit-entry {
-    background-color: $header-bgcolor;
-    margin-top: -2px;    
+    background-color: var(--header-bgcolor);
+    margin-top: -2px;  
+    font-size: 18px;  
+  }
+
+  .crystal-count {
+    font-size: 22px;
+  }
+
+
+  #crystal-popup {
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    // display: flex;
+    background-color: var(--background-color);
+    position:relative;
+    height: 40px;
+    width: 30px;
+    border-radius: 10%;
+    margin-top: 10px;
+    left: 20px;
+    font-size: 22px;
+    transition: all 0.4s;
+  }
+
+  #close-popup {
+    background-color: transparent;
+    border: none;
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-size: 16px;
+  }
+
+  .crystal-img {
+    height: 35px;
+    width:35px;
   }
 
 .input {
@@ -242,7 +264,7 @@ body {
 }
 
 #pastEntries {
-    background-color: $header-bgcolor;
+    background-color: var(--header-bgcolor);
     border: none;
     padding: 5px;
     margin-right: 0.1cm;
@@ -250,7 +272,7 @@ body {
 }
 
 #tracking {
-    background-color: $header-bgcolor;
+    background-color: var(--header-bgcolor);
     border: none;
     padding: 5px;
     font-size: 17px;
@@ -258,15 +280,15 @@ body {
 }
 
 #store {
-    background-color: $header-bgcolor;
+    background-color: var(--header-bgcolor);
     border: none;
     padding: 5px;
     font-size: 17px;
     margin-right: 0.1cm;
 }
 
-#login {
-    background-color: $header-bgcolor;
+#login- {
+    background-color: var(--header-bgcolor);
     filter: brightness(115%);
     border: 1px solid #fff;
     padding: 5px;
@@ -274,40 +296,107 @@ body {
     margin-right: 0.1cm;
 }
 
-#seriousPrompt {
-    background-color: $prompt-color;
-    color: $button-textcolor;
+#settings-icon {
+    height: 25px;
+    width: 25px;
+}
+
+#settings-popup {
+    width: 100%;
+    position:fixed;
+    overflow: scroll;
+    z-index: 1;
+}
+
+    /* toggle in label designing */
+    .toggle {
+        position : relative ;
+        display : inline-block;
+        width : 75px;
+        height : 37px;
+        border-radius: 30px;
+        border: 2px solid #000;
+        margin-top: 10px;
+    }
+           
+    /* After slide changes */
+    .toggle:after {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: var(--header-bgcolor);
+        top: -.5px; 
+        left: 0px;
+        transition:  all 0.3s;
+    }
+           
+    /* Checkbox checked effect */
+    .checkbox:checked + .toggle::after {
+        left : 37px; 
+    }
+           
+    /* Checkbox checked toggle label bg color */
+    .checkbox:checked + .toggle {
+        background-color: var(--prompt-color);
+    }
+           
+    /* Checkbox vanished */
+    .checkbox { 
+        display : none;
+    }
+
+    #set-notif {
+        font-size: 18px;
+        text-align: center;
+        margin-top : 5px;
+    }
+
+details {
+    margin-bottom: 20px; /* Add some spacing between details elements */
+  }
+
+  /* Style for opened details elements */
+  details[open] + details {
+    margin-top: 20px; /* Push down the next details element */
+  }
+
+#set-themes > button {
+    background-color: var(--header-bgcolor);
+    margin-top: 5px;
+    border: 2px solid #000;
+    font-size: 18px;
+}
+
+#set-account {
+    margin-top: 10px;
+}
+
+#set-account > a{
+    margin-top: 5px;
+    background-color: var(--header-bgcolor);
+    border: 2px solid #000;
+    font-size: 18px;
+}
+
+.promptContainer .button {
+    background-color: var(--prompt-color);
+    color: var(--button-textcolor);
     padding: 3px;
     border-radius: 10px;
-    border: 2px solid $hr-color;
+    border: 2px solid var(--hr-color);
 }
-
-#funnyPrompt {
-    background-color: $prompt-color;
-    color: $button-textcolor;
-    padding: 3px;
-    border-radius: 10px;
-    border: 2px solid $hr-color;
-}
-
-#morePrompts {
-  background-color: $prompt-color;
-  color: $button-textcolor;
-  padding: 3px;
-  border-radius: 10px;
-  border: 2px solid $hr-color;
-}
-
 
 //links
 
 a:link {
-    color: $default-font-color;
+    color: var(--default-font-color);
     text-decoration: none;
 }
 
 a:visited {
-    color: $default-font-color;
+    color: var(--default-font-color);
     text-decoration: none;
 }
 
@@ -317,7 +406,7 @@ footer {
     padding: 20px;
     padding-left: 40px;
     padding-bottom: 80px;
-    background-color: #8395b8;
+    background-color: var(--header-bgcolor);
 }
 
 .footerContent{

@@ -7,7 +7,7 @@
     padding: 3px;
     width: 30%;
     font-size: 18px;
-    border: 2px solid $filter-title-bgcolor;
+    border: 2px solid var(--outline-color);
 }
 
 // ::-webkit-search-cancel-button {
@@ -21,9 +21,9 @@
 // }
 
 #storeFilter {
-    background-color: $prompt-container-bgcolor;
+    background-color: var(--prompt-container-bgcolor);
     border-radius: 5px;
-    border: 2px solid $filter-title-bgcolor;
+    border: 2px solid var(--outline-color);
     padding: 3px;
     margin: 5px;
     font-size: 18px;
@@ -31,9 +31,9 @@
 }
 
 #sortOptions {
-    background-color: $prompt-container-bgcolor;
+    background-color: var(--prompt-container-bgcolor);
     border-radius: 5px;
-    border: 2px solid $filter-title-bgcolor;
+    border: 2px solid var(--outline-color);
     padding: 3px;
     margin: 5px;
     font-size: 18px;
@@ -72,7 +72,7 @@ span:hover { cursor:default; }
 
 .content {
     position: absolute;
-    background: $prompt-container-bgcolor;
+    background: var(--prompt-container-bgcolor);
     height:100%;
     width: 30%;
     padding: 1em 2em;
@@ -99,8 +99,8 @@ span:hover { cursor:default; }
     margin-right: 10px;
     text-align: center;
     padding: 0px;
-    background-color: $prompt-container-bgcolor;
-    border: 1px solid $filter-title-bgcolor;
+    background-color: var(--prompt-container-bgcolor);
+    border: 1px solid var(--filter-title-bgcolor);
     font-size: 15px;
 }
 
@@ -151,14 +151,42 @@ span:hover { cursor:default; }
 }
 
 .product-image{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .product-card {
     margin: 5px;
     margin-right: 50px;
+}
+
+.product-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-family:"Fuzzy Bubbles", sans-serif;
+    font-size: large;
+    text-align: left;
+}
+
+.product-btn:hover {
+    cursor: pointer;
+    filter: brightness(110%);
+    box-shadow: 4px 2px 5px #000;
+}
+
+.price {
+    font-size: large;
+}
+
+.price-img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: -9px;
+    margin-left: -5px;
 }
 
 .pre-btn, .nxt-btn{
