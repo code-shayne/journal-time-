@@ -20,6 +20,33 @@ CREATE TABLE entries (
     entry_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE rewards (
+	user_id INT,
+    crystals INT,
+    crystals_earned INT,
+    crystals_spent INT,
+    rose_theme_owned BOOLEAN,
+    beach_theme_owned BOOLEAN,
+    wild_west_theme_owned BOOLEAN,
+    slime_theme_owned BOOLEAN,
+    forest_theme_owned BOOLEAN,
+    pizza_theme_owned BOOLEAN,
+    sunset_theme_owned BOOLEAN,
+    christmas_theme_owned BOOLEAN,
+    would_you_rather_prompts_owned BOOLEAN,
+    self_reflection_prompts_owned BOOLEAN,
+    gratitude_prompts_owned BOOLEAN,
+    grief_prompts_owned BOOLEAN,
+    dog_pet_owned BOOLEAN,
+    cat_pet_owned BOOLEAN,
+    fish_pet_owned BOOLEAN,
+    turtle_pet_owned BOOLEAN,
+    ballerina_frog_pet_owned BOOLEAN,
+    snail_pet_owned BOOLEAN,
+    camel_pet_owned BOOLEAN,
+    pig_pet_owned BOOLEAN
+);
+
 
 -- Function to generate a random salt
 DELIMITER //
@@ -44,8 +71,8 @@ DELIMITER ;
 SET @salt = generate_salt(32);
 
 -- sample insert statements
--- INSERT INTO users (username, email, password_hash, salt, first_name, last_name)
--- VALUES ('username', 'email', 'password_hash', @salt, 'first_name', 'last_name');
+INSERT INTO users (username, email, password_hash, salt, first_name, last_name)
+VALUES ('username', 'email', 'password_hash', @salt, 'first_name', 'last_name');
 
 -- INSERT INTO entries (emotion, entry_title, entry_body)
 -- VALUES ('emotion', 'entry_title', 'entry_body');
