@@ -652,8 +652,8 @@ submit.addEventListener('click', () => {
 });
 
 const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
