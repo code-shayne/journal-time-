@@ -650,3 +650,10 @@ submit.addEventListener('click', () => {
     document.getElementById('crystal-popup').style.visibility = 'hidden';
    }, 500);
 });
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+});
