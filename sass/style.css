@@ -813,6 +813,24 @@ html, body {
   margin-right: 10px;
 }
 
+.close-btn {
+  display: none;
+  font-size: 24px;
+  margin-left: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.button,
+.menu-toggle,
+.close-btn {
+    cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
   @media (max-width: 768px) {
     .logo {
       height: auto;
@@ -843,9 +861,9 @@ html, body {
       display: block;
   }
   
-    .promptContainer {
+  .promptContainer {
       width: 95%;
-      margin-top: 80px;
+      margin-top: 120px;
     }
   
     #journalEntry {
@@ -895,9 +913,12 @@ html, body {
     .emotion-button {
       margin: 5px;
     }
+
+    .close-btn {
+      display: block;
+    }
   
   }
-
 
 .main {
   background-color: var(--bgcolor);
