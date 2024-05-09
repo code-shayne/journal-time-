@@ -791,11 +791,97 @@ html, body {
   flex-direction: column;
 }
 
-@media only screen and (min-width: 768px) {
-  html, body {
-    font-size: 22px;
-  }
+.nav-menu {
+  display: none;
 }
+
+  @media (max-width: 768px) {
+    .logo {
+      height: auto;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 60px;
+      left: 0px;
+      width: 100%;
+      background-color: var(--scroll-bgcolor);
+      z-index: 1;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 10px;
+      border-bottom: 1px solid var(--button-hovercolor);
+    }
+  
+    .promptContainer {
+      width: 95%;
+      margin-top: 80px;
+    }
+  
+    #journalEntry {
+      width: 100%;
+    }
+  
+    #emotionTracking {
+      width: 100%;
+    }
+  
+    .entriesFilter {
+      width: 100%;
+      position: static;
+      margin-top: 0; 
+    }
+  
+    .entriesContainer {
+      margin-left: 0;
+    }
+  
+    .form {
+      width: 100%;
+      margin: 0;
+      border-radius: 50px;
+    }
+
+    html, body {
+      font-size: 14px;
+    }
+  
+    .promptContainer {
+      font-size: 15px;
+    }
+  
+    #emotionTitle {
+      font-size: 14px;
+    }
+
+    .button {
+      padding: 10px;
+    }
+  
+    .emotion-button {
+      height: 120px;
+      width: 120px;
+    }
+
+    .input {
+      display: block;
+    }
+  
+    .emotion-button {
+      margin: 5px;
+    }
+  
+    .highNeg-list, .highPos-list, .lowNeg-list, .lowPos-list {
+      position: static; 
+    }
+  }
+
 
 .main {
   background-color: var(--bgcolor);
@@ -980,6 +1066,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
+  backface-visibility: none;
   pointer-events: none;
   font-size: 22px;
 }
@@ -1080,6 +1167,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.5s ease;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 #login-page-btn:hover, #login-page-btn:focus {
@@ -1110,6 +1198,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.5s ease;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 #submit:hover, #submit:focus {
