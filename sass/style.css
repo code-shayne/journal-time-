@@ -153,57 +153,400 @@ html, body {
       width: 95%;
       margin-top: 120px;
   }
+  
   .promptContainer button {
     margin: 1.5px;
   }
+  
+  #journalSpace {
+    width: 788px;
+    box-sizing: border-box; 
+    resize: none;
+  }
 
-    #journalEntry {
+  #emotionTracking {
       width: 100%;
-    }
+   }
 
-    #emotionTracking {
-      width: 100%;
-    }
-
-    .entriesFilter {
+  .entriesFilter {
       width: 100%;
       position: static;
       margin-top: 0; 
-    }
+   }
 
-    .entriesContainer {
+  .entriesContainer {
       margin-left: 0;
-    }
+   }
 
-    .form {
+  .form {
       width: 100%;
       margin: 0;
       border-radius: 50px;
-    }
+  }
 
-    html, body {
+  html, body {
       font-size: 14px;
-    }
+  }
 
-    .promptContainer {
+  .promptContainer {
       font-size: 15px;
-    }
+  }
 
-    #emotionTitle {
+  #emotionTitle {
       font-size: 14px;
-    }
+  }
 
-    .button {
+  .button {
       padding: 10px;
-    }
+  }
 
-    .input {
+  .input {
       display: block;
-    }
+  }
 
-    .emotion-button {
+  .emotion-button {
       margin: 5px;
-    }
+  }
+
+  .main {
+    background-color: var(--bgcolor);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 33%;
+    text-align: center;
+    font-family: "Fuzzy Bubbles", sans-serif;
+  }
+  
+  .form a {
+    text-align: left;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--bgcolor);
+    transition: 0.5s ease;
+  }
+  
+  .form a:hover {
+    color: var(--bgcolor);
+  }
+  
+  .form {
+    background: var(--form-bgcolor);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    margin: 17% 5%;
+    border-radius: 50px;
+    box-shadow: 8px 8px 20px var(--form-shadow);
+  }
+  
+  .tab-group {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0px;
+  }
+  
+  .tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .form a {
+    display: block;
+    text-align: center;
+    padding: 0px;
+    background: var(--form-bgcolor);
+    color: var(--button-textcolor);
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  
+  .form a:hover {
+    background: var(--form-bgcolor);
+    color: var(--button-textcolor);
+  }
+  
+  .form .active a {
+    background: var(--form-bgcolor);
+    text-align: left;
+    text-align: center;
+    color: var(--button-textcolor);
+  }
+  
+  .tab-content > div,
+  .signup,
+  .forgot {
+    display: none;
+  }
+  
+  .tab-content > .login {
+    display: block;
+  }
+  
+  .tab-content {
+    overflow-y: auto;
+    scrollbar-color: var(--scroll-bgcolor) var(--scroll-color);
+  }
+  
+  .tab-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .tab-content::-webkit-scrollbar-thumb {
+    background-color: var(--header-bgcolor);
+    border-radius: 4px;
+  }
+  
+  .tab-content::-webkit-scrollbar-track {
+    background-color: var(--button-textcolor);
+  }
+  
+  .form .login h1 {
+    text-align: center;
+    color: var(--button-textcolor);
+    margin: 0 0 40px;
+    margin-top: 5px;
+    font-size: 35px;
+  }
+  
+  .form .forgot h1 {
+    text-align: center;
+    color: var(--button-textcolor);
+    margin: 0 0 40px;
+    margin-top: 5px;
+    font-size: 35px;
+  }
+  
+  .form .signup h1 {
+    text-align: center;
+    color: var(--button-textcolor);
+    margin: 0 0 40px;
+    margin-top: 5px;
+    font-size: 35px;
+  }
+  
+  #signup-btn,
+  #login-btn,
+  #forgot-btn {
+    width: 100px;
+    height: 45px;
+    font-family: "Fuzzy Bubbles", sans-serif;
+    color: var(--button-textcolor);
+    border: none;
+    background-color: var(--header-bgcolor);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    white-space: nowrap;
+    border-radius: 50px;
+  }
+  
+  .req {
+    color: var(--header-bgcolor);
+  }
+  
+  .signup .field-wrap {
+    width: 99%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .form #login,
+  .form #signup {
+    display: none;
+  }
+  
+  #login-btn:hover, #signup-btn:hover, #forgot-btn:hover {
+    cursor: pointer;
+  }
+  
+  #signup-btn {
+    margin-top: 50px;
+  }
+  
+  .show-signup #login-btn {
+    display: none;
+  }
+  
+  .show-login #signup-btn {
+    display: none;
+  }
+  
+  .form label {
+    text-align: center;
+    margin: 15px;
+    color: var(--button-textcolor);
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: none;
+    pointer-events: none;
+    font-size: 22px;
+  }
+  
+  .form label.active {
+    font-size: 14px;
+    text-align: center;
+  }
+  .form label.active .req {
+    opacity: 0;
+  }
+  
+  .form label.highlight {
+    color: var(--button-textcolor);
+  }
+  
+  .form input, .form textarea {
+    font-size: 22px;
+    text-align: left;
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px;
+    background: var(--textbox-color);
+    color: var(--button-textcolor);
+    border-radius: 50px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  .form input:focus, .form textarea:focus {
+    outline: 0;
+    border-color: var(--bgcolor);
+    font-family: "Fuzzy Bubbles", sans-serif;
+  }
+  
+  .active {
+    display: center;
+  }
+  
+  #enter {
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .form textarea {
+    text-align: center;
+    align-items: center;
+    resize: vertical;
+  }
+  
+  .field-wrap {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .top-row {
+    text-align: center;
+  }
+  
+  .top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .top-row > div {
+    float: left;
+    text-align: center;
+    float: center;
+    width: 48%;
+    margin-right: 4%;
+  }
+  
+  .top-row > div:last-child {
+    margin: 0;
+  }
+  
+  #login-page-btn,
+  #forgot-page-btn {
+    border: 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 11px;
+    width: 30%;
+    height: 30%;
+    border-radius: 50px;
+    outline: none;
+    padding: 15px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--bgcolor);
+    color: var(--button-textcolor);
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  #login-page-btn:hover, #login-page-btn:focus {
+    background: var(--bgcolor);
+  }
+  
+  .signup .field-wrap {
+    align-items: center;
+    margin: 1px;
+    padding: 5px;
+  }
+  
+  .signup #submit {
+    border: 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 30%;
+    height: 30%;
+    margin-bottom: 11px;
+    border-radius: 50px;
+    outline: none;
+    padding: 15px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--bgcolor);
+    color: var(--button-textcolor);
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  #submit:hover, #submit:focus {
+    background: var(--bgcolor);
+  }
+  
+  .button-block {
+    display: block;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    margin-left: 33.3%;
+    background-color: var(--bgcolor);
+    border: none;
+    border-radius: 50px;
+  }
+  
+  .forgot {
+    margin-top: -20px;
+    text-align: center;
+  }
 }
 
 body {
@@ -1020,6 +1363,7 @@ html, body {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
+
 .form a {
   text-align: left;
   flex-direction: column;
@@ -1028,9 +1372,11 @@ html, body {
   transition: 0.5s ease;
 }
 
+
 .form a:hover {
   color: var(--bgcolor);
 }
+
 
 .form {
   background: var(--form-bgcolor);
@@ -1048,6 +1394,7 @@ html, body {
   box-shadow: 8px 8px 20px var(--form-shadow);
 }
 
+
 .tab-group {
   list-style: none;
   text-align: center;
@@ -1055,11 +1402,13 @@ html, body {
   margin: 0px;
 }
 
+
 .tab-group:after {
   content: "";
   display: table;
   clear: both;
 }
+
 
 .form a {
   display: block;
@@ -1075,10 +1424,12 @@ html, body {
   transition: 0.5s ease;
 }
 
+
 .form a:hover {
   background: var(--form-bgcolor);
   color: var(--button-textcolor);
 }
+
 
 .form .active a {
   background: var(--form-bgcolor);
@@ -1087,33 +1438,40 @@ html, body {
   color: var(--button-textcolor);
 }
 
+
 .tab-content > div,
 .signup,
 .forgot {
   display: none;
 }
 
+
 .tab-content > .login {
   display: block;
 }
+
 
 .tab-content {
   overflow-y: auto;
   scrollbar-color: var(--scroll-bgcolor) var(--scroll-color);
 }
 
+
 .tab-content::-webkit-scrollbar {
   width: 8px;
 }
+
 
 .tab-content::-webkit-scrollbar-thumb {
   background-color: var(--header-bgcolor);
   border-radius: 4px;
 }
 
+
 .tab-content::-webkit-scrollbar-track {
   background-color: var(--button-textcolor);
 }
+
 
 .form .login h1 {
   text-align: center;
@@ -1123,6 +1481,7 @@ html, body {
   font-size: 35px;
 }
 
+
 .form .forgot h1 {
   text-align: center;
   color: var(--button-textcolor);
@@ -1131,6 +1490,7 @@ html, body {
   font-size: 35px;
 }
 
+
 .form .signup h1 {
   text-align: center;
   color: var(--button-textcolor);
@@ -1138,6 +1498,7 @@ html, body {
   margin-top: 5px;
   font-size: 35px;
 }
+
 
 #signup-btn,
 #login-btn,
@@ -1155,9 +1516,11 @@ html, body {
   border-radius: 50px;
 }
 
+
 .req {
   color: var(--header-bgcolor);
 }
+
 
 .signup .field-wrap {
   width: 99%;
@@ -1165,26 +1528,32 @@ html, body {
   margin: 0;
 }
 
+
 .form #login,
 .form #signup {
   display: none;
 }
 
+
 #login-btn:hover, #signup-btn:hover, #forgot-btn:hover {
   cursor: pointer;
 }
+
 
 #signup-btn {
   margin-top: 50px;
 }
 
+
 .show-signup #login-btn {
   display: none;
 }
 
+
 .show-login #signup-btn {
   display: none;
 }
+
 
 .form label {
   text-align: center;
@@ -1192,10 +1561,10 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
-  backface-visibility: none;
   pointer-events: none;
   font-size: 22px;
 }
+
 
 .form label.active {
   font-size: 14px;
@@ -1205,9 +1574,11 @@ html, body {
   opacity: 0;
 }
 
+
 .form label.highlight {
   color: var(--button-textcolor);
 }
+
 
 .form input, .form textarea {
   font-size: 22px;
@@ -1224,15 +1595,18 @@ html, body {
   margin-bottom: 10px;
 }
 
+
 .form input:focus, .form textarea:focus {
   outline: 0;
   border-color: var(--bgcolor);
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
+
 .active {
   display: center;
 }
+
 
 #enter {
   align-items: center;
@@ -1240,11 +1614,13 @@ html, body {
   margin: 0;
 }
 
+
 .form textarea {
   text-align: center;
   align-items: center;
   resize: vertical;
 }
+
 
 .field-wrap {
   position: relative;
@@ -1253,15 +1629,18 @@ html, body {
   width: 100%;
 }
 
+
 .top-row {
   text-align: center;
 }
+
 
 .top-row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 
 .top-row > div {
   float: left;
@@ -1271,9 +1650,11 @@ html, body {
   margin-right: 4%;
 }
 
+
 .top-row > div:last-child {
   margin: 0;
 }
+
 
 #login-page-btn,
 #forgot-page-btn {
@@ -1293,18 +1674,20 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.5s ease;
   -webkit-appearance: none;
-  appearance: none;
 }
+
 
 #login-page-btn:hover, #login-page-btn:focus {
   background: var(--bgcolor);
 }
+
 
 .signup .field-wrap {
   align-items: center;
   margin: 1px;
   padding: 5px;
 }
+
 
 .signup #submit {
   border: 0;
@@ -1324,12 +1707,13 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.5s ease;
   -webkit-appearance: none;
-  appearance: none;
 }
+
 
 #submit:hover, #submit:focus {
   background: var(--bgcolor);
 }
+
 
 .button-block {
   display: block;
@@ -1342,10 +1726,12 @@ html, body {
   border-radius: 50px;
 }
 
+
 .forgot {
   margin-top: -20px;
   text-align: center;
 }
+
 
 .aboutPage {
   align-items: center;
