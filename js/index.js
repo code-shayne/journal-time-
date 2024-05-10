@@ -653,14 +653,8 @@ submit.addEventListener('click', () => {
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-const closeBtn = document.querySelector('.close-btn');
 
 menuToggle.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
     closeBtn.style.display = closeBtn.style.display === 'block' ? 'none' : 'block';
-});
-
-closeBtn.addEventListener('click', () => {
-    navLinks.style.display = 'none';
-    closeBtn.style.display = 'none';
 });
