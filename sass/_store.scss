@@ -241,3 +241,39 @@ span:hover { cursor:default; }
     margin-right: -5px;
     padding:0;
 }
+
+//product pages
+
+.product-page-info {
+    display: inline-block;
+}
+
+.product-img {
+    height: 30%;
+    width: 30%;
+    border-radius: 10%;
+    margin: 40px;
+    margin-top: 60px;
+}
+
+
+
+.product-page-title {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    margin-bottom: 50px;
+}
+
+.product-price {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.buy-btn {
+    font-size: 30px;
+    background-color: var(--prompt-color);
+    margin-bottom: 220px;
+}

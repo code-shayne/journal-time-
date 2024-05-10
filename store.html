@@ -33,7 +33,7 @@
         </form>
     </div>
     </section>
-    <hr/>
+    <!------header------>
     <section class="shopHeader">
         <div>
             <input class="storeSearch" type="search" placeholder="Search all items">
@@ -63,9 +63,8 @@
             <img src="images/crystal.png" id="crystal" style="float:right" title="Journal to earn more crystals">
          </div>
     </section>
-    <script>
 
-    </script>
+    <!-- ---themes carasel--- -->
     <section class="section" id="storeItems">
         <button class="button" id="title" onclick="showSection('themes')">Themes</button>
         <div class="theme-container">
@@ -75,7 +74,7 @@
                     <img src="images/rose-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Rose theme</h3></button>
+                    <button class="product-btn" onclick="showSection('rose-theme')"><h3 class="product-title">Rose theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -144,6 +143,8 @@
             </div>
             <button class="nxt-btn" onclick="scrollThemeContainer('right')"><img src="images/arrow.png" class="arrow" alt=""></button>
         </div> <!--end of theme container-->
+
+        <!-- prompt carasel -->
         <button class="button" id="title" onclick="showSection('prompts')">Prompt Packages</button>
         <div class="prompt-container">
             <button class="pre-btn" onclick="scrollPromptContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
@@ -170,7 +171,7 @@
                     <img src="images/wyr-prompt-cover.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Would You Rather</h3></button>
+                    <button class="product-btn" onclick="showSection('wyr-prompt')"><h3 class="product-title">Would You Rather</h3></button>
                     <span class="price">10 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -221,6 +222,8 @@
             </div>
             <button class="nxt-btn" onclick="scrollPromptContainer('right')"><img src="images/arrow.png" class="arrow" alt=""></button>
         </div> <!--end of prompt container-->
+
+        <!-- pets carasel -->
         <button class="button" id="title">Pets</button>
         <div class="pet-container">
             <button class="pre-btn" onclick="scrollPetContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
@@ -299,6 +302,8 @@
             </div>
         </div> <!--end of pet container-->
     </section>
+
+    <!-- themes page -->
     <section class="section" id="themes">
         <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
         <button class="section-title" id="title">Themes</button>
@@ -376,7 +381,8 @@
                 </div>
             </div>
         </div>
-                
+
+    <!-- prompts page -->
     </section>
     <section class="section" id="prompts">
         <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
@@ -438,6 +444,37 @@
             </div>
         </div>
     </section>
+
+    <!-- themes product pages -->
+    <section class="section" id="rose-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/rose-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Rose Theme</h1>
+                <hi class="product-description">A floral theme capturing the beauty of the rose.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- prompts product pages -->
+    <section class="section" id="wyr-prompt">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/wyr-prompt-cover.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Would You Rather Prompts</h1>
+                <hi class="product-description">Indulge in the fun childhood game 
+                    and answer fun and difficult would you rather questions.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+
     <div id="settings-popup" class="popup">        
         <div class="content" id="settings-content">
             <a href="#" class="box-close">x</a>
