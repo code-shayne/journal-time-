@@ -1561,6 +1561,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
+  backface-visibility: none;
   pointer-events: none;
   font-size: 22px;
 }
@@ -1674,6 +1675,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.5s ease;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 
@@ -1707,6 +1709,7 @@ html, body {
   color: var(--button-textcolor);
   transition: all 0.5s ease;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 
