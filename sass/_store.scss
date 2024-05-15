@@ -258,9 +258,12 @@ span:hover { cursor:default; }
     border-radius: 10%;
     margin: 40px;
     margin-top: 60px;
+    vertical-align: top;
 }
 
-
+.product-text {
+    margin-top: 7%;
+}
 
 .product-page-title {
     font-size: 45px;
@@ -269,6 +272,8 @@ span:hover { cursor:default; }
 
 .product-description {
     margin-bottom: 50px;
+    white-space: initial;
+    // width: 20%;
 }
 
 .product-price {
