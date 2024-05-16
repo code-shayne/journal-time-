@@ -137,36 +137,6 @@ function lowPosList(button) {
     })
 }
 
-
-// const themeToggle = document.getElementById('theme-toggle');
-        
-//             function changeColor() {
-//                 document.documentElement.style.setProperty("--background-color", '#EECFD4');
-//                 document.documentElement.style.setProperty("--prompt-container-bgcolor", '#AAC0AA');
-//                 document.documentElement.style.setProperty("--header-bgcolor", '#AD9FBC');
-//                 document.documentElement.style.setProperty("--outline-color", '#859785');
-//                 document.documentElement.style.setProperty("--hr-color", '#837472');
-//                 document.documentElement.style.setProperty("--button-textcolor", '#fff');
-//                 document.documentElement.style.setProperty("--button-hovercolor", '#000');
-//                 document.documentElement.style.setProperty("--prompt-color", '#938482');
-//                 // document.documentElement.style.setProperty("--filter-title-bgcolor", '#EECFD4');
-//             }
-
-// function applyTheme(cssFile) {
-//     const themeLink = document.getElementById('theme-stylesheet');
-//     themeLink.setAttribute('href', cssFile);
-//     localStorage.setItem('selectedTheme', cssFile);
-// }
-
-// function loadSelectedTheme() {
-//     const selectedTheme = localStorage.getItem('selectedTheme');
-  
-//     if (selectedTheme) {
-//       const themeLink = document.getElementById('theme-stylesheet');
-//       themeLink.setAttribute('href', selectedTheme);
-//     }
-//   }
-
   // Function to apply theme
   function applyTheme(theme) {
     // Define theme-specific CSS variables
@@ -366,9 +336,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('christmas-theme-toggle').addEventListener('click', function() {
     applyTheme('christmas')
     });
-
-
-
 
   // Apply theme stored in localStorage (if available)
   const selectedTheme = localStorage.getItem('selectedTheme');
@@ -629,15 +596,15 @@ gratitudePrompt.addEventListener('click', () => {
 const griefPrompt = document.getElementById('griefPrompt');
 griefPrompt.addEventListener('click', () => {
   getRandomPrompt('grief');
-});
+})
 
 const storyPrompt = document.getElementById('storyPrompt');
-griefPrompt.addEventListener('click', () => {
+storyPrompt.addEventListener('click', () => {
   getRandomPrompt('story');
 });
 
 const goalsPrompt = document.getElementById('goalsPrompt');
-griefPrompt.addEventListener('click', () => {
+goalsPrompt.addEventListener('click', () => {
   getRandomPrompt('goals');
 });
 
