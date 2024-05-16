@@ -651,10 +651,10 @@ submit.addEventListener('click', () => {
    }, 500);
 });
 
+//hamburger!
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    closeBtn.style.display = closeBtn.style.display === 'block' ? 'none' : 'block';
+  navLinks.classList.toggle('show-menu');
 });
