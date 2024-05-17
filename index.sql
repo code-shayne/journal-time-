@@ -47,6 +47,11 @@ CREATE TABLE rewards (
     pig_pet_owned BOOLEAN
 );
 
+CREATE TABLE notifications (
+	user_id INT,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    notifs_on BOOLEAN
+);
 
 -- Function to generate a random salt
 DELIMITER //
