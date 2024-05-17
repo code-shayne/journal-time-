@@ -1,5 +1,9 @@
 .shopHeader {
-    margin-top: 65px;
+    margin-top: 60px;
+}
+
+.logo {
+    top: 0px;
 }
 
 .storeSearch {
@@ -236,8 +240,49 @@ span:hover { cursor:default; }
 }
 
 .back-arrow {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-right: -5px;
     padding:0;
+}
+
+//product pages
+
+.product-page-info {
+    display: inline-block;
+}
+
+.product-img {
+    height: 30%;
+    width: 30%;
+    border-radius: 10%;
+    margin: 40px;
+    margin-top: 60px;
+    vertical-align: top;
+}
+
+.product-text {
+    margin-top: 7%;
+}
+
+.product-page-title {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    margin-bottom: 50px;
+    white-space: initial;
+    // width: 20%;
+}
+
+.product-price {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.buy-btn {
+    font-size: 30px;
+    background-color: var(--prompt-color);
+    margin-bottom: 220px;
 }

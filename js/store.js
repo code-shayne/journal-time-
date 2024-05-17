@@ -7,8 +7,14 @@ function showSection(sectionId) {
     // Show the selected section
     document.getElementById(sectionId).style.display = 'block';
     document.getElementById(sectionId).style.visibility = 'visible';
-    document.getElementById("storeFilter").style.visibility = 'visible';
-    document.getElementById("sortOptions").style.visibility = 'visible';
+    if (sectionId === 'prompts' || sectionId === 'themes') {
+        document.getElementById("storeFilter").style.visibility = 'visible';
+        document.getElementById("sortOptions").style.visibility = 'visible';
+    } else {
+        document.getElementById("storeFilter").style.visibility = 'hidden';
+        document.getElementById("sortOptions").style.visibility = 'hidden';
+        document.getElementById("storeSearch").style.display = 'none';
+    }
 }
 
 function scrollThemeContainer(direction) {

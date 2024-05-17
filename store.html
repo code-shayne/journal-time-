@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/style.css" id="theme-stylesheet">
     <link rel="icon" href="images/pencil.png">
-    <title>Store</title>
+    <title>Store - Journal Time!</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,28 +14,28 @@
 <body>
     <section class = "logo">
         <div class = "gridContainer">
-             <form id="logoSpace">
-                <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' 
-                    width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
-                <a href="#settings-popup" class="button" id="settings" title="Settings" 
-                    tabindex="0" style="float:right">
-                    <img id="settings-icon" src="images/settings icon.webp"></a>
-                <a href="./login.html" id="login-" class="button" title="Login"
-                    tabindex="0" style="float:right">
-                        Login</a>
-                <a href="./store.html" id="store" class="button" title="Store"
-                    tabindex="0" style="float:right">Store
-                       </a>
-                <a href="./tracking.html" id="tracking" class="button" title="Emotion Tracking"
-                    tabindex="0" style="float:right">Tracking
-                        </a>
-                <a href="./entries.html" id="pastEntries" class="button" title="Past Entries"
-                    tabindex="0" style="float:right">
-                        Entries</a>
-             </form>
-            </div>
+        <form id="logoSpace">
+            <a href = "./index.html"><img src = "images/JT Logo White.png" id = 'logo' 
+                width="200px" height="50px" alt= 'Journal Time' title="Home"></a>
+            <nav class="nav-menu">
+                <a href="#" class="menu-toggle" id="menu-toggle">&#9776;</a>
+                <div class="nav-links">
+                    <a href="store.html" id="store" class="button" title="Store"
+                    tabindex="0" style="float:right">Store</a>
+                    <a href="tracking.html" id="tracking" class="button" title="Emotion Tracking"
+                    tabindex="0" style="float:right">Tracking</a>
+                    <a href="entries.html" id="pastEntries" class="button" title="Entries"
+                    tabindex="0" style="float:right">Entries</a>
+                    <a href="#settings-popup" class="button" id="settings" title="Settings" 
+                    tabindex="0" style="float:right"><img id="settings-icon" src="images/settings icon.webp"></a>
+                    <a href="login.html" id="login-" class="button" title="Login"
+                    tabindex="0" style="float:right">Login</a>
+                </div>
+            </nav>
+        </form>
+    </div>
     </section>
-    <hr/>
+    <!------header------>
     <section class="shopHeader">
         <div>
             <input class="storeSearch" type="search" placeholder="Search all items">
@@ -65,9 +65,8 @@
             <img src="images/crystal.png" id="crystal" style="float:right" title="Journal to earn more crystals">
          </div>
     </section>
-    <script>
 
-    </script>
+    <!-- ---themes carasel--- -->
     <section class="section" id="storeItems">
         <button class="button" id="title" onclick="showSection('themes')">Themes</button>
         <div class="theme-container">
@@ -77,7 +76,7 @@
                     <img src="images/rose-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Rose theme</h3></button>
+                    <button class="product-btn" onclick="showSection('rose-theme')"><h3 class="product-title">Rose theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -86,7 +85,7 @@
                     <img src="images/beach-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Beach theme</h3></button>
+                    <button class="product-btn" onclick="showSection('beach-theme')"><h3 class="product-title">Beach theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -95,7 +94,7 @@
                     <img src="images/wildwest-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Wild West theme</h3></button>
+                    <button class="product-btn" onclick="showSection('wildwest-theme')"><h3 class="product-title">Wild West theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -104,7 +103,7 @@
                     <img src="images/slime-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Slime theme</h3></button>
+                    <button class="product-btn" onclick="showSection('slime-theme')"><h3 class="product-title">Slime theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -113,7 +112,7 @@
                     <img src="images/forest-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Forest theme</h3></button>
+                    <button class="product-btn" onclick="showSection('forest-theme')"><h3 class="product-title">Forest theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -122,7 +121,7 @@
                     <img src="images/pizza-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Pizza theme</h3></button>
+                    <button class="product-btn" onclick="showSection('pizza-theme')"><h3 class="product-title">Pizza theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -131,7 +130,7 @@
                     <img src="images/sunset-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Sunset theme</h3></button>
+                    <button class="product-btn" onclick="showSection('sunset-theme')"><h3 class="product-title">Sunset theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -140,12 +139,23 @@
                     <img src="images/christmas-theme-palette.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Christmas theme</h3></button>
+                    <button class="product-btn" onclick="showSection('christmas-theme')"><h3 class="product-title">Christmas theme</h3></button>
+                    <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb">
+                    <img src="images/pride-theme-palette.png" class="product-image" alt="">
+                </div>
+                <div class="product-info">
+                    <button class="product-btn" onclick="showSection('pride-theme')"><h3 class="product-title">Pride theme</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
             <button class="nxt-btn" onclick="scrollThemeContainer('right')"><img src="images/arrow.png" class="arrow" alt=""></button>
         </div> <!--end of theme container-->
+
+        <!-- prompt carasel -->
         <button class="button" id="title" onclick="showSection('prompts')">Prompt Packages</button>
         <div class="prompt-container">
             <button class="pre-btn" onclick="scrollPromptContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
@@ -172,7 +182,7 @@
                     <img src="images/wyr-prompt-cover.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Would You Rather</h3></button>
+                    <button class="product-btn" onclick="showSection('wyr-prompt')"><h3 class="product-title">Would You Rather</h3></button>
                     <span class="price">10 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -181,7 +191,7 @@
                     <img src="images/sr-prompt-cover.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Self-Reflection Prompts</h3></button>
+                    <button class="product-btn" onclick="showSection('sr-prompt')"><h3 class="product-title">Self-Reflection</h3></button>
                     <span class="price">15 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
@@ -190,8 +200,8 @@
                     <img src="images/gratitude-prompt-cover.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Gratitude Prompts</h3></button>
-                    <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
+                    <button class="product-btn" onclick="showSection('gratitude-prompt')"><h3 class="product-title">Gratitude</h3></button>
+                    <span class="price">10 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
             <div class="product-card">
@@ -199,30 +209,32 @@
                     <img src="images/grief-prompt-cover.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Grief Prompt</h3></button>
+                    <button class="product-btn" onclick="showSection('grief-prompt')"><h3 class="product-title">Grief</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-thumb">
-                    <img src="images/crystal.png" class="product-image" alt="">
+                    <img src="images/story-prompt-cover.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Rose theme</h3></button>
-                    <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
+                    <button class="product-btn" onclick="showSection('story-prompt')"><h3 class="product-title">Create A Story</h3></button>
+                    <span class="price">10 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-thumb">
-                    <img src="images/crystal.png" class="product-image" alt="">
+                    <img src="images/goals-prompt-cover.png" class="product-image" alt="">
                 </div>
                 <div class="product-info">
-                    <button class="product-btn"><h3 class="product-title">Rose theme</h3></button>
+                    <button class="product-btn" onclick="showSection('goals-prompt')"><h3 class="product-title">Goals</h3></button>
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
             <button class="nxt-btn" onclick="scrollPromptContainer('right')"><img src="images/arrow.png" class="arrow" alt=""></button>
         </div> <!--end of prompt container-->
+
+        <!-- pets carasel -->
         <button class="button" id="title">Pets</button>
         <div class="pet-container">
             <button class="pre-btn" onclick="scrollPetContainer('left')"><img src="images/arrow.png" class="arrow" alt=""></button>
@@ -301,6 +313,8 @@
             </div>
         </div> <!--end of pet container-->
     </section>
+
+    <!-- themes page -->
     <section class="section" id="themes">
         <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
         <button class="section-title" id="title">Themes</button>
@@ -377,8 +391,18 @@
                     <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
                 </div>
             </div>
+            <div class="product-card">
+                <div class="product-thumb">
+                    <img src="images/pride-theme-palette.png" class="product-image" alt="">
+                </div>
+                <div class="product-info">
+                    <button class="product-btn"><h3 class="product-title">Pride theme</h3></button>
+                    <span class="price">5 <img class="price-img" src="images/crystal.png"></span>
+                </div>
+            </div>
         </div>
-                
+
+    <!-- prompts page -->
     </section>
     <section class="section" id="prompts">
         <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
@@ -440,6 +464,198 @@
             </div>
         </div>
     </section>
+
+    <!-- themes product pages -->
+    <section class="section" id="rose-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/rose-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Rose Theme</h1>
+                <hi class="product-description">A floral theme capturing the beauty of the rose.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="beach-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/beach-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Beach Theme</h1>
+                <hi class="product-description">A beachy theme to remind you of summer.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="wildwest-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/wildwest-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Wild West Theme</h1>
+                <hi class="product-description">The wild west... yeehaw!</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="slime-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/slime-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Slime Theme</h1>
+                <hi class="product-description">A slimy color palette for all the slime lovers.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="forest-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/forest-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Forest Theme</h1>
+                <hi class="product-description">Picture yourself in a nice, calm forest with this theme.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="pizza-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/pizza-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Pizza Theme</h1>
+                <hi class="product-description">Who doesn't love pizza? That's why we turned it into a theme!</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="sunset-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/sunset-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Sunset Theme</h1>
+                <hi class="product-description">Experience the magic of a sunset without having to wait.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="christmas-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/christmas-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Christmas Theme</h1>
+                <hi class="product-description">The holidays came early with this theme!</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="pride-theme">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/pride-theme-palette.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Pride Theme</h1>
+                <hi class="product-description">Celebrate the LGBTQ+ community with this rainbow theme!</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- prompts product pages -->
+    <section class="section" id="wyr-prompt">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/wyr-prompt-cover.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Would You Rather Prompts</h1>
+                <hi class="product-description">Indulge in the fun childhood game  
+                    and answer fun and difficult would you rather questions.</hi>
+                <h4 class="product-price">10 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="sr-prompt">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/sr-prompt-cover.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Self Reflection Prompts</h1>
+                <hi class="product-description">Ignite self-discovery with the Reflection Journal Prompts. 
+                    Uncover insights, explore feelings, and grow personally. </hi>
+                <h4 class="product-price">15 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="gratitude-prompt">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/gratitude-prompt-cover.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Gratitude Prompts</h1>
+                <hi class="product-description">Unlock the power of gratitude with the Gratitude Prompt Package! 
+                    Cultivate a mindset of appreciation and positivity as you journey through these carefully crafted prompts.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="grief-prompt">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/grief-prompt-cover.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Grief Prompts</h1>
+                <hi class="product-description">Navigate the path of healing with the Grief Prompt Package. 
+                    Designed to support you through times of loss and mourning, these thoughtful prompts provide a safe space for reflection and expression.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="story-prompt">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/story-prompt-cover.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Story Prompts</h1>
+                <hi class="product-description">Ignite your imagination with the Create a Story Package! 
+                    Dive into a world of endless possibilities as you embark on a storytelling adventure.</hi>
+                <h4 class="product-price">10 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="goals-prompt">
+        <a href="./store.html"><button class="button" id="back-btn" title="back"><img class="back-arrow" src="images/back-arrow.png"></button></a>
+        <div class="info">
+            <img class="product-img product-page-info" src="images/goals-prompt-cover.png">
+            <div class="product-text product-page-info">
+                <h1 class="product-page-title">Goals Prompts</h1>
+                <hi class="product-description">Embark on a journey of self-discovery and achievement with the Goal Setting Package! 
+                    Whatever you're planning, this package equips you with the tools and techniques to set clear objectives and stay on track.</hi>
+                <h4 class="product-price">5 <img class="price-img" src="images/crystal.png"></h4>
+                <button class="button buy-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+
     <div id="settings-popup" class="popup">        
         <div class="content" id="settings-content">
             <a href="#" class="box-close">x</a>
@@ -466,5 +682,13 @@
             </details>
         </div>
     </div>
-    <script src="js/index.js"></script>
-</body>
+    <script src="js/store.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show-menu');
+    });    
+    </script>
+    <script src="js/index.js"></script></body>
