@@ -293,6 +293,23 @@ function lowPosList(button) {
           '--scroll-color': '#EA7971',
           '--textbox-color': 'rgba(250, 250, 250, 0.2)',
           '--bgcolor': '#79291B'
+        },
+        'pride': {
+          '--background-color': '#c4aafd',
+          '--prompt-container-bgcolor': '#ff6163',
+          '--header-bgcolor': '#72a8ff',
+          '--outline-color': '#ff3639',
+          '--hr-color': '#ffd670',
+          '--button-textcolor': '#fff',
+          '--button-hovercolor': '#000',
+          '--prompt-color': '#ff8356',
+          '--filter-title-bgcolor': '#223168',
+          '--form-bgcolor': '#9F2118',
+          '--form-shadow': '#941B17',
+          '--scroll-bgcolor': '#EF9B95',
+          '--scroll-color': '#EA7971',
+          '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+          '--bgcolor': '#79291B'
         }
     };
 
@@ -335,6 +352,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   document.getElementById('christmas-theme-toggle').addEventListener('click', function() {
     applyTheme('christmas')
+    });
+  document.getElementById('pride-theme-toggle').addEventListener('click', function() {
+    applyTheme('pride')
     });
 
   // Apply theme stored in localStorage (if available)

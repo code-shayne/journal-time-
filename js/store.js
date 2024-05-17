@@ -13,7 +13,7 @@ function showSection(sectionId) {
     } else {
         document.getElementById("storeFilter").style.visibility = 'hidden';
         document.getElementById("sortOptions").style.visibility = 'hidden';
-        document.getElementById("storeSearch").style.visibility = 'hidden';
+        document.getElementById("storeSearch").style.display = 'none';
     }
 }
 

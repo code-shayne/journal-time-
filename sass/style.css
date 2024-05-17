@@ -51,11 +51,28 @@ html, body {
   align-items: center;
 }
 
-@media only screen and (max-width: 450px) {
-  html, body {
-    font-size: 14px;
-  }
-  
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
   .logo {
     height: auto;
     display: block;
@@ -68,7 +85,7 @@ html, body {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: var(--header-bgcolor);
+    background-color: rgba(var(--header-bgcolor), 0.5);
     z-index: 1;
     padding: 0;
   }
@@ -76,6 +93,7 @@ html, body {
     display: block;
     width: 100%;
     padding: 10px;
+    border-bottom: 1px solid var(--button-textcolor);
   }
   .show-menu {
     display: flex;
@@ -85,6 +103,7 @@ html, body {
     top: 60px;
     left: 0;
     width: 100%;
+    background-color: rgba(var(--header-bgcolor), 0.5);
     z-index: 1;
     padding: 0;
   }
@@ -92,6 +111,7 @@ html, body {
     display: block;
     width: 100%;
     padding: 10px;
+    border-bottom: 1px solid var(--button-textcolor);
   }
   .menu-toggle {
     display: block;
@@ -107,7 +127,6 @@ html, body {
     position: relative;
     font-size: 17px;
     width: 100%;
-    height: 27px;
   }
   .nav-links a#settings::after {
     content: "Settings";
@@ -115,21 +134,12 @@ html, body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 27px;
+    height: 100%;
     display: left;
     align-items: center;
     justify-content: center;
     font-size: 17px;
   }
-
-  #login- {
-    background-color: var(--filter-title-bgcolor) !important;
-    border: none !important;
-    border-radius: 0;
-    padding: 5px;
-    font-size: 17px;
-  }
-  
   .promptContainer {
     width: 95%;
     margin-top: 120px;
@@ -153,7 +163,14 @@ html, body {
   .entriesContainer {
     margin-left: 0;
   }
-
+  .form {
+    width: 100%;
+    margin: 0;
+    border-radius: 50px;
+  }
+  html, body {
+    font-size: 14px;
+  }
   .promptContainer {
     font-size: 15px;
   }
@@ -175,27 +192,9 @@ html, body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
     transition: transform 0.2s;
-    width: 90%;
+    width: 33%;
     text-align: center;
     font-family: "Fuzzy Bubbles", sans-serif;
-  }
-  .form {
-    background: var(--form-bgcolor);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 650px;
-    width: 300px;
-    position: relative;
-    overflow: hidden;
-    margin: 17% 5%;
-    border-radius: 50px;
-    box-shadow: 8px 8px 20px var(--form-shadow);
-    width: 90%;
-    margin: 10% auto;
-    border-radius: 50px;
   }
   .form a {
     text-align: left;
@@ -206,6 +205,21 @@ html, body {
   }
   .form a:hover {
     color: var(--bgcolor);
+  }
+  .form {
+    background: var(--form-bgcolor);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    margin: 17% 5%;
+    border-radius: 50px;
+    box-shadow: 8px 8px 20px var(--form-shadow);
   }
   .tab-group {
     list-style: none;
@@ -227,7 +241,7 @@ html, body {
     font-family: "Fuzzy Bubbles", sans-serif;
     font-size: 20px;
     float: left;
-    width: 30%;
+    width: 50%;
     cursor: pointer;
     transition: 0.5s ease;
   }
@@ -399,8 +413,7 @@ html, body {
     margin: 0;
   }
   #login-page-btn,
-  #forgot-page-btn,
-  #submit {
+  #forgot-page-btn {
     border: 0;
     display: block;
     text-align: center;
@@ -419,20 +432,37 @@ html, body {
     transition: all 0.5s ease;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+         appearance: none;
   }
-  
-  #forgot-page-btn:hover, #forgot-page-btn:focus {
-    background: var(--bgcolor);
-  }
-
-  #login-page-btn:hover, #login-page-btn:focus{
+  #login-page-btn:hover, #login-page-btn:focus {
     background: var(--bgcolor);
   }
   .signup .field-wrap {
     align-items: center;
     margin: 1px;
     padding: 5px;
+  }
+  .signup #submit {
+    border: 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 30%;
+    height: 30%;
+    margin-bottom: 11px;
+    border-radius: 50px;
+    outline: none;
+    padding: 15px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--bgcolor);
+    color: var(--button-textcolor);
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
   }
   #submit:hover, #submit:focus {
     background: var(--bgcolor);
@@ -1188,8 +1218,8 @@ span:hover {
 }
 
 .back-arrow {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   margin-right: -5px;
   padding: 0;
 }
@@ -1254,15 +1284,9 @@ html, body {
   html, body {
     font-size: 22px;
   }
-  .nav-links {
-    display: flex;
-  }
-  .menu-toggle {
-    display: none;
-  }
 }
 .main {
-  background-color: var(--bgcolor);
+  background-color: rgb(97, 140, 150);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
@@ -1276,16 +1300,16 @@ html, body {
   text-align: left;
   flex-direction: column;
   text-decoration: none;
-  color: var(--bgcolor);
+  color: rgb(97, 140, 150);
   transition: 0.5s ease;
 }
 
 .form a:hover {
-  color: var(--bgcolor);
+  color: rgb(66, 96, 103);
 }
 
 .form {
-  background: var(--form-bgcolor);
+  background: #6d8cc5;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1297,7 +1321,7 @@ html, body {
   overflow: hidden;
   margin: 100px 33.5%;
   border-radius: 50px;
-  box-shadow: 8px 8px 20px var(--form-shadow);
+  box-shadow: 8px 8px 20px #0f355c;
 }
 
 .tab-group {
@@ -1317,8 +1341,8 @@ html, body {
   display: block;
   text-align: center;
   padding: 0px;
-  background: var(--form-bgcolor);
-  color: var(--button-textcolor);
+  background: #6d8cc5;
+  color: white;
   font-family: "Fuzzy Bubbles", sans-serif;
   font-size: 20px;
   float: left;
@@ -1328,30 +1352,24 @@ html, body {
 }
 
 .form a:hover {
-  background: var(--form-bgcolor);
-  color: var(--button-textcolor);
+  background: #6d8cc5;
+  color: white;
 }
 
 .form .active a {
-  background: var(--form-bgcolor);
+  background: #6d8cc5;
   text-align: left;
   text-align: center;
-  color: var(--button-textcolor);
+  color: white;
 }
 
-.tab-content > div,
-  .signup,
-  .forgot {
-    display: none;
-  }
-
-  .tab-content > .login {
-    display: block;
-  }
+.tab-content > div:last-child {
+  display: none;
+}
 
 .tab-content {
   overflow-y: auto;
-  scrollbar-color: var(--scroll-bgcolor) var(--scroll-color);
+  scrollbar-color: #d891af #cf6d96;
 }
 
 .tab-content::-webkit-scrollbar {
@@ -1359,25 +1377,17 @@ html, body {
 }
 
 .tab-content::-webkit-scrollbar-thumb {
-  background-color: var(--header-bgcolor);
+  background-color: #b8336a;
   border-radius: 4px;
 }
 
 .tab-content::-webkit-scrollbar-track {
-  background-color: var(--button-textcolor);
+  background-color: #f1f1f1;
 }
 
 .form .login h1 {
   text-align: center;
-  color: var(--button-textcolor);
-  margin: 0 0 40px;
-  margin-top: 5px;
-  font-size: 35px;
-}
-
-.forgot h1 {
-  text-align: center;
-  color: var(--button-textcolor);
+  color: white;
   margin: 0 0 40px;
   margin-top: 5px;
   font-size: 35px;
@@ -1385,7 +1395,15 @@ html, body {
 
 .form .signup h1 {
   text-align: center;
-  color: var(--button-textcolor);
+  color: white;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 35px;
+}
+
+.form .signup h1 {
+  text-align: center;
+  color: white;
   margin: 0 0 40px;
   margin-top: 5px;
   font-size: 35px;
@@ -1397,9 +1415,9 @@ html, body {
   width: 150px;
   height: 45px;
   font-family: "Fuzzy Bubbles", sans-serif;
-  color: var(--button-textcolor);
+  color: white;
   border: none;
-  background-color: var(--header-bgcolor);
+  background-color: #B8336A;
   text-align: center;
   margin-bottom: 30px;
   font-size: 20px;
@@ -1408,7 +1426,7 @@ html, body {
 }
 
 .req {
-  color: var(--header-bgcolor);
+  color: #b8336a;
 }
 
 .signup .field-wrap {
@@ -1440,10 +1458,9 @@ html, body {
 .form label {
   text-align: center;
   margin: 15px;
-  color: var(--button-textcolor);
+  color: white;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
-  backface-visibility: none;
   pointer-events: none;
   font-size: 22px;
 }
@@ -1457,7 +1474,7 @@ html, body {
 }
 
 .form label.highlight {
-  color: var(--button-textcolor);
+  color: white;
 }
 
 .form input, .form textarea {
@@ -1467,8 +1484,8 @@ html, body {
   width: 100%;
   height: 50px;
   padding: 5px 10px;
-  background: var(--textbox-color);
-  color: var(--button-textcolor);
+  background: rgba(250, 250, 250, 0.2);
+  color: white;
   border-radius: 50px;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
   border: none;
@@ -1477,7 +1494,7 @@ html, body {
 
 .form input:focus, .form textarea:focus {
   outline: 0;
-  border-color: var(--bgcolor);
+  border-color: rgb(45, 125, 143);
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
@@ -1539,39 +1556,14 @@ html, body {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background: var(--bgcolor);
-  color: var(--button-textcolor);
+  background: rgb(26, 82, 94);
+  color: white;
   transition: all 0.5s ease;
   -webkit-appearance: none;
-  appearance: none;
-}
-
-#forgot-page-btn {
-  border: 0;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  width: 150px;
-  height: 50px;
-  border-radius: 50px;
-  outline: none;
-  padding: 15px 0;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  background: var(--bgcolor);
-  color: var(--button-textcolor);
-  transition: all 0.5s ease;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-#forgot-page-btn:hover, #forgot-page-btn:focus {
-  background: var(--bgcolor);
 }
 
 #login-page-btn:hover, #login-page-btn:focus {
-  background: var(--bgcolor);
+  background: rgb(26, 82, 94);
 }
 
 .signup .field-wrap {
@@ -1586,23 +1578,22 @@ html, body {
   text-align: center;
   margin: 0 auto;
   margin-top: 5px;
-  width: 150px;
-  height: 50px;
+  width: 180px;
+  height: 80px;
   border-radius: 50px;
   outline: none;
   padding: 15px 0;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background: var(--bgcolor);
-  color: var(--button-textcolor);
+  background: rgb(26, 82, 94);
+  color: white;
   transition: all 0.5s ease;
   -webkit-appearance: none;
-  appearance: none;
 }
 
 #submit:hover, #submit:focus {
-  background: var(--bgcolor);
+  background: rgb(26, 82, 94);
 }
 
 .button-block {
@@ -1611,7 +1602,7 @@ html, body {
   width: 150px;
   height: 50px;
   margin-left: 33.3%;
-  background-color: var(--bgcolor);
+  background-color: rgb(26, 82, 94);
   border: none;
   border-radius: 50px;
 }
