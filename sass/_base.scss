@@ -852,13 +852,52 @@
   .checkbox {
     display: none;
   }
+
+ .notif-info {
+    opacity: 0.5;
+  }
+
+  .notif-info:hover {
+    cursor: default;
+    filter: none;
+    box-shadow: none;
+  }
   
+  .checkbox:checked ~ .notif-info {
+    opacity: 1;
+  }
+
+  .checkbox:checked ~ .notif-info:hover {
+    cursor: pointer;
+    filter: brightness(110%);
+    box-shadow: 4px 2px 5px #000;
+  }
+
+
   #set-notif {
     font-size: 18px;
     text-align: center;
     margin-top: 5px;
   }
   
+  #edit-pencil {
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+  }
+
+  #edit-btn {
+    background-color: transparent;
+    border: none;
+  }
+
+  #add-notif {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
   details {
     margin-bottom: 20px; /* Add some spacing between details elements */
   }

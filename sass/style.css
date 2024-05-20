@@ -785,10 +785,48 @@ body {
   display: none;
 }
 
+.notif-info {
+  opacity: 0.5;
+}
+
+.notif-info:hover {
+  cursor: default;
+  filter: none;
+  box-shadow: none;
+}
+
+.checkbox:checked ~ .notif-info {
+  opacity: 1;
+}
+
+.checkbox:checked ~ .notif-info:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: 4px 2px 5px #000;
+}
+
 #set-notif {
   font-size: 18px;
   text-align: center;
   margin-top: 5px;
+}
+
+#edit-pencil {
+  height: 32px;
+  width: 32px;
+  vertical-align: middle;
+}
+
+#edit-btn {
+  background-color: transparent;
+  border: none;
+}
+
+#add-notif {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 details {
@@ -1285,9 +1323,8 @@ html, body {
     font-size: 22px;
   }
 }
-
 .main {
-  background-color: var(--bgcolor);
+  background-color: rgb(97, 140, 150);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
@@ -1301,16 +1338,16 @@ html, body {
   text-align: left;
   flex-direction: column;
   text-decoration: none;
-  color: var(--bgcolor);
+  color: rgb(97, 140, 150);
   transition: 0.5s ease;
 }
 
 .form a:hover {
-  color: var(--bgcolor);
+  color: rgb(66, 96, 103);
 }
 
 .form {
-  background: var(--form-bgcolor);
+  background: #6d8cc5;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1322,7 +1359,7 @@ html, body {
   overflow: hidden;
   margin: 100px 33.5%;
   border-radius: 50px;
-  box-shadow: 8px 8px 20px var(--form-shadow);
+  box-shadow: 8px 8px 20px #0f355c;
 }
 
 .tab-group {
@@ -1342,8 +1379,8 @@ html, body {
   display: block;
   text-align: center;
   padding: 0px;
-  background: var(--form-bgcolor);
-  color: var(--button-textcolor);
+  background: #6d8cc5;
+  color: white;
   font-family: "Fuzzy Bubbles", sans-serif;
   font-size: 20px;
   float: left;
@@ -1353,30 +1390,24 @@ html, body {
 }
 
 .form a:hover {
-  background: var(--form-bgcolor);
-  color: var(--button-textcolor);
+  background: #6d8cc5;
+  color: white;
 }
 
 .form .active a {
-  background: var(--form-bgcolor);
+  background: #6d8cc5;
   text-align: left;
   text-align: center;
-  color: var(--button-textcolor);
+  color: white;
 }
 
-.tab-content > div,
-.signup,
-.forgot {
+.tab-content > div:last-child {
   display: none;
-}
-
-.tab-content > .login {
-  display: block;
 }
 
 .tab-content {
   overflow-y: auto;
-  scrollbar-color: var(--scroll-bgcolor) var(--scroll-color);
+  scrollbar-color: #d891af #cf6d96;
 }
 
 .tab-content::-webkit-scrollbar {
@@ -1384,25 +1415,17 @@ html, body {
 }
 
 .tab-content::-webkit-scrollbar-thumb {
-  background-color: var(--header-bgcolor);
+  background-color: #b8336a;
   border-radius: 4px;
 }
 
 .tab-content::-webkit-scrollbar-track {
-  background-color: var(--button-textcolor);
+  background-color: #f1f1f1;
 }
 
 .form .login h1 {
   text-align: center;
-  color: var(--button-textcolor);
-  margin: 0 0 40px;
-  margin-top: 5px;
-  font-size: 35px;
-}
-
-.form .forgot h1 {
-  text-align: center;
-  color: var(--button-textcolor);
+  color: white;
   margin: 0 0 40px;
   margin-top: 5px;
   font-size: 35px;
@@ -1410,7 +1433,15 @@ html, body {
 
 .form .signup h1 {
   text-align: center;
-  color: var(--button-textcolor);
+  color: white;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 35px;
+}
+
+.form .signup h1 {
+  text-align: center;
+  color: white;
   margin: 0 0 40px;
   margin-top: 5px;
   font-size: 35px;
@@ -1422,9 +1453,9 @@ html, body {
   width: 150px;
   height: 45px;
   font-family: "Fuzzy Bubbles", sans-serif;
-  color: var(--button-textcolor);
+  color: white;
   border: none;
-  background-color: var(--header-bgcolor);
+  background-color: #B8336A;
   text-align: center;
   margin-bottom: 30px;
   font-size: 20px;
@@ -1433,7 +1464,7 @@ html, body {
 }
 
 .req {
-  color: var(--header-bgcolor);
+  color: #b8336a;
 }
 
 .signup .field-wrap {
@@ -1442,8 +1473,7 @@ html, body {
   margin: 0;
 }
 
-.form #login,
-.form #signup {
+#login, #signup {
   display: none;
 }
 
@@ -1466,7 +1496,7 @@ html, body {
 .form label {
   text-align: center;
   margin: 15px;
-  color: var(--button-textcolor);
+  color: white;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
@@ -1482,7 +1512,7 @@ html, body {
 }
 
 .form label.highlight {
-  color: var(--button-textcolor);
+  color: white;
 }
 
 .form input, .form textarea {
@@ -1492,8 +1522,8 @@ html, body {
   width: 100%;
   height: 50px;
   padding: 5px 10px;
-  background: var(--textbox-color);
-  color: var(--button-textcolor);
+  background: rgba(250, 250, 250, 0.2);
+  color: white;
   border-radius: 50px;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
   border: none;
@@ -1502,7 +1532,7 @@ html, body {
 
 .form input:focus, .form textarea:focus {
   outline: 0;
-  border-color: var(--bgcolor);
+  border-color: rgb(45, 125, 143);
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
@@ -1551,8 +1581,7 @@ html, body {
   margin: 0;
 }
 
-#login-page-btn,
-#forgot-page-btn {
+#login-page-btn {
   border: 0;
   display: block;
   text-align: center;
@@ -1565,14 +1594,14 @@ html, body {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background: var(--bgcolor);
-  color: var(--button-textcolor);
+  background: rgb(26, 82, 94);
+  color: white;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
 
 #login-page-btn:hover, #login-page-btn:focus {
-  background: var(--bgcolor);
+  background: rgb(26, 82, 94);
 }
 
 .signup .field-wrap {
@@ -1587,22 +1616,22 @@ html, body {
   text-align: center;
   margin: 0 auto;
   margin-top: 5px;
-  width: 150px;
-  height: 50px;
+  width: 180px;
+  height: 80px;
   border-radius: 50px;
   outline: none;
   padding: 15px 0;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background: var(--bgcolor);
-  color: var(--button-textcolor);
+  background: rgb(26, 82, 94);
+  color: white;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
 
 #submit:hover, #submit:focus {
-  background: var(--bgcolor);
+  background: rgb(26, 82, 94);
 }
 
 .button-block {
@@ -1611,7 +1640,7 @@ html, body {
   width: 150px;
   height: 50px;
   margin-left: 33.3%;
-  background-color: var(--bgcolor);
+  background-color: rgb(26, 82, 94);
   border: none;
   border-radius: 50px;
 }
@@ -1620,6 +1649,7 @@ html, body {
   margin-top: -20px;
   text-align: center;
 }
+
 
 .aboutPage {
   align-items: center;
