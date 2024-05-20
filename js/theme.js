@@ -1,7 +1,6 @@
-  // Function to apply theme
-  function applyTheme(theme) {
-    // Define theme-specific CSS variables
-    const themes = {
+function applyTheme(theme) {
+  // Define theme-specific CSS variables
+  const themes = {
       'default': {
         '--background-color': '#a3b9e3',
         '--prompt-container-bgcolor': '#a19ce1',
@@ -86,43 +85,148 @@
         '--scroll-color': '#914236',
         '--textbox-color': 'rgba(250, 250, 250, 0.2)',
         '--bgcolor': '#007e8c'
+      },
+      'forest': {
+        '--background-color': '#c6e1bb',
+        '--prompt-container-bgcolor': '#869d7a',
+        '--header-bgcolor': '#91785d',
+        '--outline-color': '#5b764c',
+        '--hr-color': '#28522d',
+        '--button-textcolor': '#fff',
+        '--button-hovercolor': '#000',
+        '--prompt-color': '#785a3a',
+        '--filter-title-bgcolor': '#223168',
+        '--form-bgcolor': '#ACAD8C',
+        '--form-shadow': '#0f355c',
+        '--scroll-bgcolor': '#9cad8c',
+        '--scroll-color': '#859577',
+        '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+        '--bgcolor': '#457c45'
+      },
+      'pizza': {
+        '--background-color': '#9F817F',
+        '--prompt-container-bgcolor': '#ECCEAC',
+        '--header-bgcolor': '#C44536',
+        '--outline-color': '#65473E',
+        '--hr-color': '#28522F',
+        '--button-textcolor': '#fff',
+        '--button-hovercolor': '#000',
+        '--prompt-color': '#3D7B46',
+        '--filter-title-bgcolor': '#223168',
+        '--form-bgcolor': '#4F4F31',
+        '--form-shadow': '#474D37',
+        '--scroll-bgcolor': '#4F4F31',
+        '--scroll-color': '#938f6f',
+        '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+        '--bgcolor': '#B14736'
+      },
+      'sunset': {
+        '--background-color': '#E3AA63',
+        '--prompt-container-bgcolor': '#F2CD60',
+        '--header-bgcolor': '#CE713B',
+        '--outline-color': '#E2AE12',
+        '--hr-color': '#EA85AF',
+        '--button-textcolor': '#fff',
+        '--button-hovercolor': '#000',
+        '--prompt-color': '#E1518D',
+        '--filter-title-bgcolor': '#223168',
+        '--form-bgcolor': '#EC979C',
+        '--form-shadow': '#EFB27E',
+        '--scroll-bgcolor': '#EDABB7',
+        '--scroll-color': '#E38092',
+        '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+        '--bgcolor': '#DC7B75'
+      },
+      'christmas': {
+        '--background-color': '#4F7033',
+        '--prompt-container-bgcolor': '#b42d1a',
+        '--header-bgcolor': '#891515',
+        '--outline-color': '#6B1A0F',
+        '--hr-color': '#46622D',
+        '--button-textcolor': '#fff',
+        '--button-hovercolor': '#000',
+        '--prompt-color': '#BEA660',
+        '--filter-title-bgcolor': '#223168',
+        '--form-bgcolor': '#9F2118',
+        '--form-shadow': '#941B17',
+        '--scroll-bgcolor': '#EF9B95',
+        '--scroll-color': '#EA7971',
+        '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+        '--bgcolor': '#79291B'
+      },
+      'pride': {
+        '--background-color': '#c4aafd',
+        '--prompt-container-bgcolor': '#ff6163',
+        '--header-bgcolor': '#72a8ff',
+        '--outline-color': '#ff3639',
+        '--hr-color': '#ffd670',
+        '--button-textcolor': '#fff',
+        '--button-hovercolor': '#000',
+        '--prompt-color': '#ff8356',
+        '--filter-title-bgcolor': '#223168',
+        '--form-bgcolor': '#9F2118',
+        '--form-shadow': '#941B17',
+        '--scroll-bgcolor': '#EF9B95',
+        '--scroll-color': '#EA7971',
+        '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+        '--bgcolor': '#79291B'
       }
-    };
+  };
 
-    // Apply theme-specific CSS variables
-    const root = document.documentElement;
-    const themeVariables = themes[theme];
-    Object.keys(themeVariables).forEach(property => {
-        root.style.setProperty(property, themeVariables[property]);
-    });
+  // Apply theme-specific CSS variables
+  const root = document.documentElement;
+  const themeVariables = themes[theme];
+  Object.keys(themeVariables).forEach(property => {
+      root.style.setProperty(property, themeVariables[property]);
+  });
 
-    // Store selected theme in localStorage for persistence
-    localStorage.setItem('selectedTheme', theme);
+  // Store selected theme in localStorage for persistence
+  localStorage.setItem('selectedTheme', theme);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Add event listeners to theme toggle buttons
-  document.getElementById("default-theme-toggle").addEventListener('click', function() {
-      applyTheme('default');
-  });
-  document.getElementById('slime-theme-toggle').addEventListener('click', function() {
-      applyTheme('slime');
-  });
-  document.getElementById("rose-theme-toggle").addEventListener('click', function() {
-      applyTheme('rose');
-  });
-  document.getElementById('beach-theme-toggle').addEventListener('click', function() {
-      applyTheme('beach');
-  });
-  document.getElementById('wild-west-theme-toggle').addEventListener('click', function() {
-      applyTheme('wild-west');
-  });
-
-
-
-  // Apply theme stored in localStorage (if available)
-  const selectedTheme = localStorage.getItem('selectedTheme');
-  if (selectedTheme) {
-      applyTheme(selectedTheme);
-  }
+// Add event listeners to theme toggle buttons
+document.getElementById("default-theme-toggle").addEventListener('click', function() {
+    applyTheme('default');
 });
+document.getElementById('slime-theme-toggle').addEventListener('click', function() {
+    applyTheme('slime');
+});
+document.getElementById("rose-theme-toggle").addEventListener('click', function() {
+    applyTheme('rose');
+});
+document.getElementById('beach-theme-toggle').addEventListener('click', function() {
+    applyTheme('beach');
+});
+document.getElementById('wild-west-theme-toggle').addEventListener('click', function() {
+    applyTheme('wild-west');
+});
+document.getElementById('forest-theme-toggle').addEventListener('click', function() {
+    applyTheme('forest')
+});
+document.getElementById('pizza-theme-toggle').addEventListener('click', function() {
+  applyTheme('pizza')
+});
+document.getElementById('sunset-theme-toggle').addEventListener('click', function() {
+applyTheme('sunset')
+});
+document.getElementById('christmas-theme-toggle').addEventListener('click', function() {
+  applyTheme('christmas')
+  });
+document.getElementById('pride-theme-toggle').addEventListener('click', function() {
+  applyTheme('pride')
+  });
+
+// Apply theme stored in localStorage (if available)
+const selectedTheme = localStorage.getItem('selectedTheme');
+if (selectedTheme) {
+    applyTheme(selectedTheme);
+}
+});
+
+function loadSelectedTheme() {
+const selectedTheme = localStorage.getItem('selectedTheme');
+if (selectedTheme) {
+    applyTheme(selectedTheme);
+}
+}
