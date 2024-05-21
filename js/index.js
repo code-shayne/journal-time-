@@ -295,7 +295,7 @@ function lowPosList(button) {
           '--bgcolor': '#79291B'
         },
         'pride': {
-          '--background-color': '#c4aafd',
+          '--background-color': '#ffffe0',
           '--prompt-container-bgcolor': '#ff6163',
           '--header-bgcolor': '#72a8ff',
           '--outline-color': '#ff3639',

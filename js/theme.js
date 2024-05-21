@@ -155,14 +155,31 @@ function applyTheme(theme) {
         '--bgcolor': '#79291B'
       },
       'pride': {
-        '--background-color': '#c4aafd',
-        '--prompt-container-bgcolor': '#ff6163',
-        '--header-bgcolor': '#72a8ff',
-        '--outline-color': '#ff3639',
-        '--hr-color': '#ffd670',
+        '--background-color': '#FB8C00',
+        '--prompt-container-bgcolor': '#43A047',
+        '--header-bgcolor': '#E53935',
+        '--outline-color': '#FDD835',
+        '--hr-color': '#8E24AA',
         '--button-textcolor': '#fff',
         '--button-hovercolor': '#000',
-        '--prompt-color': '#ff8356',
+        '--prompt-color': '#1E88E5',
+        '--filter-title-bgcolor': '#223168',
+        '--form-bgcolor': '#9F2118',
+        '--form-shadow': '#941B17',
+        '--scroll-bgcolor': '#EF9B95',
+        '--scroll-color': '#EA7971',
+        '--textbox-color': 'rgba(250, 250, 250, 0.2)',
+        '--bgcolor': '#79291B'
+      },
+      'mermaid': {
+        '--background-color': '#a4d2de',
+        '--prompt-container-bgcolor': '#76deac',
+        '--header-bgcolor': '#ac8bad',
+        '--outline-color': '#4abda6',
+        '--hr-color': '#c484b7',
+        '--button-textcolor': '#fff',
+        '--button-hovercolor': '#000',
+        '--prompt-color': '#d197b0',
         '--filter-title-bgcolor': '#223168',
         '--form-bgcolor': '#9F2118',
         '--form-shadow': '#941B17',
@@ -216,6 +233,9 @@ document.getElementById('christmas-theme-toggle').addEventListener('click', func
 document.getElementById('pride-theme-toggle').addEventListener('click', function() {
   applyTheme('pride')
   });
+document.getElementById('mermaid-theme-toggle').addEventListener('click', function() {
+    applyTheme('mermaid')
+    });
 
 // Apply theme stored in localStorage (if available)
 const selectedTheme = localStorage.getItem('selectedTheme');
