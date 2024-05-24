@@ -164,12 +164,12 @@ function applyTheme(theme) {
         '--button-hovercolor': '#000',
         '--prompt-color': '#1E88E5',
         '--filter-title-bgcolor': '#223168',
-        '--form-bgcolor': '#9F2118',
-        '--form-shadow': '#941B17',
+        '--form-bgcolor': '#1E88E5',
+        '--form-shadow': '#FDD835',
         '--scroll-bgcolor': '#EF9B95',
         '--scroll-color': '#EA7971',
         '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-        '--bgcolor': '#79291B'
+        '--bgcolor': '#43A047'
       },
       'mermaid': {
         '--background-color': '#a4d2de',
@@ -181,12 +181,12 @@ function applyTheme(theme) {
         '--button-hovercolor': '#000',
         '--prompt-color': '#d197b0',
         '--filter-title-bgcolor': '#223168',
-        '--form-bgcolor': '#9F2118',
-        '--form-shadow': '#941B17',
+        '--form-bgcolor': '#4abda6',
+        '--form-shadow': '#d197b0',
         '--scroll-bgcolor': '#EF9B95',
         '--scroll-color': '#EA7971',
         '--textbox-color': 'rgba(250, 250, 250, 0.2)',
-        '--bgcolor': '#79291B'
+        '--bgcolor': '#015482'
       }
   };
 

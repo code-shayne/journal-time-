@@ -169,33 +169,43 @@ function forgotPass() {
     navLinks.classList.toggle('show-menu');
   });
   </script>
-  <script src="js/index.js"></script>
-  <script src="js/theme.js"></script>
-          <div id="settings-popup" class="popup">        
-            <div class="content" id="settings-content">
-                <!--<button class="button" id="theme-toggle" onclick="changeColor()">Toggle Theme</button>-->
-                <a href="#" class="box-close">x</a>
-                <details>
-                    <summary>Theme</summary>
-                    <p id="set-themes">
-                        <button class="button" id="default-theme-toggle">Default Theme</button>
-                        <button class="button" id="slime-theme-toggle">Slime Theme</button>
-                        <button class="button" id="rose-theme-toggle">Rose Theme</button>
-                        <button class="button" id="beach-theme-toggle">Beach Theme</button>
-                        <button class="button" id="wild-west-theme-toggle">Wild West Theme</button>
-                        <button class="button" id="forest-theme-toggle">Forest Theme</button>
-                        <button class="button" id="pizza-theme-toggle">Pizza Theme</button>
-                        <button class="button" id="sunset-theme-toggle">Sunset Theme</button> 
-                        <button class="button" id="christmas-theme-toggle">Christmas Theme</button>
-                        <button class="button"><a href="store.html">+</a></button>
-                    </p>
-                </details>
-                <details>
-                    <summary>Account</summary>
-                    <p id="set-account">
-                        <a href="login.html" class="button">Login</a>
-                    </p>
-                </details>
-            </div>
+       <div id="settings-popup" class="popup">        
+        <div class="content" id="settings-content">
+            <a href="#" class="box-close">x</a>
+            <details>
+                <summary>Theme</summary>
+                <p id="set-themes">
+                    <button class="button" id="default-theme-toggle">Default Theme</button>
+                    <button class="button" id="slime-theme-toggle">Slime Theme</button>
+                    <button class="button" id="rose-theme-toggle">Rose Theme</button>
+                    <button class="button" id="beach-theme-toggle">Beach Theme</button>
+                    <button class="button" id="wild-west-theme-toggle">Wild West Theme</button>
+                    <button class="button" id="forest-theme-toggle">Forest Theme</button>
+                    <button class="button" id="pizza-theme-toggle">Pizza Theme</button>
+                    <button class="button" id="sunset-theme-toggle">Sunset Theme</button> 
+                    <button class="button" id="christmas-theme-toggle">Christmas Theme</button> 
+                    <button class="button" id="pride-theme-toggle">Pride Theme</button> 
+                    <button class="button" id="mermaid-theme-toggle">Mermaid Theme</button> 
+                    <button class="button"><a href="store.html">+</a></button>
+                </p>
+            </details>
+            <details>
+                <summary>Account</summary>
+                <p id="set-account">
+                    <a href="login.html" class="button">Login</a>
+                </p>
+            </details>
+            <details>
+                <summary>Notifications</summary>
+                    <input type="checkbox" id="switch" class="checkbox" />
+                    <label for="switch" class="toggle">
+                        <p id="set-notif">On    Off</p>
+                    </label>
+                    <button class="button notif-info" id="edit-btn"><img id="edit-pencil" title="Edit" src="images/pencil.png"></button>
+                    <button class="button notif-info" id="add-notif" title="Add">+</button>
+            </details>
         </div>
+    </div>
+        <script src="js/index.js"></script>
+        <script src="js/theme.js"></script>
 </body>
