@@ -182,7 +182,7 @@ function applyTheme(theme) {
         '--prompt-color': '#d197b0',
         '--filter-title-bgcolor': '#223168',
         '--form-bgcolor': '#4abda6',
-        '--form-shadow': '#d197b0',
+        '--form-shadow': '#7dbcde',
         '--scroll-bgcolor': '#EF9B95',
         '--scroll-color': '#EA7971',
         '--textbox-color': 'rgba(250, 250, 250, 0.2)',
