@@ -16,7 +16,7 @@
 </details>
 
 ## About
-> Journal Time! is a web app that allows users to journal and store entries online. The web app provides prompts or free-journaling options and save all entries to unique user accounts. Users can also track emotions by indicating what they are feeling at the time of journaling. After each entry the user will receive a certain number of points or currency, incentivising journaling. The points can be used to buy accessories within the website such as different prompt packages, website themes, or journaling pets. Users can track their journaling progress and view graphs and summaries of their emotions in a separate space on the web app. The aim of this project is to encourage journaling, which is a useful practice for mental health and wellbeing. It will also make the process more accessible and fun for users.
+> Journal Time! is a web app that allows users to journal and store entries online. The web app provides prompts and free-journaling options and saves all entries to unique user accounts. Users can indicate what kind of emotion they are feeling along with their entry submission. After each entry the user will receive one crystal, incentivising journaling. The crystals can be used to buy accessories within the website such as different prompt packages or website themes. Users can also view their past entries and filter by emotion or prompt type. Email notifications can be scheduled to remind the user to journal or sent if the account hasn’t been used for 2 weeks. This project encourages journaling, which is a useful practice for mental health and wellbeing. It will also make the process more accessible and fun for the users.
 
 ## Built With
 > [![HTML](images/html.png)](https://html.spec.whatwg.org/multipage/)\
