@@ -139,7 +139,6 @@ function lowPosList(button) {
 
   // Function to apply theme
   function applyTheme(theme) {
-    // Define theme-specific CSS variables
     const themes = {
         'default': {
           '--background-color': '#a3b9e3',
