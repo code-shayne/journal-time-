@@ -1,16 +1,17 @@
 CREATE DATABASE journaltime;
 USE journaltime;
+
+DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
     email VARCHAR(255) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     salt VARCHAR(255) NOT NULL,
-    first_name VARCHAR(255),
-    last_name VARCHAR(255),
     registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+DROP TABLE IF EXISTS entries;
 CREATE TABLE entries (
     entry_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
@@ -20,6 +21,7 @@ CREATE TABLE entries (
     entry_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+DROP TABLE IF EXISTS rewards;
 CREATE TABLE rewards (
 	user_id INT,
     crystals INT,
@@ -76,8 +78,8 @@ DELIMITER ;
 SET @salt = generate_salt(32);
 
 -- sample insert statements
-INSERT INTO users (username, email, password_hash, salt, first_name, last_name)
-VALUES ('username', 'email', 'password_hash', @salt, 'first_name', 'last_name');
+-- INSERT INTO users (username, email, password_hash, salt, first_name, last_name)
+-- VALUES ('username', 'email', 'password_hash', @salt, 'first_name', 'last_name');
 
 -- INSERT INTO entries (emotion, entry_title, entry_body)
 -- VALUES ('emotion', 'entry_title', 'entry_body');
