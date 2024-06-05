@@ -71,11 +71,6 @@
           
               $sql = "INSERT INTO users (username, email, password_hash) VALUES ('$username', '$email', '$password')";
           
-              if ($conn->query($sql) === TRUE) {
-                  echo "Record inserted successfully!";
-              } else {
-                  echo "Error: " . $sql . "<br>" . $conn->error;
-              }
           }
           $conn->close();
           ?>
