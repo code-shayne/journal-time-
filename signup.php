@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql = "INSERT INTO users (username, email, password_hash) VALUES ('$username', '$email', '$password')";
+    $sql = "INSERT INTO users (username, email, pass) VALUES ('$username', '$email', '$password')";
 
     if (mysqli_query($conn, $sql)) {
       echo "Data saved successfully!";
@@ -20,4 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     mysqli_close($conn);
+    
+    header("Location: login.html");
   }
