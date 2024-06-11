@@ -1,5 +1,5 @@
-CREATE DATABASE journaltime!;
-USE journaltime!;
+CREATE DATABASE JournalTime;
+USE JournalTime;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
@@ -35,7 +35,7 @@ CREATE TABLE rewards (
     would_you_rather_prompts_owned BOOLEAN,
     self_reflection_prompts_owned BOOLEAN,
     gratitude_prompts_owned BOOLEAN,
-    grief_prompts_owned BOOLEAN,
+    grief_prompts_owned BOOLEAN
 );
 
 /* CREATE TABLE notifications (
