@@ -1,29 +1,26 @@
-CREATE DATABASE journaltime;
-USE journaltime;
+CREATE DATABASE journaltime!;
+USE journaltime!;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
     email VARCHAR(255) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
-    salt VARCHAR(255) NOT NULL,
+    pass VARCHAR(255) NOT NULL,
     registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 DROP TABLE IF EXISTS entries;
 CREATE TABLE entries (
     entry_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    emotion VARCHAR(255) NOT NULL,
-    entry_title VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
     entry_body VARCHAR(255) NOT NULL,
     entry_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 DROP TABLE IF EXISTS rewards;
 CREATE TABLE rewards (
-	user_id INT,
+	username VARCHAR(255) NOT NULL UNIQUE,
     crystals INT,
     crystals_earned INT,
     crystals_spent INT,
@@ -39,24 +36,16 @@ CREATE TABLE rewards (
     self_reflection_prompts_owned BOOLEAN,
     gratitude_prompts_owned BOOLEAN,
     grief_prompts_owned BOOLEAN,
-    dog_pet_owned BOOLEAN,
-    cat_pet_owned BOOLEAN,
-    fish_pet_owned BOOLEAN,
-    turtle_pet_owned BOOLEAN,
-    ballerina_frog_pet_owned BOOLEAN,
-    snail_pet_owned BOOLEAN,
-    camel_pet_owned BOOLEAN,
-    pig_pet_owned BOOLEAN
 );
 
-CREATE TABLE notifications (
+/* CREATE TABLE notifications (
 	user_id INT,
     email VARCHAR(255) NOT NULL UNIQUE,
     notifs_on BOOLEAN
-);
+); */
 
 -- Function to generate a random salt
-DELIMITER //
+/*DELIMITER //
 CREATE FUNCTION generate_salt(length INT) RETURNS VARCHAR(255)
 READS SQL DATA
 BEGIN
@@ -71,11 +60,10 @@ BEGIN
 
     RETURN salt;
 END //
-DELIMITER ;
+DELIMITER ;*/
 
 -- Example registration query
 -- Replace 'input_username', 'input_email', and 'input_password' with actual user input
-SET @salt = generate_salt(32);
 
 -- sample insert statements
 -- INSERT INTO users (username, email, password_hash, salt, first_name, last_name)
