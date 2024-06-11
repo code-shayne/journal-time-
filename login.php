@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', 'Pineapple8656!', 'journaltime');
+$conn = mysqli_connect('localhost', 'root', 'Pineapple8656!', 'journaltime1');
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -9,7 +9,7 @@ if (isset($_POST['Log In'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $pass = mysqli_real_escape_string($conn, $_POST['password']);
 
-    $sql = "SELECT password_hash FROM users WHERE username = '$username'";
+    $sql = "SELECT pass FROM users WHERE username = '$username'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -24,6 +24,9 @@ if (isset($_POST['Log In'])) {
     } else {
         $username_error = "Invalid Username.";
     }
+    
+    header("Location: index.html");
 }
+
 
 mysqli_close($conn);
